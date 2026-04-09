@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import ServiceIcon from '../components/ServiceIcon';
 import { services, caseStudies, CALENDLY_URL } from '../data/siteData';
 
 export default function ServiceDetailPage() {
@@ -33,7 +34,10 @@ export default function ServiceDetailPage() {
       <div className="page-hero">
         <Link to="/#services" className="back-link">All Services</Link>
 
-        <div className="section-label">{svc.icon} Service</div>
+        <div className="section-label" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <ServiceIcon name={svc.icon} size={20} strokeWidth={1.5} />
+          <span>Service</span>
+        </div>
         <h1>
           <em style={{ color: 'var(--accent)' }}>{svc.title}</em>
         </h1>

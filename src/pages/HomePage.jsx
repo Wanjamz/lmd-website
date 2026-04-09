@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceIcon from '../components/ServiceIcon';
 import { services, caseStudies, tickerItems, packages, stats, heroWords, CALENDLY_URL } from '../data/siteData';
 
 /* ─── Fade-in hook ──────────────────────────────────────────────────────── */
@@ -260,7 +261,9 @@ export default function HomePage() {
                   to={`/services/${svc.id}`}
                   className="service-card"
                 >
-                  <span className="service-icon">{svc.icon}</span>
+                  <span className="service-icon">
+                    <ServiceIcon name={svc.icon} size={32} strokeWidth={1.2} />
+                  </span>
                   <h3>{svc.title}</h3>
                   <p>{svc.short}</p>
                   <div className="service-tags">
@@ -407,7 +410,9 @@ export default function HomePage() {
             {packages.map(pkg => (
               <div key={pkg.id} className={`package-card${pkg.featured ? ' featured' : ''}`}>
                 {pkg.featured && <span className="package-badge">Most Popular</span>}
-                <span className="package-emoji">{pkg.emoji}</span>
+                <span className="package-emoji">
+                  <ServiceIcon name={pkg.icon} size={40} strokeWidth={1} />
+                </span>
                 <h3>{pkg.title}</h3>
                 <p className="package-desc">{pkg.description}</p>
                 <div className="package-timeline">{pkg.timeline}</div>

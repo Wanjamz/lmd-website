@@ -1,18 +1,18 @@
-﻿
-// â”€â”€â”€ LMD CONSULTING â€” SITE DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+// ─── LMD CONSULTING — SITE DATA ───────────────────────────────────────────────────
 
 export const CALENDLY_URL = 'https://calendly.com/lmdconsulting/discovery-call';
 
-// â”€â”€â”€ SERVICES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── SERVICES ──────────────────────────────────────────────────────────────────
 export const services = [
   {
     id: 'monitoring-evaluation',
-    icon: 'â—Ž',
+    icon: 'Target',
     title: 'Monitoring & Evaluation',
-    short: 'Rigorous systems that measure what matters â€” from MEAL frameworks to full impact evaluations.',
+    short: 'Rigorous systems that measure what matters — from MEAL frameworks to full impact evaluations.',
     description: `We design and implement comprehensive Monitoring, Evaluation, Accountability, and Learning (MEAL) systems for development organisations operating across East Africa. Our M&E work is built on a simple belief: evidence should drive decisions, not just fill reports.
 
-Whether you need a results framework from scratch, a rigorous baseline study, or a summative evaluation that satisfies the most demanding donor â€” we bring both technical rigour and contextual intelligence to every engagement.
+Whether you need a results framework from scratch, a rigorous baseline study, or a summative evaluation that satisfies the most demanding donor — we bring both technical rigour and contextual intelligence to every engagement.
 
 Our team has designed M&E systems for programmes operating in Kenya, Somalia, Ethiopia, South Sudan, and Uganda, working with everything from community-level projects to multi-country initiatives.`,
     features: [
@@ -28,17 +28,17 @@ Our team has designed M&E systems for programmes operating in Kenya, Somalia, Et
       'Accountability & Feedback Systems',
     ],
     tags: ['Results Frameworks', 'MEAL Plans', 'Evaluation Design', 'Baseline Studies'],
-    callout: 'Every programme deserves evidence that travels. We build M&E systems that generate insights your team actually uses â€” and donors actually trust.',
+    callout: 'Every programme deserves evidence that travels. We build M&E systems that generate insights your team actually uses — and donors actually trust.',
     clients: ['UNICEF', 'ActionAid', 'USAID', 'GIZ', 'IRC'],
   },
   {
     id: 'strategic-communications',
-    icon: 'â‰¡',
+    icon: 'Megaphone',
     title: 'Strategic Communications',
-    short: 'From donor reports to advocacy campaigns â€” communication that earns attention, trust, and funding.',
+    short: 'From donor reports to advocacy campaigns — communication that earns attention, trust, and funding.',
     description: `Strategic communications is the bridge between evidence and action. We help development organisations articulate their work in ways that inform, inspire, and sustain funding relationships.
 
-Too many NGOs produce brilliant work that nobody hears about. Too many impact reports sit in inboxes, unread. We fix that. Our communications work is grounded in the evidence your programmes generate â€” and shaped by what your specific audiences need to hear.
+Too many NGOs produce brilliant work that nobody hears about. Too many impact reports sit in inboxes, unread. We fix that. Our communications work is grounded in the evidence your programmes generate — and shaped by what your specific audiences need to hear.
 
 We've produced communications strategies and knowledge products for organisations across health, education, livelihoods, gender, and governance sectors.`,
     features: [
@@ -54,17 +54,17 @@ We've produced communications strategies and knowledge products for organisation
       'Media Engagement Support',
     ],
     tags: ['Donor Reporting', 'Knowledge Products', 'Campaigns', 'Advocacy'],
-    callout: "We don't just write reports â€” we produce communication assets that make your work legible, credible, and compelling to the people who fund it.",
+    callout: "We don't just write reports — we produce communication assets that make your work legible, credible, and compelling to the people who fund it.",
     clients: ['SecPlus Kenya', 'IRC', 'Plan International', 'Oxfam'],
   },
   {
     id: 'digital-systems',
-    icon: 'â¬¡',
+    icon: 'Database',
     title: 'Digital Systems',
-    short: 'Modern data infrastructure for development organisations â€” dashboards, mobile tools, and MIS solutions.',
-    description: `Paper-based data collection and fragmented spreadsheets cost development organisations time, accuracy, and credibility with donors. We build digital solutions that work in the field â€” across connectivity challenges, staff turnover, and the realities of humanitarian operations.
+    short: 'Modern data infrastructure for development organisations — dashboards, mobile tools, and MIS solutions.',
+    description: `Paper-based data collection and fragmented spreadsheets cost development organisations time, accuracy, and credibility with donors. We build digital solutions that work in the field — across connectivity challenges, staff turnover, and the realities of humanitarian operations.
 
-Our digital systems work is practical, not theoretical. We don't propose tools your team won't use. We assess your existing data flows, understand your programme model, and design solutions that make monitoring easier â€” not more bureaucratic.
+Our digital systems work is practical, not theoretical. We don't propose tools your team won't use. We assess your existing data flows, understand your programme model, and design solutions that make monitoring easier — not more bureaucratic.
 
 Every system we build comes with training and transition support so adoption actually sticks.`,
     features: [
@@ -85,14 +85,14 @@ Every system we build comes with training and transition support so adoption act
   },
   {
     id: 'research-analytics',
-    icon: 'â–³',
+    icon: 'Search',
     title: 'Research & Analytics',
     short: 'Contextually grounded research that generates actionable insights for complex development challenges.',
-    description: `Good development programming is built on evidence. We design and conduct rigorous research â€” qualitative, quantitative, and mixed methods â€” that is deeply grounded in East Africa's social, political, and operational context.
+    description: `Good development programming is built on evidence. We design and conduct rigorous research — qualitative, quantitative, and mixed methods — that is deeply grounded in East Africa's social, political, and operational context.
 
 We're not parachute researchers. Our team has long-standing relationships with communities, governments, and civil society organisations across the region. We understand the sensitivities, the languages, and the power dynamics that shape research quality.
 
-Every research product we deliver is designed to answer a specific question your organisation needs answered â€” not to produce academic output for its own sake.`,
+Every research product we deliver is designed to answer a specific question your organisation needs answered — not to produce academic output for its own sake.`,
     features: [
       'Qualitative Research Design & Facilitation',
       'Quantitative Surveys & Statistical Analysis',
@@ -111,12 +111,12 @@ Every research product we deliver is designed to answer a specific question your
   },
   {
     id: 'capacity-building',
-    icon: 'â—·',
+    icon: 'Users',
     title: 'Capacity Building',
     short: 'Building internal MEAL and communications competency that outlasts any consultancy engagement.',
     description: `Technical assistance only creates lasting change when it builds the capacity of local teams. Our capacity building programmes are designed around your organisation's specific gaps, your staff's existing knowledge, and the demands of your donors and programmes.
 
-We don't believe in one-size-fits-all training. Before we design any curriculum, we conduct a learning needs assessment. Before we run any workshop, we understand what has already been tried. Our facilitation approach is participatory, contextually relevant, and built to generate practical change â€” not certificates.
+We don't believe in one-size-fits-all training. Before we design any curriculum, we conduct a learning needs assessment. Before we run any workshop, we understand what has already been tried. Our facilitation approach is participatory, contextually relevant, and built to generate practical change — not certificates.
 
 We measure our success by what your team can do without us when we're done.`,
     features: [
@@ -137,12 +137,12 @@ We measure our success by what your team can do without us when we're done.`,
   },
   {
     id: 'knowledge-management',
-    icon: 'â–£',
+    icon: 'BookOpen',
     title: 'Knowledge Management',
     short: 'Capturing, organising, and sharing institutional knowledge so your learning stays where it belongs.',
-    description: `Development organisations generate enormous amounts of learning â€” from field visits, project experience, evaluations, and crises. Most of it is never properly captured. People leave, institutional memory walks out the door, and programmes repeat avoidable mistakes.
+    description: `Development organisations generate enormous amounts of learning — from field visits, project experience, evaluations, and crises. Most of it is never properly captured. People leave, institutional memory walks out the door, and programmes repeat avoidable mistakes.
 
-We design knowledge management systems and processes that make learning a regular practice â€” not an afterthought at project close. From after-action reviews and documentation frameworks to full knowledge portals, we help your organisation learn from itself.
+We design knowledge management systems and processes that make learning a regular practice — not an afterthought at project close. From after-action reviews and documentation frameworks to full knowledge portals, we help your organisation learn from itself.
 
 Our knowledge management work is particularly valuable for multi-year programmes and consortia where organisational learning is critical to adaptive management.`,
     features: [
@@ -158,14 +158,14 @@ Our knowledge management work is particularly valuable for multi-year programmes
       'Lessons Learned Frameworks',
     ],
     tags: ['Documentation', 'Learning Systems', 'Research Publications', 'Impact Reports'],
-    callout: "Your organisation's greatest asset is what your team has learned. We help you capture it before it disappears â€” and put it to work.",
+    callout: "Your organisation's greatest asset is what your team has learned. We help you capture it before it disappears — and put it to work.",
     clients: ['UNICEF', 'World Vision', 'Oxfam', 'Save the Children'],
   },
 ];
 
-// â”€â”€â”€ CASE STUDIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── CASE STUDIES ──────────────────────────────────────────────────────────────────
 export const caseStudies = [
-  // â”€â”€ 2025 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── 2025 ──────────────────────────────────────────────────────────────────
   {
     id: 'unicef-zambia-advocacy',
     category: 'Communications',
@@ -186,7 +186,7 @@ export const caseStudies = [
         type: 'text',
         label: 'The Challenge',
         title: 'What the client wanted',
-        content: `UNICEF Zambia needed a product that could make national child welfare data understandable for a parliamentary audience. The assignment required turning 20â€“30 indicators from multiple national sources into a visually coherent, print-ready booklet that MPs could engage with quickly and confidently. It had to meet global brand requirements and be delivered within a very tight 11-day production window.`
+        content: `UNICEF Zambia needed a product that could make national child welfare data understandable for a parliamentary audience. The assignment required turning 20–30 indicators from multiple national sources into a visually coherent, print-ready booklet that MPs could engage with quickly and confidently. It had to meet global brand requirements and be delivered within a very tight 11-day production window.`
       },
       {
         type: 'image',
@@ -199,11 +199,11 @@ export const caseStudies = [
         label: 'Our Approach',
         title: 'What we did',
         content: `We functioned as the bridge between technical data and strategic communication. Our process involved:
-        â€¢ Editorial refinement of complex data points into "bite-sized" advocacy messages.
-        â€¢ Design and layout of a 16-page high-quality booklet.
-        â€¢ Creation of custom infographics for 20+ child indicators.
-        â€¢ End-to-end production management including coordination with high-quality printers.
-        â€¢ Strict adherence to UNICEF global brand and visibility guidelines.`
+        • Editorial refinement of complex data points into "bite-sized" advocacy messages.
+        • Design and layout of a 16-page high-quality booklet.
+        • Creation of custom infographics for 20+ child indicators.
+        • End-to-end production management including coordination with high-quality printers.
+        • Strict adherence to UNICEF global brand and visibility guidelines.`
       },
       {
         type: 'image',
@@ -215,7 +215,7 @@ export const caseStudies = [
         type: 'text',
         label: 'Results',
         title: 'Key results',
-        content: `We delivered the full projectâ€”from initial data receipt to 400 finished physical copiesâ€”in exactly 11 days. The booklet harmonized data from multiple national sources into a single, authoritative narrative that was used during the parliamentary engagement session on 12 September 2025.`
+        content: `We delivered the full project—from initial data receipt to 400 finished physical copies—in exactly 11 days. The booklet harmonized data from multiple national sources into a single, authoritative narrative that was used during the parliamentary engagement session on 12 September 2025.`
       }
     ],
     impact: 'The project equipped UNICEF with an advocacy-ready tool that made the state of children in Zambia visible and understandable. It bridged the gap between raw data and decision-making, supporting parliamentary dialogue on public finance and child policy. (Delivered by Benson Wanjama.)',
@@ -229,16 +229,16 @@ export const caseStudies = [
     year: '2025',
     duration: 'Ongoing',
     location: 'East Africa (Remote & Blended)',
-    title: 'AI for Development â€” Building an AI Capacity Platform for East African NGOs',
-    excerpt: 'A purpose-built AI capacity-building platform for NGO staff and leadership in East Africa â€” tackling donor pressure, compliance risk, and the gap between generic AI tools and real development workflows.',
+    title: 'AI for Development — Building an AI Capacity Platform for East African NGOs',
+    excerpt: 'A purpose-built AI capacity-building platform for NGO staff and leadership in East Africa — tackling donor pressure, compliance risk, and the gap between generic AI tools and real development workflows.',
     fullContent: [
       {
         type: 'text',
         label: 'Overview',
         title: 'The problem with generic AI training',
-        content: `Across East Africa's development sector, NGO leaders and their teams were feeling a mounting tension. Donors â€” including major institutional funders like USAID, DANIDA, and FCDO â€” were increasingly expecting AI integration to appear in proposals, reporting frameworks, and operational workflows. The pressure was real, but the resources to respond to it were not.
+        content: `Across East Africa's development sector, NGO leaders and their teams were feeling a mounting tension. Donors — including major institutional funders like USAID, DANIDA, and FCDO — were increasingly expecting AI integration to appear in proposals, reporting frameworks, and operational workflows. The pressure was real, but the resources to respond to it were not.
 
-The core problem wasn't a lack of willingness. It was a lack of relevant, context-aware training. Generic AI courses built for Western corporate audiences consistently failed to address the realities on the ground: tools like KoboCollect for data collection, M-Changa for community fundraising, and SMS-based communication gateways were the backbone of field operations â€” yet no existing curriculum addressed them.
+The core problem wasn't a lack of willingness. It was a lack of relevant, context-aware training. Generic AI courses built for Western corporate audiences consistently failed to address the realities on the ground: tools like KoboCollect for data collection, M-Changa for community fundraising, and SMS-based communication gateways were the backbone of field operations — yet no existing curriculum addressed them.
 
 Standard AI prompt techniques broke down when applied to the strict logframe and reporting formats required by international donors. And perhaps most critically, staff had no guidance on how to use AI tools in compliance with the Kenya Data Protection Act 2019, putting beneficiary data at genuine legal risk.`
       },
@@ -251,24 +251,24 @@ Standard AI prompt techniques broke down when applied to the strict logframe and
       {
         type: 'text',
         label: 'Our Approach',
-        title: 'Built from the ground up â€” for East Africa',
-        content: `LMD Consulting Group developed AI4Dev â€” a dedicated capacity-building platform purpose-built for NGO staff and leadership in the East African development context. Rather than adapting an existing curriculum, we built from the ground up with our clients' operational realities at the center of every design decision.
+        title: 'Built from the ground up — for East Africa',
+        content: `LMD Consulting Group developed AI4Dev — a dedicated capacity-building platform purpose-built for NGO staff and leadership in the East African development context. Rather than adapting an existing curriculum, we built from the ground up with our clients' operational realities at the center of every design decision.
 
 We designed four specialized role-specific learning tracks:
-â€¢ Resource Mobilisation â€” AI tools for grant writing, donor mapping, and proposal drafting calibrated to USAID and EU standards.
-â€¢ Programme & MEAL â€” Automating data cleaning from KoboCollect, generating field insights, and drafting impact reports faster.
-â€¢ Leadership â€” AI policy development, organizational change management, and KE-DPA compliance at the institutional level.
-â€¢ Communications â€” Scaling impact storytelling and managing content localization for diverse communities across the region.`
+• Resource Mobilisation — AI tools for grant writing, donor mapping, and proposal drafting calibrated to USAID and EU standards.
+• Programme & MEAL — Automating data cleaning from KoboCollect, generating field insights, and drafting impact reports faster.
+• Leadership — AI policy development, organizational change management, and KE-DPA compliance at the institutional level.
+• Communications — Scaling impact storytelling and managing content localization for diverse communities across the region.`
       },
       {
         type: 'text',
         label: 'Platform Design',
         title: 'Flexible, verified, and compliance-first',
-        content: `Every module was designed with East African workflows in mind â€” not theoretical overviews, but real case studies and exercises drawn directly from the development sector.
+        content: `Every module was designed with East African workflows in mind — not theoretical overviews, but real case studies and exercises drawn directly from the development sector.
 
 AI4Dev offers both self-paced and blended/facilitated delivery modes, accommodating the reality of NGO staffing where senior management have limited time and field officers benefit from extended self-paced learning.
 
-The platform issues verifiable certificates upon programme completion, recognized by major development partners, alongside micro-credential badges for specific competencies such as Data Privacy and Grant Automation â€” tangible assets organizations can include in donor reports and proposals.
+The platform issues verifiable certificates upon programme completion, recognized by major development partners, alongside micro-credential badges for specific competencies such as Data Privacy and Grant Automation — tangible assets organizations can include in donor reports and proposals.
 
 Rather than treating the Kenya Data Protection Act as a footnote, we embedded KE-DPA compliance throughout the curriculum. The platform also offers a free NGO Data Protection Guide covering consent management for AI, safe prompt engineering, and a vendor assessment checklist.`
       },
@@ -284,29 +284,29 @@ Rather than treating the Kenya Data Protection Act as a footnote, we embedded KE
         title: 'Early outcomes from the platform',
         content: `The platform has begun delivering measurable outcomes for its early cohort of users:
 
-â€¢ MEAL teams integrating KoboCollect-specific training reported significant time savings in data processing workflows.
-â€¢ Programme managers cited the Kenya Data Protection Act module as a critical differentiator â€” providing the institutional confidence to begin using AI tools without exposing beneficiary data to risk.
-â€¢ Senior leadership teams used the blended delivery model to get executive staff up to speed rapidly while field officers completed self-paced tracks on their own schedules.
+• MEAL teams integrating KoboCollect-specific training reported significant time savings in data processing workflows.
+• Programme managers cited the Kenya Data Protection Act module as a critical differentiator — providing the institutional confidence to begin using AI tools without exposing beneficiary data to risk.
+• Senior leadership teams used the blended delivery model to get executive staff up to speed rapidly while field officers completed self-paced tracks on their own schedules.
 
-The pricing model â€” offered in both USD and KES, with individual track access, full programme enrollment, and organizational volume pricing â€” was designed to make the platform genuinely accessible to the development sector rather than reserved for well-funded institutions.`
+The pricing model — offered in both USD and KES, with individual track access, full programme enrollment, and organizational volume pricing — was designed to make the platform genuinely accessible to the development sector rather than reserved for well-funded institutions.`
       },
       {
         type: 'text',
         label: 'Why It Worked',
-        title: 'Context is not a detail â€” it\'s the product',
-        content: `The success of AI4Dev stems from a simple insight: by designing for East African NGOs specifically â€” their tools, their donors, their compliance environment, their team structures â€” LMD Consulting Group built something that generic platforms cannot replicate.
+        title: 'Context is not a detail — it\'s the product',
+        content: `The success of AI4Dev stems from a simple insight: by designing for East African NGOs specifically — their tools, their donors, their compliance environment, their team structures — LMD Consulting Group built something that generic platforms cannot replicate.
 
 Our clients didn't just learn about AI. They learned how to use AI in their organizations, starting on day one.
 
-ðŸ”— Visit the platform: https://www.ai4development.co/`
+🔗 Visit the platform: https://www.ai4development.co/`
       }
     ],
-    impact: 'AI4Dev is now an active platform serving East African NGOs with role-specific AI training that is KE-DPA 2019 compliant, donor-aligned, and built around the tools development teams actually use. It represents LMD\'s commitment to not just advising on AI â€” but building the infrastructure to make responsible AI adoption real across the sector.',
+    impact: 'AI4Dev is now an active platform serving East African NGOs with role-specific AI training that is KE-DPA 2019 compliant, donor-aligned, and built around the tools development teams actually use. It represents LMD\'s commitment to not just advising on AI — but building the infrastructure to make responsible AI adoption real across the sector.',
     tags: ['AI', 'Capacity Building', 'Digital Learning', 'KE-DPA', 'NGO', 'East Africa'],
     image: '/images/Evaluation.png',
     externalLink: 'https://www.ai4development.co/',
   },
-  // â”€â”€ 2024 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── 2024 ──────────────────────────────────────────────────────────────────
   {
     id: 'aea-midterm-review',
     category: 'M&E',
@@ -315,13 +315,13 @@ Our clients didn't just learn about AI. They learned how to use AI in their orga
     duration: '2 months',
     location: 'Pan-Africa',
     title: 'AEA Strategic Plan Mid-Term Review',
-    excerpt: 'An independent mid-term review of AEA\'s 2020â€“2024 Strategic Plan to assess achievement, gather stakeholder insights, and recommend practical priorities.',
+    excerpt: 'An independent mid-term review of AEA\'s 2020–2024 Strategic Plan to assess achievement, gather stakeholder insights, and recommend practical priorities.',
     fullContent: [
       {
         type: 'text',
         label: 'Overview',
         title: 'Project Background',
-        content: `The Association of Evangelicals in Africa (AEA), a continental umbrella body representing evangelical fellowships and para-church organizations across Africa, needed an independent mid-term review of its 2020â€“2024 Strategic Plan. The purpose was to assess what had been achieved so far, identify gaps, gather stakeholder insights, and recommend practical priorities for the remaining implementation period.`
+        content: `The Association of Evangelicals in Africa (AEA), a continental umbrella body representing evangelical fellowships and para-church organizations across Africa, needed an independent mid-term review of its 2020–2024 Strategic Plan. The purpose was to assess what had been achieved so far, identify gaps, gather stakeholder insights, and recommend practical priorities for the remaining implementation period.`
       },
       {
         type: 'text',
@@ -340,12 +340,12 @@ Our clients didn't just learn about AI. They learned how to use AI in their orga
         label: 'Our Approach',
         title: 'How we worked',
         content: `We designed a participatory mixed-methods evaluation that prioritized continental representation. Our work included:
-        â€¢ Comprehensive desk review of strategic documents and progress reports.
-        â€¢ Online surveys distributed to National Evangelical Fellowships (NEFs) across the continent.
-        â€¢ Key Informant Interviews (KIIs) with AEA leadership, board members, and commissions.
-        â€¢ Focus Group Discussions (FGDs) with youth and women representatives.
-        â€¢ A SWOT and PESTEL analysis to map the current operating environment.
-        â€¢ A sense-making workshop to validate preliminary findings with the AEA executive team.`
+        • Comprehensive desk review of strategic documents and progress reports.
+        • Online surveys distributed to National Evangelical Fellowships (NEFs) across the continent.
+        • Key Informant Interviews (KIIs) with AEA leadership, board members, and commissions.
+        • Focus Group Discussions (FGDs) with youth and women representatives.
+        • A SWOT and PESTEL analysis to map the current operating environment.
+        • A sense-making workshop to validate preliminary findings with the AEA executive team.`
       },
       {
         type: 'image',
@@ -402,11 +402,11 @@ In practice, the role required working across programmes, partnerships, operatio
         title: 'Core areas of communications support',
         content: `The engagement covered several interconnected areas:
 
-â€¢ Brand management and organizational representation â€” READO's brand assets were managed and deployed across external engagements, including supplying high-resolution logos for a joint Anticipatory Action Plan prepared for the Anticipation Hub by Plan International Germany.
-â€¢ Visibility and field branding coordination â€” Communications support extended into field visibility for health facilities and mobile teams in Baidoa, including Kulmis Health Center and Buulijimac Health Facility.
-â€¢ Donor visibility and compliance support â€” Under READO's ECHO-funded humanitarian project with Plan International, communications and visibility requirements were integrated from project inception rather than treated as an afterthought.
-â€¢ Project documentation and publication support â€” Including READO's Anticipatory Action Programme with Plan International and Welthungerhilfe, which was recommended for professional layout and published on the Anticipation Hub and ReliefWeb.
-â€¢ Rapid-response communications â€” During a Crisis Modifier activation in Baidoa, communications support contributed to the production of a Multi-cluster/Sectoral Initial Rapid Needs Assessment (MIRA) report, drawing direct praise from senior leadership.`
+• Brand management and organizational representation — READO's brand assets were managed and deployed across external engagements, including supplying high-resolution logos for a joint Anticipatory Action Plan prepared for the Anticipation Hub by Plan International Germany.
+• Visibility and field branding coordination — Communications support extended into field visibility for health facilities and mobile teams in Baidoa, including Kulmis Health Center and Buulijimac Health Facility.
+• Donor visibility and compliance support — Under READO's ECHO-funded humanitarian project with Plan International, communications and visibility requirements were integrated from project inception rather than treated as an afterthought.
+• Project documentation and publication support — Including READO's Anticipatory Action Programme with Plan International and Welthungerhilfe, which was recommended for professional layout and published on the Anticipation Hub and ReliefWeb.
+• Rapid-response communications — During a Crisis Modifier activation in Baidoa, communications support contributed to the production of a Multi-cluster/Sectoral Initial Rapid Needs Assessment (MIRA) report, drawing direct praise from senior leadership.`
       },
       {
         type: 'image',
@@ -418,10 +418,10 @@ In practice, the role required working across programmes, partnerships, operatio
         type: 'text',
         label: 'Key results',
         title: 'Tangible outcomes',
-        content: `â€¢ Support to a â‚¬1.25 million ECHO-funded project implemented with Plan International, with communications integrated from project inception.
-â€¢ Official representation in multi-stakeholder publication processes â€” including provision of high-resolution brand assets for partner-led publication and submission to the Anticipation Hub.
-â€¢ Improved field visibility for health facilities and mobile teams in Baidoa.
-â€¢ Rapid turnaround support for crisis reporting, helping reinforce READO's image as an agile and responsive implementing partner.`
+        content: `• Support to a €1.25 million ECHO-funded project implemented with Plan International, with communications integrated from project inception.
+• Official representation in multi-stakeholder publication processes — including provision of high-resolution brand assets for partner-led publication and submission to the Anticipation Hub.
+• Improved field visibility for health facilities and mobile teams in Baidoa.
+• Rapid turnaround support for crisis reporting, helping reinforce READO's image as an agile and responsive implementing partner.`
       }
     ],
     impact: 'The value of this work was not just in creating materials. It was in helping READO present itself as organized, responsive, and donor-ready across multiple touchpoints. In a humanitarian setting where partner trust and institutional perception matter enormously, communications played a direct role in reinforcing organizational credibility. (Delivered by Benson Wanjama as Lead Communications Consultant for READO Somalia.)',
@@ -435,14 +435,14 @@ In practice, the role required working across programmes, partnerships, operatio
     year: '2024',
     duration: '6 weeks',
     location: 'Kajiado West, Kenya',
-    title: 'Baseline Needs Assessment â€” Mother Esther Project',
+    title: 'Baseline Needs Assessment — Mother Esther Project',
     excerpt: 'A community-centred mixed-methods baseline needs assessment to understand the realities facing girls, women, and vulnerable households in Kajiado West, guiding a PCEA-supported rescue and education initiative.',
     fullContent: [
       {
         type: 'text',
         label: 'Overview',
         title: 'Evidence for girls\' empowerment programming',
-        content: `Mother Esther Project, a PCEA-supported girls' rescue and education initiative in Kajiado West, needed a baseline needs assessment to understand the realities facing girls, women, and vulnerable households in its target communities. The purpose was to generate evidence that could guide programme design, strengthen safeguarding interventions, and help the organization respond more effectively to issues affecting the Maasai community â€” especially girls at risk.`
+        content: `Mother Esther Project, a PCEA-supported girls' rescue and education initiative in Kajiado West, needed a baseline needs assessment to understand the realities facing girls, women, and vulnerable households in its target communities. The purpose was to generate evidence that could guide programme design, strengthen safeguarding interventions, and help the organization respond more effectively to issues affecting the Maasai community — especially girls at risk.`
       },
       {
         type: 'text',
@@ -470,9 +470,9 @@ The study combined quantitative household surveys with qualitative inquiry throu
         title: 'Research design and field execution',
         content: `The assignment included development of data collection tools, field planning, enumerator training, digital data collection using Kobo, qualitative interviews, analysis, and final reporting. The team conducted:
 
-â€¢ Household surveys across the three target villages
-â€¢ 20 Key informant interviews with chiefs, education officers, children's officers, faith leaders, school leadership, and other local actors
-â€¢ 8 Focus group discussions with men, women, teen mothers, and teaching staff
+• Household surveys across the three target villages
+• 20 Key informant interviews with chiefs, education officers, children's officers, faith leaders, school leadership, and other local actors
+• 8 Focus group discussions with men, women, teen mothers, and teaching staff
 
 The methodology included data quality controls, informed consent procedures, and a full audit trail to support the integrity of the assessment.`
       },
@@ -488,12 +488,12 @@ The methodology included data quality controls, informed consent procedures, and
         title: 'What the evidence showed',
         content: `The assessment found that harmful practices affecting girls remained deeply rooted despite awareness of their negative effects and despite the existence of laws prohibiting them:
 
-â€¢ 194 households reached across the three target communities (out of a target of 199)
-â€¢ 59.8% of respondents had no formal education â€” a major structural barrier to empowerment
-â€¢ Mean age of marriage: 21.5 years; mean age of first pregnancy: 19.7 years; youngest reported age of pregnancy: 10 years
-â€¢ 18% of households reported having a person with disability, with mobility-related disability most commonly reported
-â€¢ Men were significantly more likely to engage in economic activity than women, showing clear gender gaps in livelihoods
-â€¢ FGM was perceived to be decreasing but was still being practiced in secrecy`
+• 194 households reached across the three target communities (out of a target of 199)
+• 59.8% of respondents had no formal education — a major structural barrier to empowerment
+• Mean age of marriage: 21.5 years; mean age of first pregnancy: 19.7 years; youngest reported age of pregnancy: 10 years
+• 18% of households reported having a person with disability, with mobility-related disability most commonly reported
+• Men were significantly more likely to engage in economic activity than women, showing clear gender gaps in livelihoods
+• FGM was perceived to be decreasing but was still being practiced in secrecy`
       },
       {
         type: 'text',
@@ -501,19 +501,19 @@ The methodology included data quality controls, informed consent procedures, and
         title: 'A stronger foundation for programming',
         content: `The final output gave Mother Esther Project a strong evidence base for future programming. The report provided actionable direction in areas such as:
 
-â€¢ Awareness and sensitization on FGM, child marriage, and teenage pregnancy
-â€¢ Stronger engagement of men and community leaders
-â€¢ Livelihood and savings interventions for women and households
-â€¢ Education access and rescue infrastructure
-â€¢ Disability inclusion
-â€¢ Closer coordination with county and national government actors`
+• Awareness and sensitization on FGM, child marriage, and teenage pregnancy
+• Stronger engagement of men and community leaders
+• Livelihood and savings interventions for women and households
+• Education access and rescue infrastructure
+• Disability inclusion
+• Closer coordination with county and national government actors`
       }
     ],
     impact: 'This work helped Mother Esther Project move from a mission-driven response to a more evidence-led approach to community programming. Instead of relying only on observed cases, the organization gained a clearer picture of the scale, drivers, and interconnected nature of the issues affecting girls and vulnerable households. The findings created a stronger foundation for designing interventions that are protective, relevant, and grounded in local realities.',
     tags: ['Baseline Assessment', 'Gender', 'Safeguarding', 'FGM', 'Mixed Methods', 'Kenya'],
     image: '/images/Baseline 1.png',
   },
-  // â”€â”€ 2023 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── 2023 ──────────────────────────────────────────────────────────────────
   {
     id: 'lba-gender-assessment',
     category: 'Research',
@@ -555,12 +555,12 @@ The methodology relied on an extensive literature and document review covering g
         label: 'What We Delivered',
         title: 'A full gender assessment report',
         content: `The report examined:
-â€¢ The broader gender situation in Senegal
-â€¢ Key national and international legal and policy frameworks
-â€¢ Barriers affecting women in agriculture, finance, education, health, and decision-making
-â€¢ Institutional considerations relevant to LBA
-â€¢ Prior studies and assessments related to gender in Senegal
-â€¢ Recommended strategies for integrating gender into the proposed climate-smart agriculture programme
+• The broader gender situation in Senegal
+• Key national and international legal and policy frameworks
+• Barriers affecting women in agriculture, finance, education, health, and decision-making
+• Institutional considerations relevant to LBA
+• Prior studies and assessments related to gender in Senegal
+• Recommended strategies for integrating gender into the proposed climate-smart agriculture programme
 
 The report also outlined practical approaches for gender-responsive funding allocation, women-focused capacity building, financial inclusion, inclusive governance, and M&E with a gender lens.`
       },
@@ -576,9 +576,9 @@ The report also outlined practical approaches for gender-responsive funding allo
         title: 'What the data showed',
         content: `Women in Senegal play a major role in agriculture and food production but remain constrained by structural inequalities:
 
-â€¢ Men control 93.6% of cultivated land â€” a major structural barrier in productive agriculture.
-â€¢ Agriculture accounts for ~17% of GDP and employs around 70% of the population, making gender disparities highly significant for climate resilience outcomes.
-â€¢ The assessment confirmed that gender inclusion in climate-smart agriculture cannot be treated as an add-on â€” it has to be built into programme design, financing mechanisms, institutional arrangements, and performance tracking.`
+• Men control 93.6% of cultivated land — a major structural barrier in productive agriculture.
+• Agriculture accounts for ~17% of GDP and employs around 70% of the population, making gender disparities highly significant for climate resilience outcomes.
+• The assessment confirmed that gender inclusion in climate-smart agriculture cannot be treated as an add-on — it has to be built into programme design, financing mechanisms, institutional arrangements, and performance tracking.`
       },
       {
         type: 'text',
@@ -587,17 +587,17 @@ The report also outlined practical approaches for gender-responsive funding allo
         content: `The final output provided LBA with a structured, evidence-based gender assessment supporting stronger programme preparation and more credible integration of gender considerations for GCF processes.
 
 Core outputs:
-â€¢ A comprehensive gender assessment report tailored to climate-smart agriculture and finance in Senegal
-â€¢ Cross-sector analysis linking gender inequality to agriculture, climate vulnerability, finance, and public policy
-â€¢ Actionable recommendations for programme design, implementation, and monitoring
-â€¢ Institutional insight relevant to LBA's role in supporting women's access to agricultural finance`
+• A comprehensive gender assessment report tailored to climate-smart agriculture and finance in Senegal
+• Cross-sector analysis linking gender inequality to agriculture, climate vulnerability, finance, and public policy
+• Actionable recommendations for programme design, implementation, and monitoring
+• Institutional insight relevant to LBA's role in supporting women's access to agricultural finance`
       }
     ],
-    impact: 'This work strengthened the gender foundation of a proposed climate finance intervention â€” ensuring the programme could be informed by real structural constraints rather than generic inclusion statements. It positioned gender as central to resilience, access, productivity, and finance. Fine print: Sarah was contracted by ESF Consultants to prepare this assessment for LBA as part of GCF documentation. (Delivered by Sarah Ngondi Kaia and Benson Wanjama.)',
+    impact: 'This work strengthened the gender foundation of a proposed climate finance intervention — ensuring the programme could be informed by real structural constraints rather than generic inclusion statements. It positioned gender as central to resilience, access, productivity, and finance. Fine print: Sarah was contracted by ESF Consultants to prepare this assessment for LBA as part of GCF documentation. (Delivered by Sarah Ngondi Kaia and Benson Wanjama.)',
     tags: ['Gender Assessment', 'Climate Finance', 'Research', 'GCF', 'Agriculture'],
     image: '/images/Baseline 1.png',
   },
-  // â”€â”€ 2018 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── 2018 ──────────────────────────────────────────────────────────────────
   {
     id: 'secplus-brand-identity',
     category: 'Communications',
@@ -606,7 +606,7 @@ Core outputs:
     duration: '4 months',
     location: 'Kenya',
     title: 'Brand Identity Development for Secplus Consulting',
-    excerpt: 'Full brand identity developed from scratch for a Nairobi-based governance and compliance advisory firm â€” covering profile, letterhead, business cards, email signatures, and complimentary slips.',
+    excerpt: 'Full brand identity developed from scratch for a Nairobi-based governance and compliance advisory firm — covering profile, letterhead, business cards, email signatures, and complimentary slips.',
     fullContent: [
       {
         type: 'text',
@@ -620,7 +620,7 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
         type: 'text',
         label: 'The Brief',
         title: 'What the client needed',
-        content: `The client's initial brief was clear in ambition but open in execution: "I need to build an entire brand out of this â€” this is where you come in." Alongside the firm's business registration certificate and a preliminary logo concept document, Ken outlined the core requirements: a company profile, business cards, and shareable communications assets. The engagement grew to encompass a full suite of branded materials.`
+        content: `The client's initial brief was clear in ambition but open in execution: "I need to build an entire brand out of this — this is where you come in." Alongside the firm's business registration certificate and a preliminary logo concept document, Ken outlined the core requirements: a company profile, business cards, and shareable communications assets. The engagement grew to encompass a full suite of branded materials.`
       },
       {
         type: 'image',
@@ -634,10 +634,10 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
         title: 'Design constraints and strategic complexity',
         content: `The project presented several interlocking challenges:
 
-â€¢ Brand positioning in a trust-based industry â€” governance and compliance is a sector where credibility is signalled visually before a word is read. The brand had to communicate precision, expertise, and trustworthiness at first glance.
-â€¢ Building from scratch with limited assets â€” no physical address, no finalised staff designations, and only a nascent logo concept to start with.
-â€¢ Functional usability requirements â€” the letterhead needed to be usable in soft/digital format so Ken could type, e-sign, and send client communications without printing. The email signature needed to be embeddable directly into email clients.
-â€¢ Scalability for a growing team â€” mid-project, a new partner (Louisiana Kayika) was added, requiring the brand system to be extended seamlessly.`
+• Brand positioning in a trust-based industry — governance and compliance is a sector where credibility is signalled visually before a word is read. The brand had to communicate precision, expertise, and trustworthiness at first glance.
+• Building from scratch with limited assets — no physical address, no finalised staff designations, and only a nascent logo concept to start with.
+• Functional usability requirements — the letterhead needed to be usable in soft/digital format so Ken could type, e-sign, and send client communications without printing. The email signature needed to be embeddable directly into email clients.
+• Scalability for a growing team — mid-project, a new partner (Louisiana Kayika) was added, requiring the brand system to be extended seamlessly.`
       },
       {
         type: 'text',
@@ -645,12 +645,12 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
         title: 'The full brand suite',
         content: `The project delivered a complete branded communications toolkit:
 
-â€¢ Company Profile â€” a designed document communicating the firm's vision, mission, services, and leadership credentials, revised through iterative rounds of tracked-changes feedback.
-â€¢ Letterhead (Print & Digital) â€” a professionally designed A4 letterhead in both print-ready PDF and functional editable soft copy, enabling the client to draft and send branded communications digitally.
-â€¢ Business Cards â€” double-sided cards for both the founding Lead Consultant and the incoming partner, using the established brand template.
-â€¢ Email Signature â€” a branded HTML-compatible email signature developed for both team members, embeddable directly into email clients.
-â€¢ Complimentary Slip â€” completing the full physical stationery suite.
-â€¢ Brand Extension â€” when Louisiana Kayika joined in November 2018, her matching email signature and business card were delivered without rebuilding the visual system.`
+• Company Profile — a designed document communicating the firm's vision, mission, services, and leadership credentials, revised through iterative rounds of tracked-changes feedback.
+• Letterhead (Print & Digital) — a professionally designed A4 letterhead in both print-ready PDF and functional editable soft copy, enabling the client to draft and send branded communications digitally.
+• Business Cards — double-sided cards for both the founding Lead Consultant and the incoming partner, using the established brand template.
+• Email Signature — a branded HTML-compatible email signature developed for both team members, embeddable directly into email clients.
+• Complimentary Slip — completing the full physical stationery suite.
+• Brand Extension — when Louisiana Kayika joined in November 2018, her matching email signature and business card were delivered without rebuilding the visual system.`
       },
       {
         type: 'image',
@@ -662,7 +662,7 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
         type: 'text',
         label: 'Results',
         title: 'Key outcomes',
-        content: `Secplus launched with a complete, professional communications toolkit in place. The project demonstrated that a governance firm's brand can be built quickly, cost-effectively, and with enough flexibility to scale. Importantly, the quality of the branding work led directly to a second mandate: the client engaged LMD for company secretarial services just one month later â€” formalised through an Engagement Letter in September 2018.`
+        content: `Secplus launched with a complete, professional communications toolkit in place. The project demonstrated that a governance firm's brand can be built quickly, cost-effectively, and with enough flexibility to scale. Importantly, the quality of the branding work led directly to a second mandate: the client engaged LMD for company secretarial services just one month later — formalised through an Engagement Letter in September 2018.`
       }
     ],
     impact: 'Full brand identity established from scratch. Functional digital workflows enabled through an editable letterhead and embeddable email signature. The brand scaled seamlessly when a second partner joined within months. The trust built through branding converted directly into a broader retainer engagement. (Delivered by Benson Wanjama.)',
@@ -671,7 +671,7 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
   },
 ];
 
-// â”€â”€â”€ TICKER ITEMS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── TICKER ITEMS ──────────────────────────────────────────────────────────────────
 export const tickerItems = [
   { type: 'client', label: 'UNICEF' },
   { type: 'service', label: 'Monitoring & Evaluation' },
@@ -695,14 +695,14 @@ export const tickerItems = [
   { type: 'client', label: 'UN Women' },
 ];
 
-// â”€â”€â”€ PACKAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── PACKAGES ──────────────────────────────────────────────────────────────────
 export const packages = [
   {
     id: 'foundation',
-    emoji: 'â—Ž',
+    icon: 'Box',
     title: 'Foundation',
     description: 'Essential M&E and communications support for smaller programmes and project phases.',
-    timeline: '2â€“4 week delivery',
+    timeline: '2–4 week delivery',
     featured: false,
     features: [
       'Results Framework or MEAL Plan',
@@ -714,10 +714,10 @@ export const packages = [
   },
   {
     id: 'catalyst',
-    emoji: 'â–³',
+    icon: 'Flame',
     title: 'Catalyst',
     description: 'Comprehensive M&E, communications, and analytics support for mid-size programmes.',
-    timeline: '4â€“8 week delivery',
+    timeline: '4–8 week delivery',
     featured: true,
     features: [
       'Full MEAL Plan & Results Framework',
@@ -731,7 +731,7 @@ export const packages = [
   },
   {
     id: 'transform',
-    emoji: 'â–£',
+    icon: 'Globe',
     title: 'Transform',
     description: 'Full-service strategic partnership for multi-programme organisations and institutional donors.',
     timeline: 'Ongoing partnership',
@@ -749,14 +749,14 @@ export const packages = [
   },
 ];
 
-// â”€â”€â”€ STATS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── STATS ──────────────────────────────────────────────────────────────────
 export const stats = [
   { number: '10', suffix: '+', label: 'Years Experience' },
   { number: '3', suffix: '', label: 'Countries Active' },
   { number: '100', suffix: '%', label: 'Local Expertise' },
 ];
 
-// â”€â”€â”€ CONTACT SUBJECTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── CONTACT SUBJECTS ──────────────────────────────────────────────────────
 export const contactSubjects = [
   'Monitoring & Evaluation (M&E)',
   'Strategic Communications',
@@ -768,7 +768,7 @@ export const contactSubjects = [
   'General Enquiry',
 ];
 
-// â”€â”€â”€ ROTATING HERO WORDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── ROTATING HERO WORDS ────────────────────────────────────────────────────
 export const heroWords = [
   'credible,',
   'visible,',
