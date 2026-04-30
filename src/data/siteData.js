@@ -1,7 +1,7 @@
 
 // ─── LMD CONSULTING — SITE DATA ───────────────────────────────────────────────────
 
-export const CALENDLY_URL = 'https://calendly.com/lmdconsulting/discovery-call';
+export const CALENDLY_URL = 'https://calendly.com/lmd-consulting';
 
 // ─── SERVICES ──────────────────────────────────────────────────────────────────
 export const services = [
@@ -776,4 +776,70 @@ export const heroWords = [
   'strategic,',
   'fundable,',
   'measurable,',
+];
+
+// ─── MAPPED INSIGHTS ───────────────────────────────────────────────────────────
+// ✏️ TO UPDATE: Add or edit insights here. Each insight has:
+//   id          – URL-friendly slug (no spaces, use hyphens)
+//   title       – Headline of the insight
+//   date        – Publication date string
+//   region      – Geographic focus area
+//   mapEmbed    – (optional) iframe src URL for an embedded map, or leave empty ''
+//   mapImage    – (optional) path to a static map image, e.g. '/images/athi-flood-map.png'
+//   summary     – One-paragraph plain-language explanation of what happened
+//   insights    – Array of exactly 3 bullet-point strings (key insights)
+//   implications – (optional) Short paragraph on implications, or leave empty ''
+
+export const mappedInsights = [
+  {
+    id: 'athi-river-flooding-2024',
+    title: 'Athi River Flooding in 2024',
+    date: 'November 2024',
+    region: 'Machakos & Kajiado Counties, Kenya',
+    mapImage: '/images/Baseline 1.png',   // replace with actual map image
+    mapEmbed: '',
+    summary:
+      'In October–November 2024, unusually heavy short rains caused the Athi River to burst its banks across several points in Machakos and Kajiado counties. Low-lying settlements, smallholder farms, and feeder roads were inundated, displacing thousands of households and disrupting supply chains. The flooding coincided with already-saturated soils from the preceding long rains season, amplifying the extent of damage well beyond historical averages.',
+    insights: [
+      'Flood extent was 40% larger than the 2023 event, driven by above-average October rainfall of 180–220mm — nearly double the long-term mean.',
+      'Settlements built within 500m of the riverbank accounted for over 70% of displaced households, highlighting a persistent land-use planning gap.',
+      'Critical road links connecting Athi River town to Konza Technopolis were submerged for 6–11 days, disrupting logistics and emergency response access.',
+    ],
+    implications:
+      "The 2024 Athi flooding underscores the urgent need for riparian buffer zone enforcement and flood-resilient infrastructure investment along Kenya's seasonal river corridors. Early-warning systems tied to CHIRPS rainfall data could provide communities with 48–72 hours of advance notice.",
+  },
+  {
+    id: 'drought-northern-kenya',
+    title: 'Why Drought Persists in Northern Kenya',
+    date: 'October 2024',
+    region: 'Turkana, Marsabit & Mandera Counties, Kenya',
+    mapImage: '/images/Evaluation.png',   // replace with actual map image
+    mapEmbed: '',
+    summary:
+      'Northern Kenya has experienced near-continuous drought conditions since 2020. While short rainfall seasons have occasionally improved vegetation cover temporarily, structural drivers — degraded rangelands, groundwater depletion, and conflict-disrupted pastoral mobility — keep communities in a persistent state of food insecurity. This analysis maps the spatial overlap between drought severity, population density, and existing humanitarian response coverage.',
+    insights: [
+      'Turkana County recorded below-average rainfall in 14 of the last 18 seasonal rainfall periods, pointing to a structural rather than cyclical drought pattern.',
+      'Rangeland degradation — visible in NDVI satellite data — has reduced carrying capacity by an estimated 30%, compressing the livelihood base of pastoral communities.',
+      'Water point mapping shows that 62% of boreholes in Marsabit North sub-county are non-functional or seasonal, creating dependency on trucked water at 5x the per-litre cost of piped supply.',
+    ],
+    implications:
+      'Drought response in Northern Kenya must move beyond emergency food transfers toward investments in permanent water infrastructure, rangeland rehabilitation, and climate-adaptive livelihood diversification. Spatial data can help prioritise where permanent infrastructure will have the highest impact per shilling invested.',
+  },
+  {
+    id: 'aid-coverage-gaps',
+    title: 'Where Aid Is Missing in the Horn of Africa',
+    date: 'September 2024',
+    region: 'Horn of Africa',
+    mapImage: '/images/Unicef Booklet.png',   // replace with actual map image
+    mapEmbed: '',
+    summary:
+      'Using 3W (Who does What Where) data from humanitarian information portals, this analysis maps the spatial distribution of active humanitarian programming against population need indicators in the Horn of Africa. The gaps are striking: areas with high vulnerability scores and low programme density often sit at the intersection of insecurity, administrative complexity, and donor risk aversion — not actual inaccessibility.',
+    insights: [
+      'Sub-districts in the Jubbaland/Hiiraan border corridor in Somalia score in the top quartile for humanitarian need but appear in fewer than 5% of active programme footprints.',
+      "In South Sudan's Greater Equatoria region, recent programme withdrawals following security incidents left an estimated 180,000 people without active service providers for WASH and health.",
+      'Cross-referencing population displacement data with programme locations reveals that the majority of newly displaced people in 2024 were located outside existing programme catchment areas at the point of displacement.',
+    ],
+    implications:
+      'Coverage gap analysis is only useful if it translates into coordination action. Mapping unmet need is not the same as reaching it — but it is a necessary first step for advocacy, resource allocation decisions, and the design of flexible, rapid-response programme modalities.',
+  },
 ];

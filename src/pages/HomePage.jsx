@@ -526,7 +526,7 @@ export default function HomePage() {
           <div className="contact-details" style={{ marginTop: '3rem' }}>
             {[
               { label: 'Email',     value: <a href="mailto:info@lmdconsulting.co.ke">info@lmdconsulting.co.ke</a> },
-              { label: 'Phone',     value: '+254 700 000 000' },
+              { label: 'Phone',     value: <a href="tel:+254723539332" style={{ color: 'inherit' }}>+254 723 539 332</a> },
               { label: 'Location',  value: 'Nairobi, Kenya' },
               { label: 'Active In', value: 'Kenya · Uganda · Tanzania · Somalia · Ethiopia' },
             ].map(c => (

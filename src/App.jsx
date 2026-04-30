@@ -6,6 +6,7 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
 import ContactPage from './pages/ContactPage';
+import MappedPage from './pages/MappedPage';
 import './index.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         <Route path="/case-studies/:id" element={<CaseStudyDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/mapped" element={<MappedPage />} />
         {/* Fallback to home */}
         <Route path="*" element={<HomePage />} />
       </Routes>

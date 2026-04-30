@@ -53,6 +53,12 @@ export default function Header() {
             <a href="/#about" onClick={e => handleHashNav(e, '#about')}>About</a>
           </li>
           <li>
+            <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer">AI 4 NGOs</a>
+          </li>
+          <li>
+            <Link to="/mapped">Mapped</Link>
+          </li>
+          <li>
             <Link to="/contact" className="nav-cta">Let's Talk</Link>
           </li>
         </ul>
@@ -101,6 +107,12 @@ export default function Header() {
             </li>
             <li>
               <a href="/#about" onClick={e => { handleHashNav(e, '#about'); setMenuOpen(false); }}>About</a>
+            </li>
+            <li>
+              <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>AI 4 NGOs ↗</a>
+            </li>
+            <li>
+              <Link to="/mapped" onClick={() => setMenuOpen(false)}>Mapped</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

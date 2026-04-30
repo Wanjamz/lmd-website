@@ -13,6 +13,9 @@ export default function Footer() {
         <div className="footer-nairobi">
           Made with love ❤️ from Nairobi.
         </div>
+        <div style={{ marginTop: '0.8rem', fontSize: '0.78rem', color: 'rgba(245,242,235,0.55)', fontFamily: 'var(--mono)', letterSpacing: '0.04em' }}>
+          <a href="tel:+254723539332" style={{ color: 'rgba(245,242,235,0.55)', textDecoration: 'none' }}>+254 723 539 332</a>
+        </div>
       </div>
 
       <div className="footer-copy">
@@ -23,6 +26,12 @@ export default function Footer() {
           <Link to="/case-studies" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
             Case Studies
           </Link>
+          <Link to="/mapped" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
+            Mapped
+          </Link>
+          <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
+            AI 4 NGOs ↗
+          </a>
           <Link to="/contact" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
             Contact
           </Link>
