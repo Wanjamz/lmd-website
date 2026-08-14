@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { caseStudies } from '../data/siteData';
-
-const categories = ['All', 'M&E', 'Communications', 'Research', 'Digital Systems', 'Capacity Building'];
+import { useCaseStudies } from '../lib/useContentData';
 
 export default function CaseStudiesPage() {
+  const { data: caseStudies } = useCaseStudies();
   const [activeFilter, setActiveFilter] = useState('All');
+
+  /* Derived from the data, so a filter never renders with nothing behind it. */
+  const categories = ['All', ...new Set(caseStudies.map(cs => cs.category))];
 
   const filtered = activeFilter === 'All'
     ? caseStudies
@@ -15,15 +17,15 @@ export default function CaseStudiesPage() {
     <>
       {/* Page hero */}
       <div className="page-hero">
-        <div className="section-label">Our Work</div>
+        <div className="section-label">Work</div>
         <h1>
-          Case Studies &<br />
-          <em>Selected Projects</em>
+          What we have<br />
+          <em>actually done.</em>
         </h1>
         <p>
-          A selection of our work across Monitoring & Evaluation, Strategic
-          Communications, Research, Digital Systems, and Capacity Building in
-          East and the Horn of Africa.
+          Evaluations, research, communications, and systems delivered across
+          East and the Horn of Africa. Each entry sets out the brief, the
+          method, what we found, and who delivered it.
         </p>
       </div>
 
@@ -52,7 +54,7 @@ export default function CaseStudiesPage() {
       <section style={{ padding: '1rem 4vw 6rem' }}>
         <div className="work-grid">
           {filtered.map(cs => (
-            <Link key={cs.id} to={`/case-studies/${cs.id}`} className="work-card">
+            <Link key={cs.id} to={`/work/${cs.id}`} className="work-card">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <span className="work-card-type">{cs.category}</span>
                 <span className="work-card-type">{cs.year}</span>
@@ -85,7 +87,7 @@ export default function CaseStudiesPage() {
         {filtered.length === 0 && (
           <div style={{ textAlign: 'center', padding: '5rem 0', color: 'var(--muted)' }}>
             <p style={{ fontFamily: 'var(--serif)', fontSize: '1.25rem', marginBottom: '0.5rem' }}>
-              No case studies in this category yet.
+              Nothing in this category yet.
             </p>
             <button
               onClick={() => setActiveFilter('All')}
@@ -104,7 +106,7 @@ export default function CaseStudiesPage() {
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link to="/contact" className="btn-primary">Start a Conversation →</Link>
-          <Link to="/#services" className="btn-outline">Our Services</Link>
+          <Link to="/about" className="btn-outline">About Us</Link>
         </div>
       </div>
     </>

@@ -1,4 +1,23 @@
 import { Link } from 'react-router-dom';
+import { firm } from '../data/siteData';
+
+/* Main nav is Home · About Us · Work · Mapped · Contact.
+   The footer additionally carries what sits off the menu. */
+const footerLinks = [
+  { label: 'About Us',  to: '/about' },
+  { label: 'Work',      to: '/work' },
+  { label: 'Mapped',    to: '/mapped' },
+  { label: 'Services',  to: '/#services' },
+  { label: 'AI 4 NGOs', to: 'https://www.ai4development.co/', external: true },
+  { label: 'Contact',   to: '/contact' },
+];
+
+const footerLinkStyle = {
+  color: 'rgba(245,242,235,0.4)',
+  fontSize: '0.72rem',
+  fontFamily: 'var(--mono)',
+  letterSpacing: '0.06em',
+};
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,27 +33,23 @@ export default function Footer() {
           Made with love ❤️ from Nairobi.
         </div>
         <div style={{ marginTop: '0.8rem', fontSize: '0.78rem', color: 'rgba(245,242,235,0.55)', fontFamily: 'var(--mono)', letterSpacing: '0.04em' }}>
-          <a href="tel:+254723539332" style={{ color: 'rgba(245,242,235,0.55)', textDecoration: 'none' }}>+254 723 539 332</a>
+          <a href={`tel:${firm.phoneHref}`} style={{ color: 'rgba(245,242,235,0.55)', textDecoration: 'none' }}>{firm.phone}</a>
         </div>
       </div>
 
       <div className="footer-copy">
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', textAlign: 'right' }}>
-          <Link to="/#services" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
-            Services
-          </Link>
-          <Link to="/case-studies" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
-            Case Studies
-          </Link>
-          <Link to="/mapped" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
-            Mapped
-          </Link>
-          <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
-            AI 4 NGOs ↗
-          </a>
-          <Link to="/contact" style={{ color: 'rgba(245,242,235,0.4)', fontSize: '0.72rem', fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
-            Contact
-          </Link>
+          {footerLinks.map(link => (
+            link.external ? (
+              <a key={link.label} href={link.to} target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>
+                {link.label} ↗
+              </a>
+            ) : (
+              <Link key={link.label} to={link.to} style={footerLinkStyle}>
+                {link.label}
+              </Link>
+            )
+          ))}
           <div style={{ marginTop: '0.5rem', fontSize: '0.68rem', color: 'rgba(245,242,235,0.2)', letterSpacing: '0.04em' }}>
             Monitoring · Communications · Digital · Research
           </div>

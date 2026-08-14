@@ -1820,3 +1820,484 @@ section { padding: 3rem 4vw; }
     grid-template-columns: 2.5rem 1fr;
   }
 }
+
+/* ─── TWO-PILLAR SERVICES ──────────────────────────────────────────────── */
+.services-grid.pillar-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2.5rem;
+}
+
+.pillar-marker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-index {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pillar-kicker {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--accent2);
+  margin-bottom: 1.75rem;
+}
+
+.pillar-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pillar-features li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.pillar-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ─── WHY LMD ──────────────────────────────────────────────────────────── */
+#why-lmd {
+  padding: 6rem 4vw;
+  border-top: 1px solid var(--border);
+}
+
+.why-header {
+  margin-bottom: 3rem;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 2.5rem 3rem;
+}
+
+.why-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.why-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  padding-top: 0.25rem;
+}
+
+.why-item p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ─── INSIGHTS ─────────────────────────────────────────────────────────── */
+#insights {
+  padding: 6rem 4vw;
+  background: var(--paper2);
+  border-top: 1px solid var(--border);
+}
+
+.insights-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 2rem 4rem;
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.insights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: insight;
+  border-top: 1px solid var(--border);
+}
+
+.insight-topic {
+  counter-increment: insight;
+  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 0 1.75rem 3.5rem;
+  position: relative;
+}
+
+.insight-topic::before {
+  content: counter(insight, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1.9rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.insight-topic h3 {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+}
+
+.insight-topic p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+.insights-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.insights-subscribe p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent2);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .pillar-card { padding: 2.25rem 1.5rem; }
+  #why-lmd, #insights { padding: 4rem 4vw; }
+  .insight-topic { padding-left: 2.75rem; }
+}
+
+/* ─── ABOUT: COMPLIANCE ────────────────────────────────────────────────── */
+.compliance-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.compliance-note {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 0.9rem;
+}
+
+/* ─── ABOUT: VISION & MISSION ──────────────────────────────────────────── */
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.vm-card {
+  background: var(--paper2);
+  padding: 3.5rem 4vw;
+}
+
+.vm-card p {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-top: 1.25rem;
+}
+
+/* ─── ABOUT: DIFFERENTIATOR ────────────────────────────────────────────── */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 2.5rem;
+}
+
+.diff-grid p {
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--border);
+}
+
+.diff-answer {
+  border-top-color: var(--accent) !important;
+  color: var(--text) !important;
+}
+
+.diff-limits {
+  font-style: italic;
+}
+
+/* ─── ABOUT: TEAM ──────────────────────────────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.team-card {
+  background: var(--paper);
+  padding: 2.25rem 2rem;
+}
+
+.team-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 0.85rem;
+  color: var(--accent2);
+  line-height: 1.45;
+  margin-bottom: 0.4rem;
+}
+
+.team-years {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.team-card p {
+  font-size: 0.87rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ─── ABOUT: WHERE WE WORK ─────────────────────────────────────────────── */
+.country-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.country-chip {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.theme-list,
+.careers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.theme-list li,
+.careers-list li {
+  background: var(--paper);
+  padding: 1.6rem 1.75rem;
+}
+
+.theme-list h4,
+.careers-list h4 {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+}
+
+.theme-list p,
+.careers-list p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .vm-card { padding: 2.5rem 4vw; }
+}
+
+/* ─── SERVICE DETAIL: SELECTED WORK ────────────────────────────────────── */
+.selected-work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.selected-work-list li {
+  display: grid;
+  grid-template-columns: minmax(180px, 22%) 1fr;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+
+.sw-client {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.sw-detail {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .selected-work-list li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* ─── PILLAR CARD: GROUP LIST ──────────────────────────────────────────── */
+.pillar-features li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.pillar-count {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.pillar-index {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* ─── SERVICE DETAIL: GROUPED INVENTORY ────────────────────────────────── */
+.service-group {
+  margin-bottom: 2rem;
+}
+
+.service-group h4 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── HOW WE DELIVER VALUE ─────────────────────────────────────────────── */
+#deliver-value {
+  padding: 6rem 4vw;
+  border-top: 1px solid var(--border);
+}
+
+.value-chain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.value-link {
+  background: var(--paper);
+  padding: 2rem 1.75rem;
+}
+
+.value-link-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.value-link p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.value-close {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--accent2);
+  margin-top: 2.5rem;
+  max-width: 68ch;
+}
+
+/* ─── MOBILE OVERFLOW FIXES ────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* The 3-up stat grid overflowed the viewport on the About page. */
+  .hero-stat-grid.horizontal {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 0.75rem;
+  }
+  .hero-stat { padding: 1.1rem 0.9rem; }
+  .hero-stat .number { font-size: 2rem; }
+
+  /* "development" was wider than the viewport at the old clamp minimum. */
+  h1.hero-title { font-size: clamp(2rem, 9vw, 5rem); }
+
+  #deliver-value { padding: 4rem 4vw; }
+  .value-link { padding: 1.6rem 1.4rem; }
+}

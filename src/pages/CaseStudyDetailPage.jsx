@@ -1,8 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
-import { caseStudies, CALENDLY_URL } from '../data/siteData';
+import { CALENDLY_URL } from '../data/siteData';
+import { useCaseStudies } from '../lib/useContentData';
 
 export default function CaseStudyDetailPage() {
   const { id } = useParams();
+  const { data: caseStudies } = useCaseStudies();
   const cs = caseStudies.find(c => c.id === id);
 
   if (!cs) {
@@ -11,7 +13,7 @@ export default function CaseStudyDetailPage() {
         <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2rem', marginBottom: '1rem' }}>
           Case study not found
         </h2>
-        <Link to="/case-studies" className="btn-outline">← Back to Case Studies</Link>
+        <Link to="/work" className="btn-outline">← Back to Case Studies</Link>
       </div>
     );
   }
@@ -24,7 +26,7 @@ export default function CaseStudyDetailPage() {
     <>
       {/* Header */}
       <div className="case-study-header">
-        <Link to="/case-studies" className="back-link">All Case Studies</Link>
+        <Link to="/work" className="back-link">All Case Studies</Link>
 
         <div className="case-study-meta">
           <div className="case-meta-item">
@@ -160,7 +162,7 @@ export default function CaseStudyDetailPage() {
           >
             Discuss a Similar Project →
           </a>
-          <Link to="/case-studies" className="btn-outline">
+          <Link to="/work" className="btn-outline">
             ← All Case Studies
           </Link>
         </div>
@@ -175,7 +177,7 @@ export default function CaseStudyDetailPage() {
         }}>
           {prev ? (
             <Link
-              to={`/case-studies/${prev.id}`}
+              to={`/work/${prev.id}`}
               style={{
                 padding: '2.5rem 4vw',
                 borderRight: '1px solid var(--border)',
@@ -200,7 +202,7 @@ export default function CaseStudyDetailPage() {
 
           {next ? (
             <Link
-              to={`/case-studies/${next.id}`}
+              to={`/work/${next.id}`}
               style={{
                 padding: '2.5rem 4vw',
                 textDecoration: 'none',

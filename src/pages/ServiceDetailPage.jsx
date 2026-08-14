@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import ServiceIcon from '../components/ServiceIcon';
-import { services, caseStudies, CALENDLY_URL } from '../data/siteData';
+import { services, team, CALENDLY_URL } from '../data/siteData';
+import { useCaseStudies } from '../lib/useContentData';
 
 export default function ServiceDetailPage() {
   const { id } = useParams();
+  const { data: caseStudies } = useCaseStudies();
   const svc = services.find(s => s.id === id);
 
   if (!svc) {
@@ -17,11 +19,25 @@ export default function ServiceDetailPage() {
     );
   }
 
-  // Related case studies
-  const related = caseStudies.filter(cs =>
-    cs.category === svc.title.split(' ')[0] ||
-    cs.tags.some(t => svc.tags.includes(t))
-  ).slice(0, 3);
+  /* Examples of this work.
+     Hand-picked ids first so every service is guaranteed at least one, then
+     anything matching on category or shared tags to fill the row. */
+  const picked = (svc.examples ?? [])
+    .map(exId => caseStudies.find(cs => cs.id === exId))
+    .filter(Boolean);
+
+  const matched = caseStudies.filter(cs =>
+    !picked.includes(cs) && (
+      cs.category === svc.category ||
+      cs.tags.some(t => svc.tags.includes(t))
+    )
+  );
+
+  const related = [...picked, ...matched].slice(0, 3);
+
+  const pillarTeam = (svc.teamIds ?? [])
+    .map(tid => team.find(m => m.id === tid))
+    .filter(Boolean);
 
   // Index for nav back/forward
   const idx = services.findIndex(s => s.id === id);
@@ -36,12 +52,13 @@ export default function ServiceDetailPage() {
 
         <div className="section-label" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <ServiceIcon name={svc.icon} size={20} strokeWidth={1.5} />
-          <span>Service</span>
+          <span>Practice Area {svc.pillar}</span>
         </div>
         <h1>
           <em style={{ color: 'var(--accent)' }}>{svc.title}</em>
         </h1>
-        <p>{svc.short}</p>
+        <p className="pillar-kicker" style={{ marginBottom: '0.75rem' }}>{svc.kicker}</p>
+        <p>{svc.valueLine}</p>
 
         <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a
@@ -76,44 +93,99 @@ export default function ServiceDetailPage() {
             </div>
           </div>
 
-          {/* Features */}
+          {/* Service inventory, grouped */}
           <div>
             <div className="section-label">What's Included</div>
             <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.25rem', marginBottom: '1.5rem' }}>
               Service areas & deliverables
             </h3>
-            <ul className="service-features-list">
-              {svc.features.map(f => (
-                <li key={f}>{f}</li>
-              ))}
-            </ul>
 
-            {svc.clients && svc.clients.length > 0 && (
+            {svc.groups.map(group => (
+              <div className="service-group" key={group.title}>
+                <h4>{group.title}</h4>
+                <ul className="service-features-list">
+                  {group.items.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {svc.tools && svc.tools.length > 0 && (
               <div style={{ marginTop: '2.5rem' }}>
-                <div className="section-label">Past Clients</div>
+                <div className="section-label">Tools</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.75rem' }}>
-                  {svc.clients.map(c => (
-                    <span key={c} className="tag" style={{ color: 'var(--muted)', background: 'var(--paper2)' }}>
-                      {c}
+                  {svc.tools.map(t => (
+                    <span key={t} className="tag" style={{ color: 'var(--muted)', background: 'var(--paper2)' }}>
+                      {t}
                     </span>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {svc.frameworks && svc.frameworks.length > 0 && (
+              <div style={{ marginTop: '2rem' }}>
+                <div className="section-label">Grounded In</div>
+                <ul className="service-features-list" style={{ marginTop: '0.75rem' }}>
+                  {svc.frameworks.map(f => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
         </div>
       </section>
 
+      {/* Selected work — as listed in the firm profile */}
+      {svc.selectedWork && svc.selectedWork.length > 0 && (
+        <section className="page-section">
+          <div className="section-label">Selected Work</div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', letterSpacing: '-0.02em', marginBottom: '2rem' }}>
+            Assignments in this pillar
+          </h2>
+          <ul className="selected-work-list">
+            {svc.selectedWork.map(item => (
+              <li key={item.client}>
+                <span className="sw-client">{item.client}</span>
+                <span className="sw-detail">{item.detail}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Who delivers this pillar */}
+      {pillarTeam.length > 0 && (
+        <section className="page-section" style={{ background: 'var(--paper2)' }}>
+          <div className="section-label">Team</div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', letterSpacing: '-0.02em', marginBottom: '2rem' }}>
+            Who delivers this
+          </h2>
+          <div className="team-grid">
+            {pillarTeam.map(member => (
+              <div className="team-card" key={member.id}>
+                <h3>{member.name}</h3>
+                <div className="team-role">{member.role}</div>
+                <div className="team-years">{member.years}</div>
+                <p>{member.focus}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Related case studies */}
       {related.length > 0 && (
         <section className="page-section" style={{ background: 'var(--paper2)' }}>
-          <div className="section-label">Related Work</div>
+          <div className="section-label">Example of This Work</div>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', letterSpacing: '-0.02em', marginBottom: '2.5rem' }}>
-            Case studies in {svc.title}
+            Where we have done this
           </h2>
           <div className="work-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
             {related.map(cs => (
-              <Link key={cs.id} to={`/case-studies/${cs.id}`} className="work-card">
+              <Link key={cs.id} to={`/work/${cs.id}`} className="work-card">
                 <span className="work-card-type">{cs.category}</span>
                 <span className="work-card-client">{cs.client}</span>
                 <h3>{cs.title}</h3>

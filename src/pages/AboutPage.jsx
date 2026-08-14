@@ -1,123 +1,240 @@
 import { Link } from 'react-router-dom';
-import { Quote } from 'lucide-react';
+import {
+  about,
+  differentiator,
+  team,
+  whereWeWork,
+  whyChooseLMD,
+  careers,
+  compliance,
+  stats,
+  firm,
+  CALENDLY_URL,
+} from '../data/siteData';
 
 export default function AboutPage() {
   return (
-    <div>
-      {/* Hero */}
-      <section className="section bg-cream">
-        <div className="container">
-          <div className="grid grid-cols-2 items-center gap-8">
-            <div>
-              <span className="badge">ABOUT LMD</span>
-              <h1 className="hero-display mb-6">
-                We don't just design.<br/>
-                We build <span className="highlight">systems</span><br/>
-                that work.
-              </h1>
-              <p className="body-large mb-4">
-                LMD Consulting Group is a Kenya-based consultancy built on two foundations: technical rigour and strategic communication. We serve NGOs, donor-funded programmes, and SMEs across the Horn of Africa — helping them generate credible evidence and communicate it effectively to donors, partners, and communities.
-              </p>
-              <p className="body-regular text-muted">
-                The firm is led by two senior consultants with complementary expertise in Monitoring & Evaluation and strategic communications, supported by a network of experienced associates. Our founding consultants are based in Nairobi and Mogadishu, giving us genuine local presence across the Horn of Africa.
-              </p>
-            </div>
-            <div>
-              <img 
-                src="https://raw.githubusercontent.com/KaterinaLupacheva/react-app-with-tailwind/main/src/assets/hero-img.png" 
-                alt="Team planning"
-                className="illustration-placeholder w-full"
-                style={{ filter: 'hue-rotate(180deg)' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      {/* ── PAGE HERO ──────────────────────────────────────────────── */}
+      <div className="page-hero">
+        <div className="section-label">About Us</div>
+        <h1>
+          Firm profile &<br />
+          <em>capability statement.</em>
+        </h1>
+        <p>{about.intro}</p>
+      </div>
 
-      {/* Delivery Process Section */}
-      <section className="section">
-        <div className="container text-center">
-          <h2 className="section-heading mb-8">How We Work</h2>
-          
-          <div className="grid grid-cols-4 gap-6 text-left">
-            {[ 
-              { step: 1, title: 'Align', desc: 'Confirm purpose, key questions, stakeholders, and deliverables. Review documents and lock the evaluation framework.' },
-              { step: 2, title: 'Collect', desc: 'Design data collection tools. Deploy with ethics, consent, and rigorous quality controls.' },
-              { step: 3, title: 'Analyse', desc: 'Clean and validate datasets. Synthesize findings into actionable insights including SWOT where relevant.' },
-              { step: 4, title: 'Recommend', desc: 'Produce practical reports with prioritized recommendations. Stakeholder validation and full handover.' }
-            ].map((item) => (
-              <div key={item.step} className="card hover-blue flex flex-col" style={{ padding: '24px' }}>
-                <div style={{ 
-                  width: '40px', height: '40px', borderRadius: '50%', background: 'var(--color-accent-green)', 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'var(--color-dark-cta)',
-                  marginBottom: '16px'
-                }}>
-                  {item.step}
+      {/* ── CREDENTIALS + STATS ────────────────────────────────────── */}
+      <section style={{ padding: '5rem 4vw' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '4rem',
+            alignItems: 'start',
+          }}
+        >
+          <div>
+            <div className="section-label">Credentials</div>
+            <p className="section-intro" style={{ marginTop: '1.25rem' }}>
+              {about.credentials}
+            </p>
+
+            <div className="compliance-strip">
+              {compliance.items.map(item => (
+                <span key={item} className="tag">{item}</span>
+              ))}
+            </div>
+            <p className="compliance-note">{compliance.note}</p>
+          </div>
+
+          <div className="hero-stat-grid horizontal" style={{ alignSelf: 'start' }}>
+            {stats.map(s => (
+              <div className="hero-stat" key={s.label}>
+                <div className="number">
+                  {s.number}<span>{s.suffix}</span>
                 </div>
-                <h3 className="card-heading mb-2 hover-text">{item.title}</h3>
-                <p className="text-muted hover-text-muted">{item.desc}</p>
+                <div className="label">{s.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="section bg-cream">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="badge" style={{ background: 'white', color: 'var(--color-primary-dark)', border: '1px solid #e2e8f0' }}>25+ ORGANIZATIONS</span>
-            <div className="flex justify-center gap-8 mt-6" style={{ opacity: 0.5 }}>
-              <h3 className="card-heading" style={{ color: 'var(--color-text-muted)' }}>UNICEF</h3>
-              <h3 className="card-heading" style={{ color: 'var(--color-text-muted)' }}>READO</h3>
-              <h3 className="card-heading" style={{ color: 'var(--color-text-muted)' }}>SECPLUS</h3>
-            </div>
-          </div>
-
-          <div className="card text-left max-w-3xl mx-auto relative mb-12" style={{ borderLeft: '6px solid var(--color-primary-dark)' }}>
-            <Quote size={48} color="var(--color-accent-green)" className="absolute -top-4 -left-4 bg-white rounded-full p-2 shadow-sm" />
-            <p className="body-large mb-6" style={{ fontSize: '20px', lineHeight: 1.6, marginTop: '16px' }}>
-              "Working with LMD is working with a firm that has the intuition to capture your vision and turn it into communication strategies that resonate with your audience and represent you clearly to donors, partners, and potential clients."
-            </p>
-            <div>
-              <p style={{ fontWeight: 700, color: 'var(--color-primary-dark)' }}>Ken Martin Gitari</p>
-              <p className="text-muted">Managing Director, Secplus Kenya</p>
-            </div>
-          </div>
-
-          <div className="flex justify-center gap-6 flex-wrap">
-            <div className="card text-center" style={{ width: '200px', padding: '24px' }}>
-              <h3 style={{ fontSize: '32px', color: 'var(--color-accent-orange)', marginBottom: '8px' }}>25+</h3>
-              <p className="text-muted font-bold" style={{ fontSize: '14px' }}>Organizations</p>
-            </div>
-            <div className="card text-center" style={{ width: '200px', padding: '24px' }}>
-              <h3 style={{ fontSize: '32px', color: 'var(--color-primary-dark)', marginBottom: '8px' }}>HOA</h3>
-              <p className="text-muted font-bold" style={{ fontSize: '14px' }}>Kenya + Horn of Africa</p>
-            </div>
-            <div className="card text-center" style={{ width: '200px', padding: '24px' }}>
-              <h3 style={{ fontSize: '32px', color: 'var(--color-accent-green)', marginBottom: '8px' }}>100%</h3>
-              <p className="text-muted font-bold" style={{ fontSize: '14px' }}>M&E + Comms Specialists</p>
-            </div>
-          </div>
+      {/* ── VISION & MISSION ───────────────────────────────────────── */}
+      <section className="vision-mission">
+        <div className="vm-card">
+          <div className="section-label">Vision</div>
+          <p>{about.vision}</p>
+        </div>
+        <div className="vm-card">
+          <div className="section-label">Mission</div>
+          <p>{about.mission}</p>
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="section bg-navy text-center">
-        <div className="container">
-          <h2 className="section-heading text-white mb-6">Want to understand how we work?</h2>
-          <p className="body-large text-white mb-8" style={{ opacity: 0.9 }}>Book a 30-minute intro call to discuss your objectives.</p>
-          <Link to="/scheduletime" className="btn btn-primary" style={{ background: 'var(--color-accent-green)', color: 'var(--color-dark-cta)' }}>
-            Book a Free Call →
-          </Link>
+      {/* ── WHAT MAKES US DIFFERENT ────────────────────────────────── */}
+      <section style={{ padding: '5rem 4vw' }}>
+        <div className="section-label">What Makes Us Different</div>
+        <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', marginBottom: '2rem' }}>
+          One team, one voice,<br />
+          <em>one project number.</em>
+        </h2>
+
+        <div className="diff-grid">
+          <p className="diff-problem">{differentiator.problem}</p>
+          <p className="diff-answer">{differentiator.answer}</p>
+          <p className="diff-limits">{differentiator.limits}</p>
         </div>
       </section>
-      
-      <style>{`
-        .hover-blue:hover { background-color: var(--color-primary-dark); }
-        .hover-blue:hover .hover-text { color: white; }
-        .hover-blue:hover .hover-text-muted { color: rgba(255,255,255,0.8); }
-      `}</style>
-    </div>
+
+      {/* ── TEAM ───────────────────────────────────────────────────── */}
+      <section
+        style={{
+          padding: '5rem 4vw',
+          background: 'var(--paper2)',
+          borderTop: '1px solid var(--border)',
+          borderBottom: '1px solid var(--border)',
+        }}
+      >
+        <div className="section-label">The Team</div>
+        <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', marginBottom: '3rem' }}>
+          Who does the work.
+        </h2>
+
+        <div className="team-grid">
+          {team.map(member => (
+            <div className="team-card" key={member.id}>
+              <h3>{member.name}</h3>
+              <div className="team-role">{member.role}</div>
+              <div className="team-years">{member.years}</div>
+              <p>{member.focus}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHERE WE WORK ──────────────────────────────────────────── */}
+      <section style={{ padding: '5rem 4vw' }}>
+        <div className="section-label">Where We Work</div>
+        <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', marginBottom: '1.5rem' }}>
+          Concentrated where<br />
+          <em>our team is strongest.</em>
+        </h2>
+
+        <div className="country-strip">
+          {firm.countries.map(c => (
+            <span key={c} className="country-chip">{c}</span>
+          ))}
+        </div>
+
+        <p className="section-intro" style={{ marginBottom: '2rem', maxWidth: '68ch' }}>
+          {whereWeWork.intro}
+        </p>
+
+        <ul className="theme-list">
+          {whereWeWork.themes.map(theme => {
+            const [head, ...rest] = theme.split(' — ');
+            return (
+              <li key={theme}>
+                <h4>{head}</h4>
+                {rest.length > 0 && <p>{rest.join(' — ')}</p>}
+              </li>
+            );
+          })}
+        </ul>
+
+        <p className="section-intro" style={{ marginTop: '2.5rem', maxWidth: '68ch' }}>
+          {whereWeWork.clients}
+        </p>
+      </section>
+
+      {/* ── WHY ORGANISATIONS CHOOSE LMD ───────────────────────────── */}
+      <section
+        style={{
+          padding: '5rem 4vw',
+          background: 'var(--paper2)',
+          borderTop: '1px solid var(--border)',
+        }}
+      >
+        <div className="section-label">Why LMD</div>
+        <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', marginBottom: '3rem' }}>
+          Why organisations choose us.
+        </h2>
+
+        <ul className="why-list">
+          {whyChooseLMD.map((reason, i) => (
+            <li key={reason} className="why-item">
+              <span className="why-num">{String(i + 1).padStart(2, '0')}</span>
+              <p>{reason}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* ── CAREERS ────────────────────────────────────────────────── */}
+      <section style={{ padding: '5rem 4vw' }}>
+        <div className="section-label">Careers</div>
+        <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', marginBottom: '1.5rem' }}>
+          We hire slowly<br />
+          <em>and deliberately.</em>
+        </h2>
+        <p className="section-intro" style={{ marginBottom: '2rem', maxWidth: '62ch' }}>
+          {careers.intro}
+        </p>
+
+        <ul className="careers-list">
+          {careers.profiles.map(profile => {
+            const [head, ...rest] = profile.split(' — ');
+            return (
+              <li key={profile}>
+                <h4>{head}</h4>
+                {rest.length > 0 && <p>{rest.join(' — ')}</p>}
+              </li>
+            );
+          })}
+        </ul>
+
+        <p className="section-intro" style={{ marginTop: '2.5rem', maxWidth: '62ch' }}>
+          {careers.howToApply}
+        </p>
+        <a href={`mailto:${firm.email}`} className="btn-outline" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+          {firm.email} →
+        </a>
+      </section>
+
+      {/* ── CTA ────────────────────────────────────────────────────── */}
+      <div
+        style={{
+          background: 'var(--paper2)',
+          borderTop: '1px solid var(--border)',
+          padding: '4rem 4vw',
+          textAlign: 'center',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(1.2rem, 2vw, 1.6rem)',
+            marginBottom: '1.5rem',
+            letterSpacing: '-0.01em',
+          }}
+        >
+          Send us the TOR, the RFP, or a paragraph on what you are trying to do.
+        </p>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link to="/contact" className="btn-primary">Start a Conversation →</Link>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            Book a Free Call
+          </a>
+        </div>
+      </div>
+    </>
   );
 }

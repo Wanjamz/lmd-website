@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { contactSubjects, CALENDLY_URL } from '../data/siteData';
+import { contactSubjects, firm, CALENDLY_URL } from '../data/siteData';
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -72,12 +72,13 @@ export default function ContactPage() {
       {/* Left info panel */}
       <div className="contact-page-info">
         <div className="section-label">Contact</div>
-        <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '1.5rem', maxWidth: '16ch' }}>
-          Let's build something <em style={{ color: 'var(--accent)' }}>impactful</em> together.
+        <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '1.5rem', maxWidth: '18ch' }}>
+          A conversation <em style={{ color: 'var(--accent)' }}>starts</em> everything.
         </h1>
-        <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '38ch' }}>
-          Tell us what you're working on and we'll get back to you within 48 hours.
-          If you'd prefer to speak directly, book a free 30-minute discovery call.
+        <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '42ch' }}>
+          Send us the TOR, the RFP, or a paragraph on what you are trying to do.
+          We will reply within two working days with a clear yes, no, or a
+          referral to someone better placed.
         </p>
 
         <a
@@ -92,10 +93,10 @@ export default function ContactPage() {
 
         <div className="contact-details" style={{ marginBottom: '3rem' }}>
           {[
-            { label: 'Email', value: <a href="mailto:info@lmdconsulting.co.ke" style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>info@lmdconsulting.co.ke</a> },
-            { label: 'Phone', value: '+254 700 000 000' },
-            { label: 'Office', value: 'Nairobi, Kenya' },
-            { label: 'Active In', value: 'Kenya · Uganda · Tanzania · Somalia · Ethiopia · Sudan' },
+            { label: 'Email', value: <a href={`mailto:${firm.email}`} style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>{firm.email}</a> },
+            { label: 'Phone', value: <a href={`tel:${firm.phoneHref}`} style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>{firm.phone}</a> },
+            { label: 'Office', value: firm.location },
+            { label: 'Active In', value: firm.countries.join(' · ') },
           ].map(c => (
             <div className="contact-item" key={c.label}>
               <span className="contact-item-label">{c.label}</span>
@@ -109,9 +110,9 @@ export default function ContactPage() {
             QUICK LINKS
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <Link to="/#services" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Our Services →</Link>
-            <Link to="/case-studies" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Case Studies →</Link>
-            <Link to="/#packages" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Packages & Pricing →</Link>
+            <Link to="/about" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>About Us →</Link>
+            <Link to="/work" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Work →</Link>
+            <Link to="/mapped" style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Mapped →</Link>
           </div>
         </div>
       </div>
@@ -133,7 +134,7 @@ export default function ContactPage() {
               Message received. Thank you.
             </p>
             <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-              We'll be in touch within 48 hours. If your request is urgent,
+              We will reply within two working days. If your request is urgent,
               please book a call directly using the link on the left.
             </p>
             <button
@@ -264,7 +265,7 @@ export default function ContactPage() {
                 {sending ? 'Sending…' : 'Send Message →'}
               </button>
               <span style={{ fontSize: '0.78rem', color: 'var(--muted)', fontFamily: 'var(--mono)', letterSpacing: '0.04em' }}>
-                We respond within 48 hours
+                We reply within two working days
               </span>
             </div>
           </form>

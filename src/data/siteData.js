@@ -3,165 +3,421 @@
 
 export const CALENDLY_URL = 'https://calendly.com/lmd-consulting';
 
-// ─── SERVICES ──────────────────────────────────────────────────────────────────
-export const services = [
+// ─── FIRM DETAILS ──────────────────────────────────────────────────────────────
+export const firm = {
+  name: 'LMD Consulting Group',
+  email: 'info@lmdconsulting.co',
+  phone: '+254 788 850 900',
+  phoneHref: '+254788850900',
+  website: 'www.lmdconsulting.co',
+  location: 'Nairobi, Kenya',
+  countries: ['Kenya', 'Somalia', 'Djibouti', 'Ethiopia', 'South Sudan'],
+};
+
+// ─── ABOUT, VISION, MISSION ────────────────────────────────────────────────────
+export const about = {
+  intro: `LMD Consulting Group is a Kenya-registered consultancy firm supporting local and international NGOs, foundations, and donor-funded programmes across Kenya, Somalia, Djibouti, Ethiopia, and South Sudan.`,
+  credentials: `Our founding consultants bring a combined 40+ years of monitoring and evaluation, agricultural and market-systems programming, and strategic communications and design work across FAO, WFP, UNICEF, UNFPA, IOM, USAID, GIZ, SIDA, CBI, and READO Somalia. LMD is Kenya-registered (CR12), KRA-PIN registered, and holds a current Tax Compliance Certificate and a current Single Business Permit. Our Founder operates under an active UNICEF Long-Term Agreement for individual graphic-design consultancy.`,
+  vision: `To be the evidence and communications partner every serious NGO and foundation in the Horn of Africa calls first.`,
+  mission: `To turn programme work into the evidence and communications donors will fund — with rigour, clarity, and respect for the people the work is meant to serve.`,
+};
+
+// ─── WHAT MAKES US DIFFERENT ───────────────────────────────────────────────────
+export const differentiator = {
+  problem: `Most consulting relationships fragment. One firm designs the baseline. Another writes the report. A third designs the publication. A fourth builds the donor deck. By the time everything is stitched together, the narrative has drifted, the evidence has been softened, and the client has spent more than the sum of the parts.`,
+  answer: `We work differently. Sarah Ng'ondi Kaia leads the research. George Mutuku Mulatya brings the sector-specific technical depth where it's needed — agriculture, livelihoods, market systems. Benson Wanjama turns the findings into publication-grade communication products under UNICEF LTA standards. One team, one voice, one project number.`,
+  limits: `We also know what we don't do. We don't run construction supervision. We don't do multi-camera film production. We don't operate outside the Horn of Africa. When you need those things, we'll refer you to someone who does them better than we would.`,
+  // Homepage uses this shorter line; `answer` (which names the team) still
+  // runs on the About page.
+  teamLine: `At LMD we work cohesively as a team delivering synchronized and seamless outputs.`,
+};
+
+// ─── TEAM ──────────────────────────────────────────────────────────────────────
+export const team = [
   {
-    id: 'monitoring-evaluation',
-    icon: 'Target',
-    title: 'Monitoring & Evaluation',
-    short: 'Rigorous systems that measure what matters — from MEAL frameworks to full impact evaluations.',
-    description: `We design and implement comprehensive Monitoring, Evaluation, Accountability, and Learning (MEAL) systems for development organisations operating across East Africa. Our M&E work is built on a simple belief: evidence should drive decisions, not just fill reports.
-
-Whether you need a results framework from scratch, a rigorous baseline study, or a summative evaluation that satisfies the most demanding donor — we bring both technical rigour and contextual intelligence to every engagement.
-
-Our team has designed M&E systems for programmes operating in Kenya, Somalia, Ethiopia, South Sudan, and Uganda, working with everything from community-level projects to multi-country initiatives.`,
-    features: [
-      'MEAL Strategy & Plan Design',
-      'Results Frameworks & Logic Models',
-      'Baseline, Midline & Endline Evaluations',
-      'Real-Time Monitoring Systems',
-      'Theory of Change Development',
-      'Data Quality Assessments (DQA)',
-      'Programme Impact Evaluations',
-      'Indicator Development & Tracking',
-      'Participatory Evaluation Design',
-      'Accountability & Feedback Systems',
-    ],
-    tags: ['Results Frameworks', 'MEAL Plans', 'Evaluation Design', 'Baseline Studies'],
-    callout: 'Every programme deserves evidence that travels. We build M&E systems that generate insights your team actually uses — and donors actually trust.',
-    clients: ['UNICEF', 'ActionAid', 'USAID', 'GIZ', 'IRC'],
+    id: 'sarah-ngondi-kaia',
+    name: "Sarah Ng'ondi Kaia",
+    role: 'MEL Specialist',
+    years: '14 years',
+    focus: 'Leads the research on every engagement.',
   },
   {
-    id: 'strategic-communications',
-    icon: 'Megaphone',
-    title: 'Strategic Communications',
-    short: 'From donor reports to advocacy campaigns — communication that earns attention, trust, and funding.',
-    description: `Strategic communications is the bridge between evidence and action. We help development organisations articulate their work in ways that inform, inspire, and sustain funding relationships.
-
-Too many NGOs produce brilliant work that nobody hears about. Too many impact reports sit in inboxes, unread. We fix that. Our communications work is grounded in the evidence your programmes generate — and shaped by what your specific audiences need to hear.
-
-We've produced communications strategies and knowledge products for organisations across health, education, livelihoods, gender, and governance sectors.`,
-    features: [
-      'Organisational Communications Strategies',
-      'Donor Reports & Impact Narratives',
-      'Knowledge Products & Policy Briefs',
-      'Booklets, Brochures & Case Studies',
-      'Campaign Development & Messaging',
-      'Brand Positioning & Voice Guides',
-      'Advocacy Communications',
-      'Annual Reports & Social Impact Reports',
-      'Website Content & Social Media Strategy',
-      'Media Engagement Support',
-    ],
-    tags: ['Donor Reporting', 'Knowledge Products', 'Campaigns', 'Advocacy'],
-    callout: "We don't just write reports — we produce communication assets that make your work legible, credible, and compelling to the people who fund it.",
-    clients: ['SecPlus Kenya', 'IRC', 'Plan International', 'Oxfam'],
+    id: 'george-mutuku-mulatya',
+    name: 'George Mutuku Mulatya',
+    role: 'Agricultural Economist & Market Systems Advisor',
+    years: '28 years',
+    focus: 'Named for agriculture, livelihoods, market-systems, and cooperative-strengthening assignments.',
   },
   {
-    id: 'digital-systems',
-    icon: 'Database',
-    title: 'Digital Systems',
-    short: 'Modern data infrastructure for development organisations — dashboards, mobile tools, and MIS solutions.',
-    description: `Paper-based data collection and fragmented spreadsheets cost development organisations time, accuracy, and credibility with donors. We build digital solutions that work in the field — across connectivity challenges, staff turnover, and the realities of humanitarian operations.
-
-Our digital systems work is practical, not theoretical. We don't propose tools your team won't use. We assess your existing data flows, understand your programme model, and design solutions that make monitoring easier — not more bureaucratic.
-
-Every system we build comes with training and transition support so adoption actually sticks.`,
-    features: [
-      'Mobile Data Collection (KoBoToolbox, ODK)',
-      'Management Information Systems (MIS)',
-      'PowerBI & Tableau Dashboards',
-      'Data Architecture & Flow Design',
-      'Digital M&E System Integration',
-      'GIS & Mapping Solutions',
-      'Database Design & Management',
-      'System Training & Ongoing Support',
-      'Data Security & Ethics Frameworks',
-      'Offline-First Solutions for Remote Areas',
-    ],
-    tags: ['Data Management', 'Dashboards', 'Digital Tools', 'MIS'],
-    callout: 'Your programme generates valuable data every day. We help you capture it, organise it, and visualise it so decisions become faster and smarter.',
-    clients: ['ActionAid', 'World Vision', 'Concern Worldwide', 'MERCY CORPS'],
-  },
-  {
-    id: 'research-analytics',
-    icon: 'Search',
-    title: 'Research & Analytics',
-    short: 'Contextually grounded research that generates actionable insights for complex development challenges.',
-    description: `Good development programming is built on evidence. We design and conduct rigorous research — qualitative, quantitative, and mixed methods — that is deeply grounded in East Africa's social, political, and operational context.
-
-We're not parachute researchers. Our team has long-standing relationships with communities, governments, and civil society organisations across the region. We understand the sensitivities, the languages, and the power dynamics that shape research quality.
-
-Every research product we deliver is designed to answer a specific question your organisation needs answered — not to produce academic output for its own sake.`,
-    features: [
-      'Qualitative Research Design & Facilitation',
-      'Quantitative Surveys & Statistical Analysis',
-      'Mixed-Methods Studies',
-      'Gender & Social Inclusion Analysis',
-      'Needs & Situational Assessments',
-      'Conflict-Sensitive Research',
-      'Policy Research & Analysis',
-      'Rapid Market & Feasibility Assessments',
-      'Focus Group Discussion Facilitation',
-      'Key Informant Interview Design',
-    ],
-    tags: ['Qualitative Research', 'Quantitative Studies', 'Mixed Methods', 'Gender Analysis'],
-    callout: "We don't produce research reports that sit on shelves. Every study is designed around a specific decision your organisation needs to make.",
-    clients: ['GIZ', 'UN Women', 'FCDO', 'ActionAid'],
-  },
-  {
-    id: 'capacity-building',
-    icon: 'Users',
-    title: 'Capacity Building',
-    short: 'Building internal MEAL and communications competency that outlasts any consultancy engagement.',
-    description: `Technical assistance only creates lasting change when it builds the capacity of local teams. Our capacity building programmes are designed around your organisation's specific gaps, your staff's existing knowledge, and the demands of your donors and programmes.
-
-We don't believe in one-size-fits-all training. Before we design any curriculum, we conduct a learning needs assessment. Before we run any workshop, we understand what has already been tried. Our facilitation approach is participatory, contextually relevant, and built to generate practical change — not certificates.
-
-We measure our success by what your team can do without us when we're done.`,
-    features: [
-      'Learning Needs Assessment (LNA)',
-      'MEAL Training & Facilitation',
-      'Training of Trainers (TOT)',
-      'Communications Coaching & Mentorship',
-      'Modular Curriculum Design',
-      'Peer Learning Programme Design',
-      'Leadership & Management Development',
-      'Organisational Learning Culture Facilitation',
-      'Post-Training Coaching & Follow-Up',
-      'Competency Frameworks',
-    ],
-    tags: ['Training Design', 'Facilitation', 'TOT', 'Organisational Learning'],
-    callout: "We measure our success by how much your team can do without us when we're done.",
-    clients: ['Multiple NGO Consortium', 'ActionAid', 'Plan International', 'IRC'],
-  },
-  {
-    id: 'knowledge-management',
-    icon: 'BookOpen',
-    title: 'Knowledge Management',
-    short: 'Capturing, organising, and sharing institutional knowledge so your learning stays where it belongs.',
-    description: `Development organisations generate enormous amounts of learning — from field visits, project experience, evaluations, and crises. Most of it is never properly captured. People leave, institutional memory walks out the door, and programmes repeat avoidable mistakes.
-
-We design knowledge management systems and processes that make learning a regular practice — not an afterthought at project close. From after-action reviews and documentation frameworks to full knowledge portals, we help your organisation learn from itself.
-
-Our knowledge management work is particularly valuable for multi-year programmes and consortia where organisational learning is critical to adaptive management.`,
-    features: [
-      'Knowledge Audit & Gap Mapping',
-      'Learning System Design',
-      'After-Action Reviews (AAR)',
-      'Programme Documentation Frameworks',
-      'Impact Stories & Case Study Writing',
-      'Research Briefs & Policy Papers',
-      'Institutional Memory Systems',
-      'Learning Events & Reflection Workshops',
-      'Knowledge Portal Design & Management',
-      'Lessons Learned Frameworks',
-    ],
-    tags: ['Documentation', 'Learning Systems', 'Research Publications', 'Impact Reports'],
-    callout: "Your organisation's greatest asset is what your team has learned. We help you capture it before it disappears — and put it to work.",
-    clients: ['UNICEF', 'World Vision', 'Oxfam', 'Save the Children'],
+    id: 'benson-wanjama',
+    name: 'Benson Wanjama',
+    role: 'Communications & Design Specialist, LMD Founder',
+    years: '10 years',
+    focus: 'Operates under an active UNICEF Long-Term Agreement. Supported by junior designers and field videographers as project load requires.',
   },
 ];
+
+// ─── OUR EXPERTISE ─────────────────────────────────────────────────────────────
+export const expertise = {
+  intro: `At LMD Consulting, we bring together evidence, communication, and technology to help organizations make informed decisions, communicate their impact, and build systems that support long-term growth.`,
+  note: `Our services are organized into three core practice areas.`,
+};
+
+// ─── SERVICES — THREE PILLARS ──────────────────────────────────────────────────
+// Each pillar carries grouped service lists. The homepage cards show the group
+// headings only; the full inventory lives on the pillar detail page.
+export const services = [
+  {
+    id: 'evidence',
+    pillar: '01',
+    icon: 'Target',
+    title: 'Evidence',
+    kicker: 'Research. Monitoring. Evaluation. Learning.',
+    short: 'Strong decisions begin with reliable evidence.',
+    description: `Strong decisions begin with reliable evidence.
+
+We support governments, development partners, NGOs, humanitarian organizations, and private sector institutions to generate, analyze, and use data for planning, accountability, and learning.`,
+    valueLine: 'Evidence helps organizations understand what is happening.',
+    groups: [
+      {
+        title: 'Monitoring, Evaluation & Learning (MEAL)',
+        items: [
+          'MEAL Framework Design',
+          'Performance Monitoring Systems',
+          'Indicator Development',
+          'Results Frameworks',
+          'Theory of Change Development',
+          'Logical Framework (Logframe) Design',
+          'Learning Agenda Development',
+        ],
+      },
+      {
+        title: 'Research & Assessments',
+        items: [
+          'Baseline Studies',
+          'Midline Studies',
+          'Endline Evaluations',
+          'Needs Assessments',
+          'Feasibility Studies',
+          'Market Assessments',
+          'Perception Studies',
+          'Knowledge, Attitudes & Practices (KAP) Surveys',
+          'Organizational Assessments',
+        ],
+      },
+      {
+        title: 'Data Collection & Analysis',
+        items: [
+          'Quantitative Data Collection',
+          'Qualitative Research',
+          'Survey Design',
+          'Mobile Data Collection',
+          'Data Cleaning & Quality Assurance',
+          'Statistical Analysis',
+          'Data Interpretation',
+        ],
+      },
+      {
+        title: 'Data Visualization & Insights',
+        items: [
+          'Interactive Dashboards',
+          'GIS Mapping',
+          'Infographics',
+          'Data Storytelling',
+          'Learning Reports',
+          'Evaluation Reports',
+          'Research Publications',
+        ],
+      },
+    ],
+    tools: ['SurveyCTO', 'KoboCollect', 'ODK'],
+    frameworks: [
+      'Market Systems Development',
+      'Adopt-Adapt-Expand-Respond (AAER)',
+      'OECD DAC evaluation criteria',
+      'Gender-responsive evaluation',
+    ],
+    tags: ['MEAL', 'Baselines', 'Research', 'Data Visualisation'],
+    callout: 'Strong decisions begin with reliable evidence.',
+    selectedWork: [
+      { client: 'Mother Esther Project', detail: 'Baseline on FGM and early marriages, Kajiado West.' },
+      { client: 'ACWICT', detail: 'M&E SOPs review and development.' },
+      { client: 'AEA', detail: 'Strategic Plan Midterm Review.' },
+      { client: 'CBI', detail: "MEL framework for Women's Economic Empowerment programme in the macadamia value chain." },
+      { client: 'STS International Solidarity', detail: 'MEL for FAO, WFP and SIDA-funded resilience and livelihoods programmes in Somalia.' },
+    ],
+    teamIds: ['sarah-ngondi-kaia', 'george-mutuku-mulatya'],
+    category: 'M&E',
+    examples: ['mother-esther-baseline', 'aea-midterm-review', 'lba-gender-assessment'],
+  },
+  {
+    id: 'communication',
+    pillar: '02',
+    icon: 'Megaphone',
+    title: 'Communication',
+    kicker: 'Stories that build trust. Design that creates impact.',
+    short: 'Communication that is clear, professional, and strategic.',
+    description: `Stories that build trust. Design that creates impact.
+
+We help organizations communicate clearly, professionally, and strategically through compelling visual identity, publications, storytelling, and digital communications.`,
+    valueLine: 'Communication transforms evidence into meaningful stories, engagement, and influence.',
+    groups: [
+      {
+        title: 'Brand & Identity',
+        items: [
+          'Brand Strategy',
+          'Visual Identity Design',
+          'Logo Design',
+          'Brand Guidelines',
+          'Corporate Identity Systems',
+        ],
+      },
+      {
+        title: 'Publications & Reports',
+        items: [
+          'Annual Reports',
+          'Donor Reports',
+          'Impact Reports',
+          'Policy Briefs',
+          'Research Publications',
+          'White Papers',
+          'Company Profiles',
+          'Capability Statements',
+          'Brochures',
+          'Newsletters',
+        ],
+      },
+      {
+        title: 'Strategic Communications',
+        items: [
+          'Communication Strategies',
+          'Campaign Development',
+          'Knowledge Management',
+          'Stakeholder Communications',
+          'Internal Communications',
+          'Media & Public Relations Support',
+        ],
+      },
+      {
+        title: 'Creative Design',
+        items: [
+          'Graphic Design',
+          'Presentation Design',
+          'Infographics',
+          'Data Visualization',
+          'Social Media Design',
+          'Marketing Materials',
+          'Exhibition & Event Branding',
+          'Print & Digital Publications',
+        ],
+      },
+      {
+        title: 'Storytelling & Content',
+        items: [
+          'Success Stories',
+          'Case Studies',
+          'Photography',
+          'Videography',
+          'Documentary Production',
+          'Motion Graphics',
+          'Animation',
+          'Social Media Content',
+          'Website Content Development',
+        ],
+      },
+    ],
+    tools: ['Adobe InDesign', 'Illustrator', 'Photoshop'],
+    frameworks: [
+      'UNICEF Long-Term Agreement standards',
+      'USAID, UKAID and AFDB co-branding compliance',
+    ],
+    tags: ['Annual Reports', 'Policy Briefs', 'Brand Identity', 'Storytelling'],
+    callout: 'Stories that build trust. Design that creates impact.',
+    selectedWork: [
+      { client: 'UNICEF Zambia', detail: '2026 Social Sector Budget Brief; 2025 State of Children Infographic Booklet for MP advocacy.' },
+      { client: 'IOM Somalia', detail: 'Displacement Tracking Matrix information products under USAID / UKAID / AFDB co-branding.' },
+      { client: 'READO Somalia', detail: 'Ongoing communications and donor visibility since 2022, FAO / SHF-funded.' },
+      { client: 'NIRAS Africa', detail: 'Multi-country visual communications across seven African offices.' },
+    ],
+    teamIds: ['benson-wanjama'],
+    category: 'Communications',
+    examples: ['unicef-zambia-advocacy', 'reado-somalia-communications', 'secplus-brand-identity'],
+  },
+  {
+    id: 'digital',
+    pillar: '03',
+    icon: 'Database',
+    title: 'Digital',
+    kicker: 'Digital experiences designed for growth.',
+    short: 'Platforms and systems that help organizations work smarter.',
+    description: `Technology should help organizations work smarter, connect better, and deliver greater impact.
+
+We build digital platforms and intelligent systems that improve organizational performance and strengthen engagement.`,
+    valueLine: 'Digital provides the technology and systems that enable organizations to operate more effectively and scale their impact.',
+    groups: [
+      {
+        title: 'Websites & Digital Platforms',
+        items: [
+          'Website Design',
+          'Website Development',
+          'Website Redesign',
+          'Website Audits',
+          'Website Maintenance',
+          'Website Care Plans',
+          'Landing Pages',
+          'Client Portals',
+          'Knowledge Platforms',
+        ],
+      },
+      {
+        title: 'Hosting & Infrastructure',
+        items: [
+          'Domain Registration',
+          'Website Hosting',
+          'Business Email Solutions',
+          'SSL Certificates',
+          'Website Migration',
+          'Website Backups',
+          'Security Monitoring',
+          'Performance Optimization',
+        ],
+      },
+      {
+        title: 'AI Solutions',
+        items: [
+          'AI Readiness Assessments',
+          'AI Strategy',
+          'AI Assistants',
+          'AI Chatbots',
+          'AI Knowledge Bases',
+          'Proposal Support Systems',
+          'Content Automation',
+          'Document Intelligence',
+        ],
+      },
+      {
+        title: 'Automation & Productivity',
+        items: [
+          'Workflow Automation',
+          'Microsoft 365 Automation',
+          'CRM Setup & Integration',
+          'Process Digitization',
+          'Form Development',
+          'Approval Workflows',
+          'Digital Document Management',
+        ],
+      },
+      {
+        title: 'Digital Growth',
+        items: [
+          'Search Engine Optimization (SEO)',
+          'Website Analytics',
+          'User Experience (UX) Reviews',
+          'Conversion Optimization',
+          'Accessibility Reviews',
+          'Website Performance Monitoring',
+        ],
+      },
+    ],
+    tools: [],
+    frameworks: [],
+    tags: ['Websites', 'AI Solutions', 'Automation', 'Digital Growth'],
+    callout: 'Digital experiences designed for growth.',
+    // ⚠️ No named digital engagements supplied yet — add them here so this
+    // pillar carries the same evidence as the other two.
+    selectedWork: [],
+    teamIds: ['benson-wanjama'],
+    category: 'Digital Systems',
+    examples: ['ai4dev-platform'],
+  },
+];
+
+// ─── HOW WE DELIVER VALUE ──────────────────────────────────────────────────────
+export const howWeDeliverValue = {
+  intro: 'Every project combines our three core disciplines:',
+  close: `Together, these three pillars enable us to deliver integrated solutions that move beyond individual services to create measurable, lasting value.`,
+};
+
+// ─── WHERE WE WORK ─────────────────────────────────────────────────────────────
+export const whereWeWork = {
+  intro: `Geographically, our clients are concentrated in Kenya and Somalia, with active engagements extending into Djibouti, Ethiopia, and South Sudan. Thematically, our work is concentrated where our team is strongest:`,
+  themes: [
+    "Women's economic empowerment and gender-responsive programming — including macadamia and dairy value chains, women's cooperatives, and adolescent SRHR programming.",
+    'Adolescent sexual and reproductive health, and gender-based violence prevention — including community-level baselines, contribution analysis, and knowledge products for advocacy.',
+    'Agriculture, livelihoods, and market systems — smallholder farmer strengthening, cooperative development, value chain analysis, and post-harvest resilience programming.',
+    'Humanitarian communications and displacement — donor visibility, field documentation, and information products for emergency and protracted-crisis contexts.',
+  ],
+  clients: `We work with international NGOs, UN agencies, foundations, government partners, and donor-funded consortia. We do not chase private sector or SME work — it is not what we are set up for.`,
+};
+
+// ─── HOW WE WORK ───────────────────────────────────────────────────────────────
+export const process = [
+  {
+    num: '1',
+    title: 'Discover',
+    body: 'We start by reading the TOR, your programme documents, and any prior evaluations closely. We ask the questions others do not ask up front — the ones that surface the real constraints before scope is locked.',
+  },
+  {
+    num: '2',
+    title: 'Design',
+    body: 'We propose a methodology grounded in what is actually possible in the field, not what is theoretically ideal. Every method we propose is one we have deployed on comparable assignments. We are explicit about assumptions and about what we will not be able to deliver at the proposed budget.',
+  },
+  {
+    num: '3',
+    title: 'Deliver',
+    body: 'Sarah leads the research. George anchors sector depth when needed. Benson turns findings into publication-grade outputs. Weekly written check-ins with the client. Transparent progress. No surprises at deadline.',
+  },
+  {
+    num: '4',
+    title: 'Measure',
+    body: 'We hand over evidence-traceable products. Every claim tracks to a source in the register. Editable source files at close-out. Your donors can audit our work, and so can we.',
+  },
+  {
+    num: '5',
+    title: 'Improve',
+    body: 'We are built for repeat engagements. The majority of our strongest client relationships are second-year, third-year, or longer. We treat the first engagement as the start of a relationship, not the end of a transaction.',
+  },
+];
+
+// ─── WHY ORGANISATIONS CHOOSE LMD ──────────────────────────────────────────────
+export const whyChooseLMD = [
+  'We deliver three services exceptionally well — MEL, donor-grade communications, and digital presence — instead of ten services adequately.',
+  'We know the Horn of Africa. Our clients are here. Our work has been here for a decade. We do not parachute in.',
+  'We are honest about our capability envelope. Ask us to do something outside it and we will tell you and recommend someone better.',
+  'We are UNICEF-credentialed. Active Long-Term Agreement for graphic design; publications certified by UNICEF Zambia programme leads.',
+  'We are fully compliant. CR12, KRA PIN, current Tax Compliance Certificate, and current Single Business Permit — all held and available on request.',
+  'We do what we say we will do, when we said we would do it, at the price we quoted.',
+];
+
+// ─── INSIGHTS ──────────────────────────────────────────────────────────────────
+export const insights = {
+  intro: `We publish practical guidance — no vaporware, no thought-leadership padding — on the questions our clients actually ask us. Topics include:`,
+  topics: [
+    'Contribution analysis for donor-funded programmes — how to attribute change credibly without overclaiming.',
+    'Designing baselines that survive scope changes — the design decisions that matter most.',
+    "What UNICEF-standard publication design actually looks like — a practitioner's field guide.",
+    'MEL for adolescent SRHR and gender-transformative programming — what donors are actually looking for in 2026.',
+    'Building donor-ready websites for NGOs in the Horn of Africa — payment integration, accessibility, and credibility.',
+  ],
+  subscribeNote: 'Subscribe to receive one useful piece a month.',
+};
+
+// ─── CAREERS ───────────────────────────────────────────────────────────────────
+export const careers = {
+  intro: `We hire slowly and deliberately. When we do hire, we are looking for three profiles:`,
+  profiles: [
+    'Junior researchers with mixed-methods training and East Africa fieldwork experience — comfortable with KoboCollect / SurveyCTO, and with qualitative coding.',
+    'Publication designers with InDesign fluency and donor-branding experience — UNICEF, FCDO, USAID or equivalent.',
+    'Sector advisors with senior credibility in agriculture, livelihoods, health, WASH, or education — available on a named-associate basis for specific bids.',
+  ],
+  howToApply: `If that is you, write to info@lmdconsulting.co with a CV and two work samples. We reply to every application within two weeks.`,
+};
+
+// ─── COMPLIANCE ────────────────────────────────────────────────────────────────
+export const compliance = {
+  items: ['CR12', 'KRA PIN', 'Tax Compliance Certificate', 'Single Business Permit'],
+  note: 'Compliance documents available on request.',
+};
 
 // ─── CASE STUDIES ──────────────────────────────────────────────────────────────────
 export const caseStudies = [
@@ -674,25 +930,27 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
 // ─── TICKER ITEMS ──────────────────────────────────────────────────────────────────
 export const tickerItems = [
   { type: 'client', label: 'UNICEF' },
-  { type: 'service', label: 'Monitoring & Evaluation' },
+  { type: 'service', label: 'Monitoring, Evaluation & Learning' },
+  { type: 'client', label: 'FAO' },
+  { type: 'service', label: 'Donor-Grade Communications' },
+  { type: 'client', label: 'WFP' },
+  { type: 'service', label: 'Baselines & Endlines' },
+  { type: 'client', label: 'IOM' },
+  { type: 'service', label: 'Contribution Analysis' },
+  { type: 'client', label: 'UNFPA' },
+  { type: 'service', label: 'Annual Reports' },
   { type: 'client', label: 'USAID' },
-  { type: 'service', label: 'Strategic Communications' },
+  { type: 'service', label: 'Policy Briefs' },
   { type: 'client', label: 'GIZ' },
-  { type: 'service', label: 'Digital Systems' },
-  { type: 'client', label: 'ActionAid' },
-  { type: 'service', label: 'Research & Analytics' },
-  { type: 'client', label: 'World Vision' },
-  { type: 'service', label: 'Capacity Building' },
-  { type: 'client', label: 'Save the Children' },
-  { type: 'service', label: 'Knowledge Management' },
-  { type: 'client', label: 'FCDO' },
-  { type: 'service', label: 'Proposal Development' },
-  { type: 'client', label: 'IRC' },
-  { type: 'client', label: 'MERCY CORPS' },
-  { type: 'client', label: 'Plan International' },
-  { type: 'client', label: 'Oxfam' },
-  { type: 'client', label: 'Concern Worldwide' },
-  { type: 'client', label: 'UN Women' },
+  { type: 'client', label: 'SIDA' },
+  { type: 'client', label: 'UKAID' },
+  { type: 'client', label: 'AFDB' },
+  { type: 'client', label: 'CBI' },
+  { type: 'client', label: 'NIRAS Africa' },
+  { type: 'client', label: 'READO Somalia' },
+  { type: 'client', label: 'ACWICT' },
+  { type: 'client', label: 'AEA' },
+  { type: 'client', label: 'STS International Solidarity' },
 ];
 
 // ─── PACKAGES ──────────────────────────────────────────────────────────────────
@@ -751,31 +1009,30 @@ export const packages = [
 
 // ─── STATS ──────────────────────────────────────────────────────────────────
 export const stats = [
-  { number: '10', suffix: '+', label: 'Years Experience' },
-  { number: '3', suffix: '', label: 'Countries Active' },
-  { number: '100', suffix: '%', label: 'Local Expertise' },
+  { number: '40', suffix: '+', label: 'Combined Years' },
+  { number: '5', suffix: '', label: 'Countries' },
+  { number: '2', suffix: '', label: 'Core Services' },
 ];
 
 // ─── CONTACT SUBJECTS ──────────────────────────────────────────────────────
 export const contactSubjects = [
-  'Monitoring & Evaluation (M&E)',
-  'Strategic Communications',
-  'Digital Systems & Dashboards',
-  'Research & Analytics',
-  'Capacity Building & Training',
-  'Knowledge Management',
-  'Proposal Development Support',
+  'Monitoring, Evaluation & Learning',
+  'Donor-Grade Communications, Design & Digital',
+  'Both — an integrated engagement',
+  'Careers / Associate Enquiry',
   'General Enquiry',
 ];
 
 // ─── ROTATING HERO WORDS ────────────────────────────────────────────────────
+// These fill the slot in "We ___ development work in the Horn of Africa."
+// Keep them verbs describing what we actually do — not claims about what it
+// does for the client. The work makes that case on its own.
 export const heroWords = [
-  'credible,',
-  'visible,',
-  'M&E-ready,',
-  'strategic,',
-  'fundable,',
-  'measurable,',
+  'evaluate',
+  'measure',
+  'document',
+  'map',
+  'strengthen',
 ];
 
 // ─── MAPPED INSIGHTS ───────────────────────────────────────────────────────────

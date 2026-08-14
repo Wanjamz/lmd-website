@@ -1,7 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceIcon from '../components/ServiceIcon';
-import { services, caseStudies, tickerItems, packages, stats, heroWords, CALENDLY_URL } from '../data/siteData';
+import {
+  services,
+  tickerItems,
+  stats,
+  heroWords,
+  process as processSteps,
+  whyChooseLMD,
+  insights,
+  differentiator,
+  expertise,
+  howWeDeliverValue,
+  firm,
+  CALENDLY_URL,
+} from '../data/siteData';
+import { useCaseStudies } from '../lib/useContentData';
 
 /* ─── Fade-in hook ──────────────────────────────────────────────────────── */
 function useFadeIn() {
@@ -112,8 +126,6 @@ function ActivityCarousel() {
   );
 }
 
-const categories = ['All', 'M&E', 'Communications', 'Research', 'Digital Systems', 'Capacity Building'];
-
 export default function HomePage() {
   /* Hero rotating word */
   const [wordIdx, setWordIdx] = useState(0);
@@ -131,7 +143,9 @@ export default function HomePage() {
   }, []);
 
   /* Case study filter */
+  const { data: caseStudies } = useCaseStudies();
   const [activeFilter, setActiveFilter] = useState('All');
+  const categories = ['All', ...new Set(caseStudies.map(cs => cs.category))];
   const filteredStudies = activeFilter === 'All'
     ? caseStudies
     : caseStudies.filter(cs => cs.category === activeFilter);
@@ -152,7 +166,9 @@ export default function HomePage() {
   const refServices = useFadeIn();
   const refWork    = useFadeIn();
   const refProcess = useFadeIn();
-  const refPacks   = useFadeIn();
+  const refValue   = useFadeIn();
+  const refWhy     = useFadeIn();
+  const refInsights = useFadeIn();
   const refAbout   = useFadeIn();
   const refContact = useFadeIn();
 
@@ -163,23 +179,22 @@ export default function HomePage() {
       {/* ── HERO ───────────────────────────────────────────────────── */}
       <section id="hero">
         <div>
-          <div className="hero-tag">Nairobi · East Africa</div>
+          <div className="hero-tag">Nairobi · Horn of Africa</div>
 
           <h1 className="hero-title">
-            We make<br />
-            NGOs{' '}
+            We{' '}
             <em className={`hero-rotating-word ${wordVisible ? 'visible' : 'hidden'}`}>
               {heroWords[wordIdx]}
             </em>
             <br />
-            trusted, and<br />
-            impactful.
+            development work<br />
+            in the Horn of Africa.
           </h1>
 
           <p className="hero-sub">
-            LMD Consulting is an East Africa–based firm specialising in Monitoring &
-            Evaluation, Strategic Communications, Digital Systems, and Research for
-            development organisations, NGOs, and institutional donors.
+            LMD Consulting Group is a Nairobi-based consultancy supporting local
+            and international organizations, foundations, and donor-funded programs
+            across Kenya, Somalia, Djibouti, Ethiopia, and South Sudan.
           </p>
 
           <div className="hero-btns">
@@ -191,7 +206,7 @@ export default function HomePage() {
             >
               Book a Free Call →
             </a>
-            <a href="#services" className="btn-outline">Our Services</a>
+            <Link to="/work" className="btn-outline">See Our Work</Link>
           </div>
         </div>
 
@@ -241,50 +256,42 @@ export default function HomePage() {
         <div className="container" style={{ maxWidth: '100%', padding: 0 }}>
           <div className="services-header fade-in" ref={refServices}>
             <div>
-              <div className="section-label">What We Do</div>
+              <div className="section-label">Our Expertise</div>
               <h2 className="section-title">
-                Services built for<br />
-                <em>development work</em>
+                Three core<br />
+                <em>practice areas.</em>
               </h2>
             </div>
-            <p className="section-intro">
-              We work across six disciplines — combining technical rigour with deep
-              contextual knowledge of East Africa's development landscape. Click any
-              service to learn more about how we work.
-            </p>
+            <p className="section-intro">{expertise.intro}</p>
           </div>
 
-          <div className="services-grid">
-            {services.map((svc, idx) => (
-              <React.Fragment key={svc.id}>
-                <Link
-                  to={`/services/${svc.id}`}
-                  className="service-card"
-                >
+          <div className="services-grid pillar-grid">
+            {services.map(svc => (
+              <Link
+                to={`/services/${svc.id}`}
+                key={svc.id}
+                className="service-card pillar-card"
+              >
+                <div className="pillar-marker">
                   <span className="service-icon">
                     <ServiceIcon name={svc.icon} size={32} strokeWidth={1.2} />
                   </span>
-                  <h3>{svc.title}</h3>
-                  <p>{svc.short}</p>
-                  <div className="service-tags">
-                    {svc.tags.slice(0, 3).map(t => (
-                      <span key={t} className="tag">{t}</span>
-                    ))}
-                  </div>
-                  <span className="service-card-arrow">→</span>
-                </Link>
-                {/* Responsive Photo Card */}
-                {idx === 3 && (
-                  <div className="service-card photo-fit-card" style={{ padding: 0, overflow: 'hidden' }}>
-                    <img 
-                      src="/images/Evaluation.png" 
-                      alt="Data analysis in field" 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      onError={e => { e.target.style.display = 'none'; }}
-                    />
-                  </div>
-                )}
-              </React.Fragment>
+                  <span className="pillar-index">{svc.pillar}</span>
+                </div>
+                <h3>{svc.title}</h3>
+                <p className="pillar-kicker">{svc.kicker}</p>
+
+                <ul className="pillar-features">
+                  {svc.groups.map(g => (
+                    <li key={g.title}>
+                      {g.title}
+                      <span className="pillar-count">{g.items.length}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <span className="service-card-arrow">→</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -295,13 +302,13 @@ export default function HomePage() {
         <div className="fade-in" ref={refWork}>
           <div className="work-header">
             <div>
-              <div className="section-label">Our Work</div>
+              <div className="section-label">Work</div>
               <h2 className="section-title">
-                Case Studies &<br />
-                <em>Selected Projects</em>
+                What we have<br />
+                <em>actually done.</em>
               </h2>
             </div>
-            <Link to="/case-studies" className="btn-outline" style={{ alignSelf: 'flex-end' }}>
+            <Link to="/work" className="btn-outline" style={{ alignSelf: 'flex-end' }}>
               View All →
             </Link>
           </div>
@@ -323,7 +330,7 @@ export default function HomePage() {
             {filteredStudies.map(cs => (
               <Link
                 key={cs.id}
-                to={`/case-studies/${cs.id}`}
+                to={`/work/${cs.id}`}
                 className="work-card"
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
@@ -350,38 +357,17 @@ export default function HomePage() {
         <div>
           <div className="section-label">How We Work</div>
           <h2 className="section-title">
-            Our Systematic<br />
-            <em>Approach</em>
+            The same five-step<br />
+            <em>rhythm, every time.</em>
           </h2>
           <p className="section-intro" style={{ marginBottom: '1rem' }}>
-            A structured, evidence-led methodology applied consistently
-            across every engagement — regardless of size.
+            Every engagement follows the same five-step rhythm — regardless of
+            scope or budget.
           </p>
         </div>
 
         <div className="process-steps">
-          {[
-            {
-              num: '01',
-              title: 'Discover',
-              body: 'We begin every engagement with a rigorous context analysis — mapping stakeholders, understanding organisational dynamics, and identifying the core question your work needs to answer. No assumptions. No copy-paste frameworks.',
-            },
-            {
-              num: '02',
-              title: 'Design',
-              body: 'We develop bespoke frameworks, tools, and methodologies grounded in international best practice and calibrated to your specific context. Every design decision is explained and validated with your team.',
-            },
-            {
-              num: '03',
-              title: 'Deploy',
-              body: 'Implementation is where quality is either made or lost. We bring field-tested protocols, rigorous quality assurance processes, and experienced teams to every data collection and delivery phase.',
-            },
-            {
-              num: '04',
-              title: 'Learn & Adapt',
-              body: 'Evidence is only valuable if it changes something. We support organisations to interpret findings, communicate them effectively, and embed learning into programme and institutional decision-making.',
-            },
-          ].map(step => (
+          {processSteps.map(step => (
             <div className="process-step" key={step.num}>
               <div className="step-num">{step.num}</div>
               <div className="step-content">
@@ -393,38 +379,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PACKAGES ───────────────────────────────────────────────── */}
-      <section id="packages" className="fade-in" ref={refPacks}>
-        <div className="container" style={{ maxWidth: '100%', padding: '0 4vw' }}>
-          <div className="section-label">Investment</div>
-          <h2 className="section-title">
-            Choose a package<br />
-            <em>or build your own</em>
-          </h2>
-          <p className="section-intro">
-            Every engagement is scoped to your specific programme. These packages
-            are a starting point — most of our clients build a custom combination.
-          </p>
+      {/* ── HOW WE DELIVER VALUE ───────────────────────────────────── */}
+      <section id="deliver-value" className="fade-in" ref={refValue}>
+        <div className="section-label">How We Deliver Value</div>
+        <h2 className="section-title" style={{ marginBottom: '1rem' }}>
+          Three disciplines,<br />
+          <em>one engagement.</em>
+        </h2>
+        <p className="section-intro" style={{ marginBottom: '2.5rem' }}>
+          {howWeDeliverValue.intro}
+        </p>
 
-          <div className="packages-grid">
-            {packages.map(pkg => (
-              <div key={pkg.id} className={`package-card${pkg.featured ? ' featured' : ''}`}>
-                {pkg.featured && <span className="package-badge">Most Popular</span>}
-                <span className="package-emoji">
-                  <ServiceIcon name={pkg.icon} size={40} strokeWidth={1} />
-                </span>
-                <h3>{pkg.title}</h3>
-                <p className="package-desc">{pkg.description}</p>
-                <div className="package-timeline">{pkg.timeline}</div>
-                <ul className="package-features">
-                  {pkg.features.map(f => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-                <Link to="/contact" className="btn-ghost">Get in Touch →</Link>
-              </div>
-            ))}
+        <div className="value-chain">
+          {services.map(svc => (
+            <div className="value-link" key={svc.id}>
+              <span className="value-link-title">{svc.title}</span>
+              <p>{svc.valueLine}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="value-close">{howWeDeliverValue.close}</p>
+      </section>
+
+      {/* ── WHY ORGANISATIONS CHOOSE LMD ───────────────────────────── */}
+      <section id="why-lmd" className="fade-in" ref={refWhy}>
+        <div className="why-header">
+          <div className="section-label">Why LMD</div>
+          <h2 className="section-title">
+            Why organisations<br />
+            <em>choose us.</em>
+          </h2>
+        </div>
+
+        <ul className="why-list">
+          {whyChooseLMD.map((reason, i) => (
+            <li key={reason} className="why-item">
+              <span className="why-num">{String(i + 1).padStart(2, '0')}</span>
+              <p>{reason}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* ── INSIGHTS ───────────────────────────────────────────────── */}
+      <section id="insights" className="fade-in" ref={refInsights}>
+        <div className="insights-header">
+          <div>
+            <div className="section-label">Insights</div>
+            <h2 className="section-title">
+              Practical guidance,<br />
+              <em>no padding.</em>
+            </h2>
           </div>
+          <p className="section-intro">{insights.intro}</p>
+        </div>
+
+        <ol className="insights-list">
+          {insights.topics.map(topic => {
+            const [head, ...rest] = topic.split(' — ');
+            return (
+              <li key={topic} className="insight-topic">
+                <h3>{head}</h3>
+                {rest.length > 0 && <p>{rest.join(' — ')}</p>}
+              </li>
+            );
+          })}
+        </ol>
+
+        <div className="insights-subscribe">
+          <p>{insights.subscribeNote}</p>
+          <Link to="/contact" className="btn-primary">Subscribe →</Link>
         </div>
       </section>
 
@@ -451,41 +476,38 @@ export default function HomePage() {
               onError={e => { e.target.style.display = 'none'; }}
             />
             <div className="about-logo-stats">
-              <div className="about-logo-stat">
-                <span className="about-stat-num">10<span style={{ color: 'var(--accent)' }}>+</span></span>
-                <span className="about-stat-label">Years Experience</span>
-              </div>
-              <div className="about-logo-stat">
-                <span className="about-stat-num">300<span style={{ color: 'var(--accent)' }}>+</span></span>
-                <span className="about-stat-label">Projects Delivered</span>
-              </div>
-              <div className="about-logo-stat">
-                <span className="about-stat-num">100<span style={{ color: 'var(--accent)' }}>%</span></span>
-                <span className="about-stat-label">Local Expertise</span>
-              </div>
+              {stats.map(s => (
+                <div className="about-logo-stat" key={s.label}>
+                  <span className="about-stat-num">
+                    {s.number}<span style={{ color: 'var(--accent)' }}>{s.suffix}</span>
+                  </span>
+                  <span className="about-stat-label">{s.label}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="section-label" style={{ marginTop: '2rem' }}>About Us</div>
           <h2 className="section-title" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}>
-            East Africa's M&E and communications partner for organisations that take
-            their <em>evidence seriously.</em>
+            One team, one voice,<br />
+            <em>one project number.</em>
           </h2>
           <p className="section-intro" style={{ marginTop: '1rem' }}>
-            LMD Consulting Group is a Nairobi-based consulting firm serving
-            development organisations, NGOs, and institutional donors across East
-            and the Horn of Africa. Founded by practitioners who grew up working
-            inside the sector, we combine methodological discipline with genuine
-            partnership to help organisations work better.
+            {differentiator.problem}
           </p>
+          <p className="section-intro" style={{ marginTop: '1rem' }}>
+            {differentiator.teamLine}
+          </p>
+          <Link to="/about" className="btn-outline" style={{ marginTop: '1.75rem', display: 'inline-block' }}>
+            More About Us →
+          </Link>
         </div>
 
         <div className="about-pillars">
           {[
-            { num: '01', title: 'Contextually Grounded', desc: "We don't parachute in. Our team has spent years inside the East African development sector — understanding what works, what doesn't, and why context always matters." },
-            { num: '02', title: 'Methodologically Rigorous', desc: 'We apply international standards to every engagement — from OECD DAC evaluation criteria to feminist research principles — without losing sight of practical usability.' },
-            { num: '03', title: 'Client-Partnered', desc: 'We work with organisations, not just for them. Co-creation, transparent communication, and genuine investment in your outcomes are non-negotiable for us.' },
-            { num: '04', title: 'Locally Led', desc: '100% East African team. We understand the communities, languages, political economies, and operational realities your programmes navigate every day.' },
+            { num: '01', title: 'Three services, not ten', desc: 'MEL, donor-grade communications, and digital presence — delivered exceptionally, instead of ten services delivered adequately.' },
+            { num: '02', title: 'We know the Horn of Africa', desc: 'Our clients are here. Our work has been here for a decade. We do not parachute in.' },
+            { num: '03', title: 'Honest about our limits', desc: 'Ask us to do something outside our capability envelope and we will tell you, then recommend someone better placed.' },
           ].map(pillar => (
             <div className="about-pillar" key={pillar.num}>
               <div className="pillar-num">{pillar.num}</div>
@@ -525,10 +547,10 @@ export default function HomePage() {
 
           <div className="contact-details" style={{ marginTop: '3rem' }}>
             {[
-              { label: 'Email',     value: <a href="mailto:info@lmdconsulting.co.ke">info@lmdconsulting.co.ke</a> },
-              { label: 'Phone',     value: <a href="tel:+254723539332" style={{ color: 'inherit' }}>+254 723 539 332</a> },
-              { label: 'Location',  value: 'Nairobi, Kenya' },
-              { label: 'Active In', value: 'Kenya · Uganda · Tanzania · Somalia · Ethiopia' },
+              { label: 'Email',     value: <a href={`mailto:${firm.email}`}>{firm.email}</a> },
+              { label: 'Phone',     value: <a href={`tel:${firm.phoneHref}`} style={{ color: 'inherit' }}>{firm.phone}</a> },
+              { label: 'Location',  value: firm.location },
+              { label: 'Active In', value: firm.countries.join(' · ') },
             ].map(c => (
               <div className="contact-item" key={c.label}>
                 <span className="contact-item-label">{c.label}</span>
@@ -548,7 +570,7 @@ export default function HomePage() {
           {sent ? (
             <div className="form-success">
               <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', marginBottom: '0.5rem' }}>
-                Message received. We'll be in touch within 48 hours.
+                Message received. We will reply within two working days.
               </p>
               <button onClick={() => setSent(false)} style={{ fontSize: '0.8rem', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', marginTop: '0.5rem' }}>
                 Send another message

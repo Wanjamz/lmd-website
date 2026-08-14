@@ -19,14 +19,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const handleHashNav = (e, hash) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const el = document.querySelector(hash);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
       <nav className="main-nav" style={{ boxShadow: scrolled ? '0 2px 16px rgba(13,13,11,0.08)' : 'none' }}>
@@ -41,25 +33,19 @@ export default function Header() {
 
         <ul className="nav-links">
           <li>
-            <a href="/#services" onClick={e => handleHashNav(e, '#services')}>Services</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/case-studies">Case Studies</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
-            <a href="/#packages" onClick={e => handleHashNav(e, '#packages')}>Packages</a>
-          </li>
-          <li>
-            <a href="/#about" onClick={e => handleHashNav(e, '#about')}>About</a>
-          </li>
-          <li>
-            <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer">AI 4 NGOs</a>
+            <Link to="/work">Work</Link>
           </li>
           <li>
             <Link to="/mapped">Mapped</Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-cta">Let's Talk</Link>
+            <Link to="/contact" className="nav-cta">Contact</Link>
           </li>
         </ul>
 
@@ -97,25 +83,19 @@ export default function Header() {
           </div>
           <ul>
             <li>
-              <a href="/#services" onClick={e => { handleHashNav(e, '#services'); setMenuOpen(false); }}>Services</a>
+              <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
             </li>
             <li>
-              <Link to="/case-studies">Case Studies</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
             </li>
             <li>
-              <a href="/#packages" onClick={e => { handleHashNav(e, '#packages'); setMenuOpen(false); }}>Packages</a>
-            </li>
-            <li>
-              <a href="/#about" onClick={e => { handleHashNav(e, '#about'); setMenuOpen(false); }}>About</a>
-            </li>
-            <li>
-              <a href="https://www.ai4development.co/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>AI 4 NGOs ↗</a>
+              <Link to="/work" onClick={() => setMenuOpen(false)}>Work</Link>
             </li>
             <li>
               <Link to="/mapped" onClick={() => setMenuOpen(false)}>Mapped</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
             </li>
           </ul>
           <div className="mobile-cta-wrap">

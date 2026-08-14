@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { mappedInsights } from '../data/siteData';
+import { Link } from 'react-router-dom';
+import { useMappedInsights } from '../lib/useContentData';
 
 /* ─────────────────────────────────────────────────────────────────────────
    MAPPED — Spatial Intelligence
@@ -129,6 +130,7 @@ function InsightDetail({ insight, onClose }) {
 }
 
 export default function MappedPage() {
+  const { data: insights } = useMappedInsights();
   const [selected, setSelected] = useState(null);
 
   if (selected) {
@@ -151,8 +153,13 @@ export default function MappedPage() {
 
       {/* ── Insights grid ── */}
       <section className="mapped-insights-section">
+        <div className="mapped-hero-label">Analysis</div>
+        <h2 className="mapped-about-title" style={{ marginBottom: '2.5rem' }}>
+          What we have analysed
+        </h2>
+
         <div className="mapped-insights-grid">
-          {mappedInsights.map(insight => (
+          {insights.map(insight => (
             <InsightCard key={insight.id} insight={insight} onClick={setSelected} />
           ))}
         </div>
@@ -168,7 +175,7 @@ export default function MappedPage() {
           </p>
 
           <div className="mapped-services-list">
-            <h3>What we analyse</h3>
+            <h3>Areas we cover</h3>
             <ul>
               <li>Flood analysis</li>
               <li>Drought mapping</li>
@@ -178,7 +185,7 @@ export default function MappedPage() {
           </div>
 
           <div className="mapped-contact-soft">
-            <p>If your organisation needs similar insights, <a href="/contact">get in touch</a>.</p>
+            <p>If your organisation needs similar insights, <Link to="/contact">get in touch</Link>.</p>
           </div>
         </div>
       </section>
