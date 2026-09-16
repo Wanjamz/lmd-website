@@ -122,19 +122,13 @@ export default function CaseStudyDetailPage() {
         )}
 
         {/* Impact */}
-        <div
-          className="case-study-section"
-          style={{
-            background: 'var(--paper2)',
-            padding: '2.5rem',
-            borderLeft: '3px solid var(--accent)',
-            margin: '2rem 0',
-          }}
-        >
-          <div className="section-label">Impact</div>
-          <h3 style={{ marginBottom: '1rem' }}>What changed</h3>
-          <p style={{ fontSize: '1rem', lineHeight: 1.75, color: 'var(--ink)' }}>{cs.impact}</p>
-        </div>
+        {cs.impact && (
+          <div className="case-study-section impact-panel">
+            <div className="section-label">Impact</div>
+            <h3 style={{ marginBottom: '1rem' }}>What changed</h3>
+            <p>{cs.impact}</p>
+          </div>
+        )}
 
         {/* CTAs */}
         <div style={{
@@ -170,61 +164,22 @@ export default function CaseStudyDetailPage() {
 
       {/* Prev / Next navigation */}
       {(prev || next) && (
-        <div style={{
-          borderTop: '1px solid var(--border)',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-        }}>
+        <nav className="pager" aria-label="More case studies">
           {prev ? (
-            <Link
-              to={`/work/${prev.id}`}
-              style={{
-                padding: '2.5rem 4vw',
-                borderRight: '1px solid var(--border)',
-                textDecoration: 'none',
-                color: 'inherit',
-                transition: 'background 0.2s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--paper2)'}
-              onMouseLeave={e => e.currentTarget.style.background = ''}
-            >
-              <div style={{ fontSize: '0.65rem', fontFamily: 'var(--mono)', color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-                ← Previous
-              </div>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: '0.65rem', color: 'var(--accent)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
-                {prev.category}
-              </div>
-              <div style={{ fontFamily: 'var(--serif)', fontSize: '1rem', lineHeight: 1.3 }}>
-                {prev.title}
-              </div>
+            <Link to={`/work/${prev.id}`} className="pager-link">
+              <span className="meta-label">← Previous</span>
+              <span className="pager-category">{prev.category}</span>
+              <span className="pager-title">{prev.title}</span>
             </Link>
           ) : <div />}
-
           {next ? (
-            <Link
-              to={`/work/${next.id}`}
-              style={{
-                padding: '2.5rem 4vw',
-                textDecoration: 'none',
-                color: 'inherit',
-                textAlign: 'right',
-                transition: 'background 0.2s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--paper2)'}
-              onMouseLeave={e => e.currentTarget.style.background = ''}
-            >
-              <div style={{ fontSize: '0.65rem', fontFamily: 'var(--mono)', color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-                Next →
-              </div>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: '0.65rem', color: 'var(--accent)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
-                {next.category}
-              </div>
-              <div style={{ fontFamily: 'var(--serif)', fontSize: '1rem', lineHeight: 1.3 }}>
-                {next.title}
-              </div>
+            <Link to={`/work/${next.id}`} className="pager-link pager-link--next">
+              <span className="meta-label">Next →</span>
+              <span className="pager-category">{next.category}</span>
+              <span className="pager-title">{next.title}</span>
             </Link>
           ) : <div />}
-        </div>
+        </nav>
       )}
     </>
   );

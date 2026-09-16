@@ -4,15 +4,38 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuClosing, setMenuClosing] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => setMenuOpen(false), [location]);
+  /* Navigating away swaps the page underneath, so the menu can go at once. */
+  const [menuLocation, setMenuLocation] = useState(location);
+  if (menuLocation !== location) {
+    setMenuLocation(location);
+    setMenuOpen(false);
+    setMenuClosing(false);
+  }
+
+  /* Closing in place plays a short fade before the sheet unmounts. */
+  const closeMenu = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setMenuOpen(false);
+      return;
+    }
+    setMenuClosing(true);
+  };
+  const onMenuAnimationEnd = e => {
+    if (menuClosing && e.target === e.currentTarget) {
+      setMenuOpen(false);
+      setMenuClosing(false);
+    }
+  };
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -21,7 +44,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="main-nav" style={{ boxShadow: scrolled ? '0 2px 16px rgba(13,13,11,0.08)' : 'none' }}>
+      <nav className={`main-nav${scrolled ? ' is-scrolled' : ''}`}>
         {/* Logo */}
         <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
           <img
@@ -53,18 +76,23 @@ export default function Header() {
           className="hamburger"
           onClick={() => setMenuOpen(true)}
           aria-label="Open menu"
+          aria-expanded={menuOpen}
+          style={{ color: 'var(--ink)' }}
         >
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <line x1="2" y1="5.5" x2="20" y2="5.5" stroke="#0d0d0b" strokeWidth="1.5" />
-            <line x1="2" y1="11.5" x2="20" y2="11.5" stroke="#0d0d0b" strokeWidth="1.5" />
-            <line x1="2" y1="17.5" x2="20" y2="17.5" stroke="#0d0d0b" strokeWidth="1.5" />
+            <line x1="2" y1="5.5" x2="20" y2="5.5" stroke="currentColor" strokeWidth="1.5" />
+            <line x1="2" y1="11.5" x2="20" y2="11.5" stroke="currentColor" strokeWidth="1.5" />
+            <line x1="2" y1="17.5" x2="20" y2="17.5" stroke="currentColor" strokeWidth="1.5" />
           </svg>
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="mobile-menu">
+        <div
+          className={`mobile-menu${menuClosing ? ' is-closing' : ''}`}
+          onAnimationEnd={onMenuAnimationEnd}
+        >
           <div className="mobile-menu-header">
             <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
               <img
@@ -74,11 +102,14 @@ export default function Header() {
               />
             </Link>
             <button
-              onClick={() => setMenuOpen(false)}
-              style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}
+              onClick={closeMenu}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--ink)', padding: 4, display: 'flex' }}
               aria-label="Close menu"
             >
-              ✕
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <line x1="4" y1="4" x2="18" y2="18" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="18" y1="4" x2="4" y2="18" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
             </button>
           </div>
           <ul>

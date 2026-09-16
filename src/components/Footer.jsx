@@ -13,10 +13,10 @@ const footerLinks = [
 ];
 
 const footerLinkStyle = {
-  color: 'rgba(245,242,235,0.4)',
-  fontSize: '0.72rem',
-  fontFamily: 'var(--mono)',
-  letterSpacing: '0.06em',
+  color: 'rgba(232,238,244,0.72)',
+  fontSize: '0.85rem',
+  fontFamily: 'var(--sans)',
+  letterSpacing: '0',
 };
 
 export default function Footer() {
@@ -32,8 +32,8 @@ export default function Footer() {
         <div className="footer-nairobi">
           Made with love ❤️ from Nairobi.
         </div>
-        <div style={{ marginTop: '0.8rem', fontSize: '0.78rem', color: 'rgba(245,242,235,0.55)', fontFamily: 'var(--mono)', letterSpacing: '0.04em' }}>
-          <a href={`tel:${firm.phoneHref}`} style={{ color: 'rgba(245,242,235,0.55)', textDecoration: 'none' }}>{firm.phone}</a>
+        <div style={{ marginTop: '0.9rem', fontSize: '0.85rem', color: 'rgba(232,238,244,0.72)', fontFamily: 'var(--sans)' }}>
+          <a href={`tel:${firm.phoneHref}`} style={{ color: 'rgba(232,238,244,0.72)', textDecoration: 'none' }}>{firm.phone}</a>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
               </Link>
             )
           ))}
-          <div style={{ marginTop: '0.5rem', fontSize: '0.68rem', color: 'rgba(245,242,235,0.2)', letterSpacing: '0.04em' }}>
+          <div style={{ marginTop: '0.75rem', fontSize: '0.8rem', color: 'rgba(232,238,244,0.45)' }}>
             Monitoring · Communications · Digital · Research
           </div>
         </div>

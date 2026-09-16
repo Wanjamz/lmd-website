@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { Map } from 'lucide-react';
 import { useMappedInsights } from '../lib/useContentData';
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -13,10 +14,14 @@ function InsightCard({ insight, onClick }) {
     <article
       className="mapped-card"
       onClick={() => onClick(insight)}
-      style={{ cursor: 'pointer' }}
       role="button"
       tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && onClick(insight)}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick(insight);
+        }
+      }}
     >
       {/* Map visual */}
       <div className="mapped-card-img-wrap">
@@ -34,8 +39,8 @@ function InsightCard({ insight, onClick }) {
             className="mapped-card-img"
           />
         ) : (
-          <div className="mapped-card-placeholder">
-            <span>🗺</span>
+          <div className="mapped-detail-placeholder" style={{ height: '100%', border: 'none' }}>
+            <Map size={36} strokeWidth={1.25} aria-hidden="true" />
           </div>
         )}
         <div className="mapped-card-overlay">
@@ -57,6 +62,9 @@ function InsightCard({ insight, onClick }) {
 }
 
 function InsightDetail({ insight, onClose }) {
+  /* Opening an insight starts at its title, not wherever the grid was. */
+  useEffect(() => { window.scrollTo(0, 0); }, [insight.id]);
+
   return (
     <div className="mapped-detail-overlay">
       <div className="mapped-detail">
@@ -86,7 +94,7 @@ function InsightDetail({ insight, onClose }) {
             />
           ) : (
             <div className="mapped-detail-placeholder">
-              <span>🗺</span>
+              <Map size={40} strokeWidth={1.25} aria-hidden="true" />
               <p>Map visual coming soon</p>
             </div>
           )}
@@ -122,7 +130,7 @@ function InsightDetail({ insight, onClose }) {
 
         <div className="mapped-cta-bar">
           <p>Does your organisation need spatial analysis like this?</p>
-          <a href="/contact" className="btn-primary">Get in touch →</a>
+          <Link to="/contact" className="btn-primary">Get in touch →</Link>
         </div>
       </div>
     </div>
@@ -131,10 +139,14 @@ function InsightDetail({ insight, onClose }) {
 
 export default function MappedPage() {
   const { data: insights } = useMappedInsights();
-  const [selected, setSelected] = useState(null);
+  /* The open insight lives in the URL, so Back closes it and links can be shared. */
+  const [params, setParams] = useSearchParams();
+  const selected = insights.find(i => i.id === params.get('insight'));
+  const open = insight => setParams({ insight: insight.id });
+  const close = () => setParams({});
 
   if (selected) {
-    return <InsightDetail insight={selected} onClose={() => setSelected(null)} />;
+    return <InsightDetail insight={selected} onClose={close} />;
   }
 
   return (
@@ -148,19 +160,18 @@ export default function MappedPage() {
             Spatial Intelligence — Exploring real-world problems through maps, data, and design.
           </p>
         </div>
-        <div className="mapped-hero-deco" aria-hidden="true">⬡</div>
       </header>
 
       {/* ── Insights grid ── */}
       <section className="mapped-insights-section">
-        <div className="mapped-hero-label">Analysis</div>
+        <div className="section-label">Analysis</div>
         <h2 className="mapped-about-title" style={{ marginBottom: '2.5rem' }}>
           What we have analysed
         </h2>
 
         <div className="mapped-insights-grid">
           {insights.map(insight => (
-            <InsightCard key={insight.id} insight={insight} onClick={setSelected} />
+            <InsightCard key={insight.id} insight={insight} onClick={open} />
           ))}
         </div>
       </section>

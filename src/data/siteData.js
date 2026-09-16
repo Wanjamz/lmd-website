@@ -1011,7 +1011,7 @@ export const packages = [
 export const stats = [
   { number: '40', suffix: '+', label: 'Combined Years' },
   { number: '5', suffix: '', label: 'Countries' },
-  { number: '2', suffix: '', label: 'Core Services' },
+  { number: '3', suffix: '', label: 'Core Services' },
 ];
 
 // ─── CONTACT SUBJECTS ──────────────────────────────────────────────────────

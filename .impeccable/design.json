@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T00:00:00Z",
+  "title": "Design System: LMD Consulting Group",
+  "extensions": {
+    "colorMeta": {
+      "lmd-navy": {
+        "role": "primary",
+        "displayName": "LMD Navy",
+        "canonical": "#1a4875",
+        "tonalRamp": [
+          "#0a1c2e",
+          "#0f2b47",
+          "#153a60",
+          "#1a4875",
+          "#3d6a96",
+          "#6f93b6",
+          "#a9c0d6",
+          "#e3ebf2"
+        ]
+      },
+      "deep-navy": {
+        "role": "primary",
+        "displayName": "Deep Navy",
+        "canonical": "#0b2f4f",
+        "tonalRamp": [
+          "#051624",
+          "#082239",
+          "#0b2f4f",
+          "#1f4668",
+          "#4a6c8a",
+          "#7c95ab",
+          "#b3c3d1",
+          "#e6ecf1"
+        ]
+      },
+      "marigold-signal": {
+        "role": "secondary",
+        "displayName": "Marigold Signal",
+        "canonical": "#e3a02a",
+        "tonalRamp": [
+          "#3d2800",
+          "#7a4d00",
+          "#b0740f",
+          "#e3a02a",
+          "#f2b243",
+          "#f6c878",
+          "#fadfae",
+          "#fdf4e3"
+        ]
+      },
+      "marigold-signal-hover": {
+        "role": "secondary",
+        "displayName": "Marigold Hover",
+        "canonical": "#f2b243"
+      },
+      "marigold-ink": {
+        "role": "secondary",
+        "displayName": "Marigold Ink",
+        "canonical": "#7a4d00"
+      },
+      "navy-ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "#0e1b27",
+        "tonalRamp": [
+          "#0e1b27",
+          "#1f2e3b",
+          "#3a4a57",
+          "#56676f",
+          "#7d8b92",
+          "#a7b1b6",
+          "#d0d6d9",
+          "#edeff0"
+        ]
+      },
+      "cool-paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "#edeff0"
+      },
+      "white-sheet": {
+        "role": "neutral",
+        "displayName": "White Sheet",
+        "canonical": "#ffffff"
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "#56676f"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(14, 27, 39, 0.14)"
+      },
+      "faint-rule": {
+        "role": "neutral",
+        "displayName": "Faint Rule",
+        "canonical": "rgba(14, 27, 39, 0.09)"
+      },
+      "navy-wash": {
+        "role": "neutral",
+        "displayName": "Navy Wash",
+        "canonical": "rgba(26, 72, 117, 0.06)"
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "On Dark",
+        "canonical": "#e8eef4"
+      },
+      "on-dark-muted": {
+        "role": "neutral",
+        "displayName": "On Dark Muted",
+        "canonical": "rgba(232, 238, 244, 0.62)"
+      },
+      "on-dark-rule": {
+        "role": "neutral",
+        "displayName": "On Dark Rule",
+        "canonical": "rgba(232, 238, 244, 0.18)"
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger",
+        "canonical": "#b3123c"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero title only, white on deep navy, with a marigold hairline beneath."
+      },
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "Inner-page hero h1, max 20ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles and the contact CTA heading."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Serif card and process-step headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default running copy."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Card descriptions and step copy in slate muted."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sentence-case section, form, card-type and contact labels; zero tracking."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-token",
+        "value": "0 1px 2px rgba(14, 27, 39, 0.06)",
+        "purpose": "Defined as --shadow but effectively unused; the system is flat."
+      },
+      {
+        "name": "input-focus-halo",
+        "value": "0 0 0 3px rgba(26, 72, 117, 0.06)",
+        "purpose": "The only glow: form field focus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "--ease-out. Arrivals: hero lines, drawn rules, card arrows, view-transition groups."
+      },
+      {
+        "name": "transition-standard",
+        "value": "0.18s ease",
+        "purpose": "Hover colour, border and background changes."
+      },
+      {
+        "name": "press",
+        "value": "translateY(1px) over 0.1s",
+        "purpose": "Active state on buttons, nav CTA and filter tabs; a push, not a lift."
+      },
+      {
+        "name": "hero-set",
+        "value": "0.9s ease-out, 90ms line stagger",
+        "purpose": "Hero title lines rise out of a vertical mask, once on load."
+      },
+      {
+        "name": "rule-draw",
+        "value": "scaleX 0→1, 0.7–0.8s ease-out",
+        "purpose": "The signature: hero marigold rule, pillar rules and process rule draw left to right."
+      },
+      {
+        "name": "section-fade",
+        "value": "opacity 0.45s ease-out",
+        "purpose": "Sections resolve in place; no slide."
+      },
+      {
+        "name": "filter-view-transition",
+        "value": "group 0.42s, old 0.16s, new 0.3s +80ms",
+        "purpose": "Work-grid filtering: staying cards slide to position, others fade."
+      },
+      {
+        "name": "sheet",
+        "value": "in 0.28s / out 0.16s",
+        "purpose": "Mobile menu fade with 40ms link stagger; exit faster than entrance."
+      },
+      {
+        "name": "ticker",
+        "value": "44s linear infinite",
+        "purpose": "Client/service marquee; pauses on hover and offscreen, stops under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "600px"
+      },
+      {
+        "name": "sm-plus",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "lg",
+        "value": "900px"
+      },
+      {
+        "name": "xl",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single warm action on any view: marigold fill, navy ink text.",
+      "html": "<button class=\"ds-btn-primary\">Book a call</button>",
+      "css": ".ds-btn-primary { background: #e3a02a; color: #0e1b27; padding: 0.85rem 1.75rem; font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; border: 1px solid #e3a02a; border-radius: 3px; cursor: pointer; transition: background 0.18s ease, border-color 0.18s ease; } .ds-btn-primary:hover { background: #f2b243; border-color: #f2b243; } .ds-btn-primary:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on light grounds; fills navy on hover.",
+      "html": "<button class=\"ds-btn-outline\">See our work</button>",
+      "css": ".ds-btn-outline { background: transparent; color: #1a4875; padding: 0.85rem 1.75rem; font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(14, 27, 39, 0.14); border-radius: 3px; cursor: pointer; transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease; } .ds-btn-outline:hover { background: #1a4875; border-color: #1a4875; color: #ffffff; } .ds-btn-outline:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button on Navy",
+      "kind": "button",
+      "refersTo": "button-outline-on-dark",
+      "description": "Secondary action on the deep navy hero field (One Inversion Rule).",
+      "html": "<div class=\"ds-navy-field\"><button class=\"ds-btn-outline-dark\">About LMD</button></div>",
+      "css": ".ds-navy-field { background: #0b2f4f; padding: 1.5rem; } .ds-btn-outline-dark { background: transparent; color: #e8eef4; padding: 0.85rem 1.75rem; font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(232, 238, 244, 0.18); border-radius: 3px; cursor: pointer; transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease; } .ds-btn-outline-dark:hover { background: #e8eef4; border-color: #e8eef4; color: #0b2f4f; } .ds-btn-outline-dark:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Navy-wash label for disciplines and topics.",
+      "html": "<span class=\"ds-tag\">Baselines</span>",
+      "css": ".ds-tag { font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; font-weight: 500; color: #1a4875; background: rgba(26, 72, 117, 0.06); padding: 0.2rem 0.55rem; border-radius: 3px; white-space: nowrap; }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "chip",
+      "refersTo": "filter-tab",
+      "description": "Work filters; marigold marks the live filter.",
+      "html": "<div class=\"ds-filters\"><button class=\"ds-filter ds-filter-active\">All</button><button class=\"ds-filter\">Evidence</button><button class=\"ds-filter\">Communication</button></div>",
+      "css": ".ds-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; } .ds-filter { font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.9rem; border: 1px solid rgba(14, 27, 39, 0.14); background: transparent; border-radius: 3px; color: #56676f; cursor: pointer; transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease; } .ds-filter:hover { color: #1a4875; border-color: #1a4875; } .ds-filter:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; } .ds-filter-active, .ds-filter-active:hover { background: #e3a02a; color: #0e1b27; border-color: #e3a02a; font-weight: 600; }"
+    },
+    {
+      "name": "Work Card",
+      "kind": "card",
+      "refersTo": "work-card",
+      "description": "Case study card: hairline-bordered white sheet, media band, border turns navy on hover.",
+      "html": "<a class=\"ds-work-card\" href=\"#\"><div class=\"ds-work-media\">Image</div><div class=\"ds-work-meta\"><span class=\"ds-work-type\">Communication</span><span class=\"ds-work-client\">UNICEF Zambia · 2025</span></div><h3 class=\"ds-work-title\">Parliamentary Advocacy Communications</h3><p class=\"ds-work-desc\">Budget brief and infographic booklet for MP advocacy.</p><span class=\"ds-work-arrow\">→</span></a>",
+      "css": ".ds-work-card { display: flex; flex-direction: column; gap: 0.75rem; max-width: 360px; background: #ffffff; border: 1px solid rgba(14, 27, 39, 0.14); border-radius: 3px; overflow: hidden; padding: 1.75rem; color: #0e1b27; text-decoration: none; transition: border-color 0.18s ease; } .ds-work-card:hover { border-color: #1a4875; } .ds-work-card:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; } .ds-work-media { margin: -1.75rem -1.75rem 1rem; height: 160px; background: rgba(26, 72, 117, 0.06); border-bottom: 1px solid rgba(14, 27, 39, 0.14); display: flex; align-items: center; justify-content: center; color: #56676f; font-size: 0.8rem; font-family: 'Archivo', Arial, sans-serif; } .ds-work-meta { display: flex; justify-content: space-between; gap: 1rem; font-family: 'Archivo', Arial, sans-serif; font-size: 0.87rem; } .ds-work-type { font-weight: 600; color: #1a4875; } .ds-work-client { color: #56676f; } .ds-work-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.3; margin: 0; } .ds-work-desc { font-family: 'Archivo', Arial, sans-serif; font-size: 0.88rem; color: #56676f; line-height: 1.6; margin: 0; } .ds-work-arrow { color: #1a4875; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Cool paper field with navy focus border and wash halo.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Organisation</span><input class=\"ds-input\" placeholder=\"e.g. READO Somalia\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 0.4rem; max-width: 360px; } .ds-field-label { font-family: 'Archivo', Arial, sans-serif; font-size: 0.85rem; font-weight: 600; color: #0e1b27; } .ds-input { background: #edeff0; border: 1px solid rgba(14, 27, 39, 0.14); padding: 0.7rem 0.9rem; font-family: 'Archivo', Arial, sans-serif; font-size: 0.95rem; color: #0e1b27; border-radius: 3px; outline: none; transition: border-color 0.18s ease; } .ds-input::placeholder { color: #56676f; opacity: 0.75; } .ds-input:focus { border-color: #1a4875; box-shadow: 0 0 0 3px rgba(26, 72, 117, 0.06); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Translucent white bar, serif wordmark, muted links, navy CTA.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#\">LMD<span>.</span></a><ul class=\"ds-nav-links\"><li><a href=\"#\">Work</a></li><li><a href=\"#\">Mapped</a></li><li><a href=\"#\">About</a></li><li><a class=\"ds-nav-cta\" href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 4vw; background: rgba(255, 255, 255, 0.92); border-bottom: 1px solid rgba(14, 27, 39, 0.09); backdrop-filter: blur(10px); } .ds-nav-logo { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; letter-spacing: -0.02em; color: #0e1b27; text-decoration: none; } .ds-nav-logo span { color: #1a4875; } .ds-nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; font-family: 'Archivo', Arial, sans-serif; font-size: 0.9rem; font-weight: 500; } .ds-nav-links a { color: #56676f; text-decoration: none; transition: color 0.18s ease; } .ds-nav-links a:hover { color: #1a4875; } .ds-nav-links a:focus-visible { outline: 2px solid #e3a02a; outline-offset: 2px; } .ds-nav-links a.ds-nav-cta { background: #1a4875; color: #ffffff; padding: 0.55rem 1.2rem; font-weight: 600; border-radius: 3px; } .ds-nav-links a.ds-nav-cta:hover { background: #0b2f4f; color: #ffffff; }"
+    },
+    {
+      "name": "Callout",
+      "kind": "custom",
+      "refersTo": "service-callout",
+      "description": "Navy-wash panel with the marigold tab at the top-left.",
+      "html": "<div class=\"ds-callout\">Strong decisions begin with reliable evidence.</div>",
+      "css": ".ds-callout { position: relative; background: rgba(26, 72, 117, 0.06); border-radius: 3px; padding: 1.75rem 2rem; font-family: 'Fraunces', Georgia, serif; font-size: 1.2rem; color: #0e1b27; max-width: 520px; } .ds-callout::before { content: ''; position: absolute; top: 0; left: 0; width: 3rem; height: 3px; background: #e3a02a; }"
+    },
+    {
+      "name": "Speech-Bubble Quote Card",
+      "kind": "custom",
+      "refersTo": "hero-quote-card",
+      "description": "The system's only ornament, derived from the LMD mark; sits on the navy hero.",
+      "html": "<div class=\"ds-navy-pad\"><figure class=\"ds-quote\"><blockquote>We do what we say we will do, when we said we would do it.</blockquote></figure></div>",
+      "css": ".ds-navy-pad { background: #0b2f4f; padding: 2rem 2rem 3rem; } .ds-quote { position: relative; margin: 0; background: #ffffff; color: #0e1b27; padding: 2rem 2rem 1.75rem; border-radius: 3px; max-width: 420px; } .ds-quote::after { content: ''; position: absolute; left: 2.25rem; bottom: -14px; width: 0; height: 0; border-left: 16px solid #ffffff; border-bottom: 14px solid transparent; } .ds-quote blockquote { margin: 0; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.15rem; line-height: 1.45; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Field Dossier",
+    "overview": "The site should read like a sober, well-kept evidence file handed across a table to a procurement panel. Navy gives the structure, hairline rules divide the page, and serif headings are set with care. One marigold tab marks where to act next. Nothing on the page is there to impress. The proof, the names and the typesetting do the persuading, the way a well-produced donor report does.\n\nThe system is flat and ruled. Depth comes from tone (cool paper ground, white sheets on it, and a deep navy field for heroes), never from shadow. Density is moderate: generous section rhythm (5.5rem), comfortable reading measures (52–66ch), and compact labels in sentence case with no tracking. Motion follows one idea: the dossier is ruled, and rules get drawn. The hero title is set line by line and the marigold rule is drawn under it, once, on load. The same drawn rule marks the practice areas and the five-stage process as they arrive. Everything else is short feedback or continuity, and reduced-motion users get no travel at all.\n\nColour follows the LMD mark. The logo is navy and nothing else, so navy is the structural identity, not an accent. Marigold is the page's only other hue, and it has exactly two jobs: the primary action and the live/active state.",
+    "keyCharacteristics": [
+      "Navy is the identity; marigold is only for action and active state",
+      "Flat surfaces separated by 1px hairlines; no drop shadows",
+      "Near-square corners (3px) everywhere",
+      "Fraunces serif headings with a quiet italic clause; Archivo for everything else",
+      "One loud moment per page: the solid navy hero field",
+      "Sentence-case labels, no uppercase tracking, no decorative rules before labels",
+      "The speech-bubble quote card, taken from the logo, is the only ornament"
+    ],
+    "rules": [
+      {
+        "name": "The Two-Jobs Rule",
+        "body": "Marigold is used only for the primary action and the live/active state (plus the focus ring and its one graphic hairline). It never tints headings, icons, links or backgrounds. If you are reaching for marigold to make something \"pop\", use navy or type weight instead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Navy-Is-Structure Rule",
+        "body": "Navy is not an accent to sprinkle. It is the frame: labels, marks, fields. No third hue enters the palette.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Inversion Rule",
+        "body": "Every panel on navy inverts the same way (on-dark text, on-dark-muted labels, on-dark-rule borders, outline buttons that fill with on-dark on hover, tags at 10% white). A new dark section reuses this rule and never invents its own overrides.",
+        "section": "colors"
+      },
+      {
+        "name": "The Change-of-Voice Italic Rule",
+        "body": "An italic clause inside a heading (em) drops to weight 400 and keeps the heading's colour. It is a shift in voice, never a highlighter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Label Rule",
+        "body": "Labels are sentence case, 0.85rem, weight 600, with zero letter-spacing and no leading rule or dash. The label names the section and gets out of the way; the title carries the weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled-Not-Raised Rule",
+        "body": "Surfaces never cast drop shadows. To separate things, use a hairline, a tonal step (paper → white sheet), or the navy field. Hover states change border colour or background tone, never elevation.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Near-Square Rule",
+        "body": "Corners never go above 3px. A rounder corner makes the system read as an app rather than a dossier.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep marigold (marigold-signal) to the primary button, the active filter or state, the focus ring, the hero hairline and the callout tab.",
+      "Do build every new dark panel with the One Inversion Rule tokens (on-dark, on-dark-muted, on-dark-rule) instead of ad-hoc overrides.",
+      "Do separate surfaces with 1px hairlines and tonal steps (cool paper → white sheet → deep navy).",
+      "Do set headings in Fraunces weight 500 with negative tracking, and use a weight-400 italic clause in the same colour for a change of voice.",
+      "Do keep labels sentence case, 0.85rem, weight 600, with zero tracking.",
+      "Do keep corners at 3px and hover states to border or background changes over 0.18s.",
+      "Do honour `prefers-reduced-motion`. Nothing travels: the hero lines, drawn rules, menu links and ticker stay still, while opacity and colour changes that confirm state remain.",
+      "Do use a drawn rule (`scaleX` from the left, `--ease-out`) when motion needs a signature. It is the system's one motion idea."
+    ],
+    "donts": [
+      "Don't add drop shadows, lifted hover states or glassy cards.",
+      "Don't introduce a third hue, or use marigold for headings, icons, links or decorative fills.",
+      "Don't use uppercase tracked eyebrow labels, dash-and-rule prefixes before labels, or monospace as a style (all deliberately removed).",
+      "Don't round corners beyond 3px, or use pill buttons.",
+      "Don't add slide-up entrance animations to every section. Only the hero is staged; sections resolve with a 0.45s opacity fade.",
+      "Don't add ornament beyond the logo-derived speech-bubble quote card, including outline ghost wordmarks, background text or decorative blobs.",
+      "Don't use a warm cream ground. The paper stays cool (cool-paper).",
+      "Don't put a coloured stripe down the side of a card or callout; use the top-left marigold tab."
+    ]
+  }
+}

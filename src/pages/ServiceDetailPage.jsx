@@ -55,7 +55,7 @@ export default function ServiceDetailPage() {
           <span>Practice Area {svc.pillar}</span>
         </div>
         <h1>
-          <em style={{ color: 'var(--accent)' }}>{svc.title}</em>
+          <em>{svc.title}</em>
         </h1>
         <p className="pillar-kicker" style={{ marginBottom: '0.75rem' }}>{svc.kicker}</p>
         <p>{svc.valueLine}</p>
@@ -198,50 +198,20 @@ export default function ServiceDetailPage() {
       )}
 
       {/* Service navigation */}
-      <section className="page-section">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-          {prev ? (
-            <Link
-              to={`/services/${prev.id}`}
-              style={{
-                border: '1px solid var(--border)',
-                padding: '1.5rem',
-                textDecoration: 'none',
-                color: 'inherit',
-                transition: 'background 0.2s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--paper2)'}
-              onMouseLeave={e => e.currentTarget.style.background = ''}
-            >
-              <div style={{ fontSize: '0.68rem', fontFamily: 'var(--mono)', letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-                ← Previous
-              </div>
-              <div style={{ fontFamily: 'var(--serif)', fontSize: '1rem' }}>{prev.title}</div>
+      <nav className="pager" aria-label="Other practice areas">
+        {prev ? (
+            <Link to={`/services/${prev.id}`} className="pager-link">
+              <span className="meta-label">← Previous</span>
+              <span className="pager-title">{prev.title}</span>
             </Link>
           ) : <div />}
-
-          {next ? (
-            <Link
-              to={`/services/${next.id}`}
-              style={{
-                border: '1px solid var(--border)',
-                padding: '1.5rem',
-                textDecoration: 'none',
-                color: 'inherit',
-                textAlign: 'right',
-                transition: 'background 0.2s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--paper2)'}
-              onMouseLeave={e => e.currentTarget.style.background = ''}
-            >
-              <div style={{ fontSize: '0.68rem', fontFamily: 'var(--mono)', letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
-                Next →
-              </div>
-              <div style={{ fontFamily: 'var(--serif)', fontSize: '1rem' }}>{next.title}</div>
+        {next ? (
+            <Link to={`/services/${next.id}`} className="pager-link pager-link--next">
+              <span className="meta-label">Next →</span>
+              <span className="pager-title">{next.title}</span>
             </Link>
           ) : <div />}
-        </div>
-      </section>
+      </nav>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCaseStudies } from '../lib/useContentData';
+import { withViewTransition } from '../lib/motion';
 
 export default function CaseStudiesPage() {
   const { data: caseStudies } = useCaseStudies();
@@ -36,7 +37,8 @@ export default function CaseStudiesPage() {
             <button
               key={cat}
               className={`filter-tab${activeFilter === cat ? ' active' : ''}`}
-              onClick={() => setActiveFilter(cat)}
+              aria-pressed={activeFilter === cat}
+              onClick={() => withViewTransition(() => setActiveFilter(cat))}
             >
               {cat}
             </button>
@@ -44,7 +46,7 @@ export default function CaseStudiesPage() {
         </div>
 
         <div style={{ textAlign: 'right', marginBottom: '1rem' }}>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--muted)', letterSpacing: '0.08em' }}>
+          <span className="meta-label" aria-live="polite">
             {filtered.length} {filtered.length === 1 ? 'project' : 'projects'}
           </span>
         </div>
@@ -54,7 +56,12 @@ export default function CaseStudiesPage() {
       <section style={{ padding: '1rem 4vw 6rem' }}>
         <div className="work-grid">
           {filtered.map(cs => (
-            <Link key={cs.id} to={`/work/${cs.id}`} className="work-card">
+            <Link
+              key={cs.id}
+              to={`/work/${cs.id}`}
+              className="work-card"
+              style={{ viewTransitionName: `work-${cs.id}` }}
+            >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <span className="work-card-type">{cs.category}</span>
                 <span className="work-card-type">{cs.year}</span>
@@ -65,12 +72,8 @@ export default function CaseStudiesPage() {
 
               <div style={{ marginTop: 'auto' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.75rem' }}>
-                  <span style={{ fontFamily: 'var(--mono)', fontSize: '0.65rem', color: 'var(--muted)', letterSpacing: '0.08em' }}>
-                    {cs.location}
-                  </span>
-                  <span style={{ fontFamily: 'var(--mono)', fontSize: '0.65rem', color: 'var(--muted)', letterSpacing: '0.08em' }}>
-                    {cs.duration}
-                  </span>
+                  {cs.location && <span className="meta-label">{cs.location}</span>}
+                  {cs.duration && <span className="meta-label">{cs.duration}</span>}
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
                   {cs.tags.slice(0, 2).map(t => (
@@ -89,11 +92,8 @@ export default function CaseStudiesPage() {
             <p style={{ fontFamily: 'var(--serif)', fontSize: '1.25rem', marginBottom: '0.5rem' }}>
               Nothing in this category yet.
             </p>
-            <button
-              onClick={() => setActiveFilter('All')}
-              style={{ fontSize: '0.85rem', color: 'var(--accent)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--mono)', letterSpacing: '0.08em' }}
-            >
-              Show all →
+            <button type="button" className="text-button" onClick={() => setActiveFilter('All')}>
+              Show all work
             </button>
           </div>
         )}
