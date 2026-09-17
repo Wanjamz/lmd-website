@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Map } from 'lucide-react';
 import { useMappedInsights } from '../lib/useContentData';
+import { researchPapers } from '../content/research';
 
 /* ─────────────────────────────────────────────────────────────────────────
    MAPPED — Spatial Intelligence
@@ -58,6 +59,44 @@ function InsightCard({ insight, onClick }) {
         <span className="mapped-read-more">Read insight →</span>
       </div>
     </article>
+  );
+}
+
+/* A full research paper, shown in its own formatting. Figures that have not
+   been uploaded yet are hidden rather than shown as broken images. */
+function ResearchPaper({ html, onClose }) {
+  const ref = useRef(null);
+
+  useEffect(() => { window.scrollTo(0, 0); }, [html]);
+
+  /* Image errors don't bubble, so listen in the capture phase before any can fire. */
+  useLayoutEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    const hide = img => { (img.closest('figure') || img).style.display = 'none'; };
+    const onError = e => { if (e.target.tagName === 'IMG') hide(e.target); };
+    root.addEventListener('error', onError, true);
+    root.querySelectorAll('img').forEach(img => {
+      if (img.complete && img.naturalWidth === 0) hide(img);
+    });
+    return () => root.removeEventListener('error', onError, true);
+  }, [html]);
+
+  /* In-page contents links scroll within the paper instead of changing the route. */
+  const onClick = e => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    e.preventDefault();
+    ref.current.querySelector(link.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  return (
+    <div className="mapped-research">
+      <div className="mapped-research-bar">
+        <button className="mapped-back-btn" onClick={onClose}>← Back to Mapped</button>
+      </div>
+      <div ref={ref} onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
   );
 }
 
@@ -128,6 +167,22 @@ function InsightDetail({ insight, onClose }) {
           </section>
         )}
 
+        {/* Full research paper — optional */}
+        {insight.reportUrl && (
+          <section className="mapped-detail-section mapped-report">
+            <h3 className="mapped-detail-section-label">Read the full paper</h3>
+            {insight.reportNote && <p className="mapped-detail-text">{insight.reportNote}</p>}
+            <a
+              href={insight.reportUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Open the research paper ↗
+            </a>
+          </section>
+        )}
+
         <div className="mapped-cta-bar">
           <p>Does your organisation need spatial analysis like this?</p>
           <Link to="/contact" className="btn-primary">Get in touch →</Link>
@@ -145,6 +200,9 @@ export default function MappedPage() {
   const open = insight => setParams({ insight: insight.id });
   const close = () => setParams({});
 
+  if (selected && researchPapers[selected.id]) {
+    return <ResearchPaper html={researchPapers[selected.id]} onClose={close} />;
+  }
   if (selected) {
     return <InsightDetail insight={selected} onClose={close} />;
   }

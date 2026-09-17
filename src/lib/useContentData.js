@@ -105,5 +105,7 @@ function normaliseMappedInsight(row) {
     summary:     row.summary,
     insights:    row.insights   ?? [],
     implications:row.implications ?? '',
+    reportUrl:   row.report_url ?? '',
+    reportNote:  row.report_note ?? '',
   };
 }

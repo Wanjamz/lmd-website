@@ -75,7 +75,7 @@ The firm is candid about its capability envelope and refers out work it would no
 - **Credentials:** active UNICEF LTA (individual graphic-design consultancy, held by the Founder). CR12, KRA PIN, current Tax Compliance Certificate, and current Single Business Permit, all available on request. The founding consultants have 40+ combined years of experience.
 - **Testimonials (confirmed genuine and approved):** Ken Martin Gitari, Managing Director, SecPlus Kenya; and a Senior Programme Officer, UNICEF Zambia. Both appear on the homepage.
 - **Absences (must not be fabricated):** no other testimonials, no press coverage, and no quantified outcome benchmarks beyond what the case studies state.
-- **Mapped content is placeholder.** The current Mapped insights (Athi River flooding 2024, northern Kenya drought) use sample figures and stand-in map images. Never present those numbers as verified findings.
+- **Mapped research:** the Athi River insight is now based on LMD's desk research paper *Will Athi River Flood Again?* (September 2026), rendered in full inside the insight view from `src/content/research/athi-river-flood-2026.html` (figures in `V2/public/research/athi-river-flood-2026/`). It rates every claim and explicitly withdrew some figures (6.7 m/s velocity, 11 m depths, 162 missing, the Greatwall Gardens flood link, clear skies on 24 April); never reuse them. The other Mapped insights (e.g. northern Kenya drought) still use sample figures and stand-in images and must not be presented as verified.
 
 ## Product Principles
 

@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:20.377Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:20.885Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:21.338Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:21.691Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:22.073Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "src/content/research/athi-river-flood-2026.html"
+        ],
+        "createdAt": "2026-09-17T05:32:22.441Z",
+        "reason": "User asked for the Athi River paper to keep the exact formatting of their supplied HTML"
+      }
+    ]
+  }
+}

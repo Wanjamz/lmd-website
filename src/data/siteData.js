@@ -1046,24 +1046,26 @@ export const heroWords = [
 //   summary     – One-paragraph plain-language explanation of what happened
 //   insights    – Array of exactly 3 bullet-point strings (key insights)
 //   implications – (optional) Short paragraph on implications, or leave empty ''
+//   reportUrl   – (optional) link to a full research paper in V2/public, e.g. '/research/paper.html'
+//   reportNote  – (optional) one line describing that paper
 
 export const mappedInsights = [
   {
     id: 'athi-river-flooding-2024',
-    title: 'Athi River Flooding in 2024',
-    date: 'November 2024',
-    region: 'Machakos & Kajiado Counties, Kenya',
-    mapImage: '/images/Baseline 1.png',   // replace with actual map image
+    title: 'Will Athi River Flood Again? The 2024 Disaster and the 2026 El Niño',
+    date: 'September 2026',
+    region: 'Mavoko, Machakos County, Kenya',
+    mapImage: '/research/athi-river-flood-2026/cover.png',
     mapEmbed: '',
     summary:
-      'In October–November 2024, unusually heavy short rains caused the Athi River to burst its banks across several points in Machakos and Kajiado counties. Low-lying settlements, smallholder farms, and feeder roads were inundated, displacing thousands of households and disrupting supply chains. The flooding coincided with already-saturated soils from the preceding long rains season, amplifying the extent of damage well beyond historical averages.',
+      "Before dawn on 24 April 2024 the Athi River broke its banks and flooded Kwa Mang'eli, Graceland Estate, Kicheko, Kasuitu and neighbouring settlements in Mavoko. Around 2,000 residents of Athi River sub-county were displaced, two people died and rescue teams used boats to reach families on rooftops. Two and a half years later, a very strong El Niño is building and Kenya's forecasters expect an unusually wet October to December 2026. This desk review of 30+ sources asks whether Athi River could flood again, and whether anything has changed to prevent it.",
     insights: [
-      'Flood extent was 40% larger than the 2023 event, driven by above-average October rainfall of 180–220mm — nearly double the long-term mean.',
-      'Settlements built within 500m of the riverbank accounted for over 70% of displaced households, highlighting a persistent land-use planning gap.',
-      'Critical road links connecting Athi River town to Konza Technopolis were submerged for 6–11 days, disrupting logistics and emergency response access.',
+      "The 2026 hazard is real and near: NOAA gives a greater than 90% chance of a very strong El Niño, and ICPAC and KMSA both forecast above-normal short rains, with Nairobi, Machakos and Kajiado named.",
+      "The flood comes from upstream. The river drains the Ngong Hills and Kajiado North, falling roughly 470 m to the town, while Mavoko's built-up area rose from 24.6% to 37.0% between 1989 and 2018 and more of its rain now becomes runoff.",
+      "The vulnerabilities were still active in 2026: floods hit Githunguri, Syokimau, Mlolongo, 360 Estate and Kicheko in April and May 2026, and we found no public evidence that river-corridor flood protection for the 2024 hotspots has been completed.",
     ],
     implications:
-      "The 2024 Athi flooding underscores the urgent need for riparian buffer zone enforcement and flood-resilient infrastructure investment along Kenya's seasonal river corridors. Early-warning systems tied to CHIRPS rainfall data could provide communities with 48–72 hours of advance notice.",
+      "A damaging flood during the 2026 short rains is plausible and the risk is elevated, but not certain. The most likely outcome is repeated local flooding, with a serious chance of a 2024-scale river flood if an extreme overnight storm hits the upper catchment. County authorities should publish the status of drainage and riparian works, pre-position rescue capacity in the 2024 hotspots, and set up an upstream-to-downstream warning so residents are not relying on a whistle again.",
   },
   {
     id: 'drought-northern-kenya',

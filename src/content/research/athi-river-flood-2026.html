@@ -1,0 +1,561 @@
+<!-- LMD Consulting Group research paper: "Will Athi River Flood Again?" (September 2026).
+     Rendered inside the Mapped insight view. Styles are scoped to .lmd-research and classes are prefixed lr-.
+     Figures load from /research/athi-river-flood-2026/ (V2/public/research/athi-river-flood-2026/). -->
+<article class="lmd-research" id="athi-river-flood-research">
+<style>
+.lmd-research{
+  --lr-ink:#0e1b27; --lr-paper:#edeff0; --lr-card:#ffffff; --lr-accent:#1a4875; --lr-accent2:#0b2f4f;
+  --lr-signal:#e3a02a; --lr-signal-ink:#7a4d00; --lr-danger:#b3123c; --lr-muted:#56676f;
+  --lr-rule:rgba(14,27,39,.12); --lr-wash:rgba(26,72,117,.06); --lr-on-dark:#e8eef4; --lr-on-dark-muted:rgba(232,238,244,.72);
+  --lr-serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --lr-sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --lr-mono:ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  background:var(--lr-paper); color:var(--lr-ink); font-family:var(--lr-sans); font-size:17px; line-height:1.65;
+  text-align:left; overflow-wrap:break-word;
+}
+.lmd-research *,.lmd-research *::before,.lmd-research *::after{box-sizing:border-box}
+.lmd-research img{max-width:100%;height:auto;display:block}
+.lmd-research a{color:var(--lr-accent);text-decoration:underline;text-underline-offset:2px}
+.lmd-research p{margin:0 0 16px}
+.lmd-research .lr-wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.lmd-research .lr-wide{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* Cover */
+.lmd-research .lr-cover{background:var(--lr-accent2);color:var(--lr-on-dark);
+  background-image:radial-gradient(circle at 85% 20%, rgba(26,72,117,.9), transparent 55%)}
+.lmd-research .lr-cover .lr-wide{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;padding-top:64px;padding-bottom:32px;align-items:center}
+.lmd-research .lr-cover .lr-wide.lr-statrow{grid-template-columns:repeat(4,1fr);gap:12px;padding-top:8px;padding-bottom:48px;align-items:stretch}
+.lmd-research .lr-eyebrow{font-family:var(--lr-sans);font-weight:600;font-size:13px;letter-spacing:.04em;color:var(--lr-signal);display:inline-block;border-bottom:2px solid var(--lr-signal);padding-bottom:4px}
+.lmd-research .lr-cover h1{font-family:var(--lr-serif);font-weight:600;font-size:clamp(40px,6.4vw,72px);line-height:1.02;letter-spacing:-.01em;margin:18px 0 14px;color:#fff}
+.lmd-research .lr-cover h1 span{color:var(--lr-signal);font-style:italic;font-weight:500}
+.lmd-research .lr-dek{font-size:19px;color:var(--lr-on-dark);max-width:34em;margin:0 0 18px}
+.lmd-research .lr-meta{font-size:13px;color:var(--lr-on-dark-muted)}
+.lmd-research .lr-cover figure{margin:0;background:#0d2a35;border-radius:3px;overflow:hidden}
+.lmd-research .lr-cover figcaption{font-size:12px;color:var(--lr-on-dark-muted);padding:8px 10px}
+.lmd-research .lr-stat{background:rgba(232,238,244,.06);border:1px solid rgba(232,238,244,.18);border-radius:3px;padding:16px}
+.lmd-research .lr-stat b{font-family:var(--lr-serif);font-weight:600;font-size:38px;line-height:1;display:block;color:#fff}
+.lmd-research .lr-stat.lr-hero b{color:var(--lr-signal)}
+.lmd-research .lr-stat small{display:block;font-size:12.5px;color:var(--lr-on-dark-muted);line-height:1.4;margin-top:8px}
+
+/* Body */
+.lmd-research .lr-main{padding:48px 0 80px}
+.lmd-research h2{font-family:var(--lr-serif);font-weight:600;font-size:clamp(26px,3.4vw,34px);line-height:1.15;margin:8px 0 12px;color:var(--lr-ink)}
+.lmd-research h2 .lr-num{font-family:var(--lr-sans);font-weight:700;color:var(--lr-signal);font-size:.7em;margin-right:12px;vertical-align:.18em}
+.lmd-research h3{font-family:var(--lr-sans);font-size:19px;font-weight:700;margin:32px 0 6px;color:var(--lr-ink)}
+.lmd-research h4{font-family:var(--lr-sans);color:var(--lr-ink)}
+.lmd-research .lr-sec-eyebrow{font-family:var(--lr-sans);font-weight:600;font-size:13px;color:var(--lr-accent);margin-top:64px;display:block}
+.lmd-research .lr-lede{font-size:20px;line-height:1.6}
+.lmd-research .lr-quote{font-family:var(--lr-serif);font-style:italic;font-size:clamp(22px,3vw,30px);line-height:1.3;color:var(--lr-accent);border-left:3px solid var(--lr-signal);padding:4px 0 4px 20px;margin:32px 0}
+.lmd-research .lr-rating{font-family:var(--lr-mono);font-size:12px;color:var(--lr-signal-ink);white-space:nowrap}
+.lmd-research .lr-fig{margin:28px 0}
+.lmd-research .lr-fig img{border-radius:3px;border:1px solid var(--lr-rule);background:#fff}
+.lmd-research .lr-fig figcaption{font-size:13.5px;color:var(--lr-muted);margin-top:8px;line-height:1.5}
+.lmd-research .lr-fig figcaption b{color:var(--lr-ink)}
+
+/* Boxes */
+.lmd-research .lr-box{border-radius:3px;padding:14px 18px 16px;margin:24px 0}
+.lmd-research .lr-box .lr-lbl{font-family:var(--lr-sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px;font-weight:700}
+.lmd-research .lr-box p:last-child,.lmd-research .lr-box ul:last-child{margin-bottom:0}
+.lmd-research .lr-box.lr-simple{background:#fdf4e3;border:1px solid var(--lr-signal)}
+.lmd-research .lr-box.lr-simple .lr-lbl{color:var(--lr-signal-ink)}
+.lmd-research .lr-box.lr-know{background:var(--lr-wash);border:1px solid rgba(26,72,117,.2)}
+.lmd-research .lr-box.lr-know .lr-lbl{color:var(--lr-accent)}
+.lmd-research .lr-box.lr-dark{background:var(--lr-accent2);color:var(--lr-on-dark)}
+.lmd-research .lr-box.lr-dark .lr-lbl{color:var(--lr-signal)}
+.lmd-research .lr-box.lr-dark b{color:#fff}
+.lmd-research .lr-box.lr-dark a{color:var(--lr-signal)}
+.lmd-research .lr-box.lr-dark .lr-rating{color:var(--lr-signal)}
+.lmd-research .lr-box.lr-info{background:var(--lr-card);border:1px solid var(--lr-rule);border-left:4px solid var(--lr-accent)}
+.lmd-research .lr-box.lr-info .lr-lbl{color:var(--lr-accent)}
+.lmd-research .lr-box ul{margin:0;padding-left:20px}
+.lmd-research .lr-box li{margin-bottom:6px}
+
+/* Findings */
+.lmd-research .lr-findings{display:grid;gap:12px;margin:24px 0}
+.lmd-research .lr-finding{background:var(--lr-card);border:1px solid var(--lr-rule);border-radius:3px;padding:14px 16px;display:grid;grid-template-columns:40px 1fr;gap:12px}
+.lmd-research .lr-finding .lr-n{font-family:var(--lr-serif);font-weight:600;font-size:30px;line-height:1;color:var(--lr-accent)}
+.lmd-research .lr-finding p{margin:0}
+
+/* Tables */
+.lmd-research .lr-tablewrap{overflow-x:auto;margin:20px 0;border-radius:3px;border:1px solid var(--lr-rule);background:var(--lr-card)}
+.lmd-research table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:620px;margin:0}
+.lmd-research caption{caption-side:top;text-align:left;padding:10px 12px;font-weight:700;background:var(--lr-card)}
+.lmd-research th{background:var(--lr-accent2);color:#fff;text-align:left;font-weight:600;padding:10px 12px;font-size:13px;border:0}
+.lmd-research td{padding:10px 12px;border:0;border-top:1px solid var(--lr-rule);vertical-align:top;background:var(--lr-card);color:var(--lr-ink)}
+.lmd-research tr:nth-child(even) td{background:#f6f8fa}
+.lmd-research td.lr-tag{font-family:var(--lr-mono);font-size:12px;white-space:nowrap;color:var(--lr-signal-ink)}
+
+/* Causal chain */
+.lmd-research .lr-chain{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:24px 0}
+.lmd-research .lr-chain div{flex:1 1 130px;background:var(--lr-accent2);color:var(--lr-on-dark);border-radius:3px;padding:12px;font-size:13.5px;line-height:1.4;position:relative}
+.lmd-research .lr-chain div b{display:block;font-family:var(--lr-serif);font-weight:600;font-size:17px;color:#fff;margin-bottom:4px}
+.lmd-research .lr-chain div:not(:last-child)::after{content:"\2192";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--lr-signal);font-weight:700;z-index:2}
+
+/* Scenarios */
+.lmd-research .lr-scen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.lmd-research .lr-scard{background:var(--lr-card);border:1px solid var(--lr-rule);border-top:4px solid var(--lr-accent);border-radius:3px;padding:16px}
+.lmd-research .lr-scard.lr-b{border-top-color:var(--lr-signal)}
+.lmd-research .lr-scard.lr-c{border-top-color:var(--lr-danger)}
+.lmd-research .lr-scard h4{font-family:var(--lr-serif);font-weight:600;font-size:21px;line-height:1.2;margin:0 0 6px}
+.lmd-research .lr-scard .lr-tagline{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--lr-muted);display:block;margin-bottom:10px}
+.lmd-research .lr-scard p{font-size:14.5px;margin-bottom:10px}
+
+/* Chart */
+.lmd-research .lr-chart{background:var(--lr-card);border:1px solid var(--lr-rule);border-radius:3px;padding:18px;margin:24px 0}
+.lmd-research .lr-chart h4{margin:0 0 4px;font-size:16px}
+.lmd-research .lr-chart .lr-sub{font-size:13px;color:var(--lr-muted);margin:0 0 14px}
+.lmd-research .lr-barrow{display:grid;grid-template-columns:150px 1fr 56px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.lmd-research .lr-bar{height:22px;background:#e8eef4;border-radius:2px;position:relative;overflow:hidden}
+.lmd-research .lr-bar i{position:absolute;top:0;bottom:0;left:0;background:var(--lr-accent)}
+.lmd-research .lr-bar i.lr-light{background:#7f9bb8}
+
+.lmd-research .lr-refs{font-size:14px;padding-left:22px}
+.lmd-research .lr-refs li{margin-bottom:8px;word-break:break-word}
+.lmd-research ol,.lmd-research ul{padding-left:22px;margin:0 0 16px}
+.lmd-research .lr-toc{background:var(--lr-card);border:1px solid var(--lr-rule);border-radius:3px;padding:16px 20px;margin:24px 0}
+.lmd-research .lr-toc ol{margin:6px 0 0;padding-left:20px;columns:2;column-gap:32px;font-size:14.5px}
+.lmd-research .lr-toc a{color:var(--lr-ink);text-decoration:none;border-bottom:1px solid var(--lr-rule)}
+.lmd-research .lr-toc a:hover{color:var(--lr-accent)}
+.lmd-research .lr-foot{background:var(--lr-ink);color:var(--lr-on-dark-muted);padding:40px 0;font-size:14px}
+.lmd-research .lr-foot a{color:var(--lr-on-dark)}
+.lmd-research .lr-mark{font-family:var(--lr-serif);font-weight:600;font-size:26px;color:#fff;margin-bottom:6px}
+.lmd-research .lr-mark span{color:var(--lr-signal);font-style:italic;font-weight:500}
+.lmd-research .lr-cite{font-size:12.5px}
+
+@media (max-width:760px){
+  .lmd-research{font-size:16px}
+  .lmd-research .lr-rating{white-space:normal}
+  .lmd-research .lr-cover .lr-wide{grid-template-columns:1fr;padding-top:40px}
+  .lmd-research .lr-cover .lr-wide.lr-statrow{grid-template-columns:repeat(2,1fr)}
+  .lmd-research .lr-scen{grid-template-columns:1fr}
+  .lmd-research .lr-toc ol{columns:1}
+  .lmd-research .lr-barrow{grid-template-columns:110px 1fr 48px}
+  .lmd-research .lr-chain div:not(:last-child)::after{display:none}
+}
+@media print{ .lmd-research .lr-cover,.lmd-research .lr-foot{-webkit-print-color-adjust:exact;print-color-adjust:exact} }
+</style>
+<header class="lr-cover">
+  <div class="lr-wide">
+    <div>
+      <span class="lr-eyebrow">LMD Consulting Group &middot; Research Paper &middot; Climate &amp; Urban Risk</span>
+      <h1>Will Athi River <span>Flood Again?</span></h1>
+      <p class="lr-dek">What the April 2024 disaster tells us about the very strong 2026 El Niño, and whether Mavoko is ready for the October to December short rains.</p>
+      <p class="lr-meta">LMD Consulting Group &middot; Desk research paper &middot; Evidence current to 16 September 2026 &middot; Approx. 30 minute read</p>
+    </div>
+    <figure>
+      <img src="/research/athi-river-flood-2026/cover.png" alt="Stylised isometric illustration of a river leaving hills and flowing through a grid of urban blocks, set on a dark contour map">
+      <figcaption>Concept illustration: a highland catchment draining into a low-lying urban grid.</figcaption>
+    </figure>
+  </div>
+  <div class="lr-wide lr-statrow">
+    <div class="lr-stat lr-hero"><b>&gt;90%</b><small>NOAA probability of a very strong El Niño this northern autumn and winter (Sept 2026)</small></div>
+    <div class="lr-stat"><b>80%</b><small>Share of Kenya where KMSA expects above-average October to December rain</small></div>
+    <div class="lr-stat"><b>~2,000</b><small>Residents of Athi River sub-county displaced on 24 April 2024</small></div>
+    <div class="lr-stat"><b>37%</b><small>Built-up share of Mavoko in 2018, up from 24.6% in 1989</small></div>
+  </div>
+</header>
+
+<div class="lr-main">
+<div class="lr-wrap">
+
+<span class="lr-sec-eyebrow">Abstract</span>
+<p class="lr-lede">On 24 April 2024 the Athi River broke its banks before dawn and flooded Kwa Mang'eli, Graceland Estate, Kicheko, Kasuitu and neighbouring settlements in Mavoko, Machakos County. Around 2,000 people were displaced, two died, and rescue teams used boats to reach families on rooftops. Two and a half years later, a very strong El Niño is building in the Pacific and Kenya's forecasters expect an unusually wet October to December 2026 season.</p>
+<p>This paper asks whether Athi River could flood again this season, and whether anything has changed to prevent it. It is a desk review of 30+ sources, including NOAA, ICPAC, the Kenya Meteorological Service Authority (KMSA), OCHA and NDOC situation reports, a World Weather Attribution study, two peer-reviewed catchment studies, the Mavoko Municipality Integrated Development Plan 2024 to 2029, court records reported in the press, and news coverage from 2018 to September 2026. Elevations were checked against the SRTM 30 m digital elevation model and site locations against OpenStreetMap. Every claim carries an evidence rating.</p>
+<p><b>Our answer:</b> a damaging flood in Athi River during the 2026 short rains is plausible and the risk is elevated, but it is not certain. The rainfall hazard has risen sharply. The drivers that turned heavy rain into a disaster in 2024 (a fast-draining upstream catchment, rapid paving of the municipality, homes on low ground beside the river, and undersized or blocked drains) were still producing floods in Mavoko as recently as April and May 2026. Authorities have announced riparian demolitions, drain clearance and evacuation planning, but this review found no public evidence that any structural flood protection for the main Athi River corridor has been completed.</p>
+<p style="font-size:14px;color:var(--lr-muted)"><b>Keywords:</b> Athi River; Mavoko; El Niño 2026; short rains; riverine flooding; urban flooding; riparian encroachment; Machakos County; early warning.</p>
+
+<div class="lr-box lr-simple">
+  <span class="lr-lbl">Read this first: what this paper is and is not</span>
+  <p>This is desk research. The author has not visited the affected sites during this review and cannot confirm on-the-ground conditions, the state of individual drains, or whether specific works have been built. Where the evidence is thin, we say so. Findings are rated from ★ (single uncorroborated report) to ★★★★★ (government data with independent corroboration).</p>
+</div>
+
+<nav class="lr-toc" aria-label="Contents">
+  <b>Contents</b>
+  <ol>
+    <li><a href="#lr-s1">Key findings</a></li>
+    <li><a href="#lr-s2">The morning the river rose</a></li>
+    <li><a href="#lr-s3">The 2026 El Niño: what forecasters now say</a></li>
+    <li><a href="#lr-s4">Was 2024 an El Niño flood?</a></li>
+    <li><a href="#lr-s5">Why Athi River floods: the causal chain</a></li>
+    <li><a href="#lr-s6">Who is exposed</a></li>
+    <li><a href="#lr-s7">What has changed since 2024</a></li>
+    <li><a href="#lr-s8">Three scenarios for October to December 2026</a></li>
+    <li><a href="#lr-s9">Stress test and open questions</a></li>
+    <li><a href="#lr-s10">Recommendations</a></li>
+    <li><a href="#lr-s11">What to watch, week by week</a></li>
+    <li><a href="#lr-s12">Method, limitations and references</a></li>
+  </ol>
+</nav>
+
+<span class="lr-sec-eyebrow" id="lr-s1">Section 01</span>
+<h2><span class="lr-num">01</span>Key findings</h2>
+<div class="lr-findings">
+  <div class="lr-finding"><span class="lr-n">1</span><p><b>The 2026 hazard is real and near.</b> NOAA's September update gives a greater than 90% chance of a very strong El Niño and a 75% chance that October to December 2026 exceeds every El Niño on record back to 1950. ICPAC and KMSA both forecast above-normal short rains, with Nairobi, Machakos and Kajiado named. <span class="lr-rating">★★★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">2</span><p><b>The flood comes from upstream.</b> The river that flooded Athi River drains the Ngong Hills and Kajiado North, falling roughly 470 m to the town. Heavy rain there can raise the river in Mavoko hours later. <span class="lr-rating">★★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">3</span><p><b>2024 was not simply an El Niño flood.</b> World Weather Attribution found El Niño and the Indian Ocean Dipole had negligible influence on the March to May 2024 extreme rainfall, while climate change made it about twice as likely. El Niño's strongest link in Kenya is to the October to December season, which is exactly the season now approaching. <span class="lr-rating">★★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">4</span><p><b>The town is shedding more water than it used to.</b> Mavoko's built-up area rose from 24.6% to 37.0% between 1989 and 2018, and the share of rain turned into runoff rose from 69% to 76%. Upstream, wetlands in the Mbagathi and Stony Athi sub-catchments fell by 99% between 2000 and 2019. <span class="lr-rating">★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">5</span><p><b>The vulnerabilities were still active in 2026.</b> Floods hit Githunguri, Syokimau, Mlolongo, 360 Estate and Kicheko during the March to May 2026 rains, a season without El Niño influence. Officials blamed encroachment on riparian land, blocked waterways and diverted rivers. <span class="lr-rating">★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">6</span><p><b>Plans exist; delivery is unverified.</b> Mavoko's 2024 to 2029 plan budgets KSh 100 million for stormwater drainage in Athi River and Mlolongo and proposes a disaster management centre. We found no public progress report. The plan treats flooding mainly as a drainage problem and does not set out river-corridor flood protection for the settlements hit in 2024. <span class="lr-rating">★★★★</span></p></div>
+  <div class="lr-finding"><span class="lr-n">7</span><p><b>Most likely outcome: repeated local flooding, with a serious chance of a 2024-scale river flood.</b> This is an analyst judgement, not a model output. The decisive unknowns are how much rain falls on the upper catchment in a single night, and whether warnings reach riverside households in time. <span class="lr-rating">Judgement</span></p></div>
+</div>
+
+<span class="lr-sec-eyebrow" id="lr-s2">Section 02</span>
+<h2><span class="lr-num">02</span>The morning the river rose</h2>
+<p>Heavy rain fell over Nairobi and its surroundings on the night of Tuesday 23 April 2024. At about 6 a.m. on Wednesday, the community policing chairman in Kwa Mang'eli received word that fast-moving water was heading for the village and blew a whistle to warn his neighbours; the village was soon submerged. <span class="lr-rating">[KNA, 25 Apr 2024 ★★★★]</span> In Graceland Estate, a gated development where homes sold for about KSh 12 million, residents said water entered their houses at around 7 a.m. and rose quickly, in places reaching two floors. <span class="lr-rating">[KNA; Daily Nation, 24 Apr 2024 ★★★]</span></p>
+<p>The Kenya Red Cross, working with a multi-agency team and residents, rescued 96 people from Graceland. <span class="lr-rating">[KRCS via The Star, 25 Apr 2024 ★★★]</span> Police reported that about 1,500 people held by floodwater in Kwa Mang'eli were rescued around midday, and that two people died in the Athi River flooding. <span class="lr-rating">[The Star, 25 Apr 2024 ★★]</span> The Machakos County Commissioner told KNA that more than 2,000 residents of Athi River sub-county were displaced and moved to rescue centres, naming Kwa Mang'eli, Kwa Nzomo, Kinanie, Kyelenzi, 39, Kisumu Ndogo and Graceland as the hardest hit. <span class="lr-rating">[KNA ★★★★]</span> Governor Wavinya Ndeti listed Kicheko, Graceland, Kasuitu and Kwa Mang'eli as the worst affected and promised to evict developers on riparian land. <span class="lr-rating">[KNA; The Star ★★★]</span></p>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-1-timeline.png" alt="Timeline beside a 3D block diagram showing rain on hills upstream, a river breach, peak flooding in an urban area, rescue and recession on 24 April 2024">
+  <figcaption><b>Figure 1. Indicative reconstruction of 24 April 2024.</b> The hour bands are illustrative. The documented anchors are: heavy rain on the night of 23 April; a warning in Kwa Mang'eli at about 06:00; water entering Graceland homes at about 07:00; rescues through the day, including 96 people at Graceland and about 1,500 at Kwa Mang'eli by noon. <i>Correction:</i> "Kasoito" in the graphic refers to Kasuitu, a settlement, not a tributary. The main upstream tributary system is the Mbagathi River and its feeders, including the Kandisi.</figcaption>
+</figure>
+
+<p>Mavoko was one scene in a national emergency. By mid-June 2024, NDOC counted 315 deaths, 188 injuries, 38 people missing and more than 293,200 people displaced between 1 March and 18 June. <span class="lr-rating">[OCHA Flash Update 7 ★★★★]</span> The Kenya Red Cross operations report later recorded 294 fatalities for March to May, about 55,000 displaced households, 11,000 livestock lost and 65,000 acres of cropland damaged. <span class="lr-rating">[Dialogue Earth, citing KRCS ★★★]</span> Nairobi County was the worst affected, with an estimated 256,890 people affected by mid-May. <span class="lr-rating">[OCHA ★★★★]</span> Five days after the Athi River flood, a debris-blocked culvert under a railway embankment failed at Mai Mahiu and killed dozens, a reminder that blocked drainage structures can turn water into a wave.</p>
+
+<div class="lr-tablewrap">
+<table>
+<caption>Table 1. National impact of the March to May 2024 rains (figures differ by source and date)</caption>
+<thead><tr><th>Indicator</th><th>Figure</th><th>Source and date</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td>Deaths</td><td>315</td><td>NDOC via OCHA, 1 Mar to 18 Jun 2024</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Deaths (March to May)</td><td>294</td><td>KRCS operations report via Dialogue Earth</td><td class="lr-tag">★★★</td></tr>
+<tr><td>People displaced</td><td>293,200+ (58,641 families)</td><td>NDOC via OCHA, 18 Jun 2024</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Missing</td><td>38 (down from 75 in May)</td><td>NDOC via OCHA</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Livestock lost</td><td>11,311</td><td>KRCS via OCHA, 15 May 2024</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Learners out of school</td><td>~350,000</td><td>Ministry of Education via OCHA, 10 Jun 2024</td><td class="lr-tag">★★★★</td></tr>
+</tbody>
+</table>
+</div>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-impact-cards.png" alt="Six stat cards: 294 fatalities, 55,000 displaced households, 65,377 acres destroyed, 162 missing persons, 11,311 livestock lost, 2,000 school disruptions">
+  <figcaption><b>Figure 1b. National impact summary from an earlier working graphic.</b> Four figures match Table 1's sources (294 deaths, about 55,000 displaced households, about 65,000 acres of cropland, 11,311 livestock). <i>Correction:</i> "162 missing persons" does not match NDOC, which reported 38 missing by 18 June 2024; and "2,000 school disruptions" understates the Ministry of Education figure of about 350,000 learners out of school. Use Table 1 for citation.</figcaption>
+</figure>
+
+<span class="lr-sec-eyebrow" id="lr-s3">Section 03</span>
+<h2><span class="lr-num">03</span>The 2026 El Niño: what forecasters now say</h2>
+<p>El Niño is no longer a forecast. NOAA's Climate Prediction Center has had an El Niño Advisory in place since June 2026. Its September discussion says the event is strengthening, gives a greater than 90% chance of a very strong event through the northern hemisphere autumn and winter, and puts a 75% chance on October to December 2026 exceeding the strength of every El Niño since 1950. It also cautions that a stronger event raises the odds of typical impacts without guaranteeing them. <span class="lr-rating">[NOAA CPC, Sept 2026 ★★★★★]</span> The weekly Niño 3.4 index reached +2.7 °C in mid-August. <span class="lr-rating">[IRI ★★★★]</span></p>
+
+<div class="lr-box lr-simple">
+  <span class="lr-lbl">In simple terms</span>
+  <p>El Niño is a warming of the central and eastern Pacific that reshapes rainfall worldwide. East Africa is one of the few regions that tends to get wetter, mostly in the October to December "short rains". "Super" and "Godzilla" are media labels. NOAA's term is a <b>very strong</b> El Niño. A positive Indian Ocean Dipole, a warm western Indian Ocean, usually adds to East African rainfall and is also expected this year.</p>
+</div>
+
+<h3>Regional and national outlooks</h3>
+<p>The 74th Greater Horn of Africa Climate Outlook Forum (GHACOF74), held on 17 and 18 August 2026, released an outlook indicating an increased likelihood of wetter-than-normal October to December conditions. ICPAC noted that this season supplies up to 70% of annual rainfall in parts of Kenya, named 1997 and 2023 as the closest analogue years, and expects a positive Indian Ocean Dipole. <span class="lr-rating">[ICPAC, 18 Aug 2026 ★★★★]</span> Its technical statement gives a greater than 90% likelihood of exceeding 400 mm over parts of central Kenya during the season. <span class="lr-rating">[GHACOF74 ★★★★]</span></p>
+<p>The Kenya Meteorological Service Authority's outlook, dated 26 August 2026, expects above-average rainfall over about 80% of the country, with prolonged wet spells and occasional isolated storms. Nairobi, Machakos and Kajiado are among the counties named. <span class="lr-rating">[KMSA via national press ★★★★]</span> KMSA notes the short rains supply over 40% of annual rainfall in Machakos and parts of Kajiado. Onset is expected in the second to third week of October around Nairobi and in the third to fourth week in Machakos. <span class="lr-rating">[KMSA via The Kenya Times; Smart Farmer ★★★]</span> This timing matters for Athi River, because the upper catchment may start running high before rain is heavy in Mavoko itself.</p>
+
+<h3>The economic stakes</h3>
+<p>In July, the African Development Bank's director for climate change and green growth told Reuters that the event could cut the GDP of heavily affected African countries by 1% to 2% on average, a combined $10 billion to $20 billion, and could drive migration from hard-hit areas. <span class="lr-rating">[Reuters, 26 Jul 2026 ★★★]</span> This is a continental estimate, not a forecast for Athi River. For Kenya, the 1997 to 1998 El Niño floods are commonly estimated to have cost about 11% of annual GDP. <span class="lr-rating">[The Star infographic, Sept 2026 ★★]</span></p>
+
+<figure class="lr-quote">Build the fence before people fall: it is "cheaper to build a fence around a precipice."<br><span style="font-family:var(--lr-sans);font-style:normal;font-size:14px;color:var(--lr-muted)">Anthony Nyong, AfDB, to Reuters, July 2026</span></figure>
+
+<span class="lr-sec-eyebrow" id="lr-s4">Section 04</span>
+<h2><span class="lr-num">04</span>Was 2024 an El Niño flood?</h2>
+<p>Popular coverage often called the 2024 floods "El Niño rains". The evidence is more precise than that, and the distinction changes what we should expect in 2026.</p>
+<p>The World Meteorological Organization's State of the Climate in Africa 2024 said the El Niño and positive Indian Ocean Dipole that ran from 2023 into early 2024 played major roles in the continent's rainfall patterns. <span class="lr-rating">[WMO, May 2025 ★★★★]</span> An event-specific study by World Weather Attribution, looking at the maximum 30-day rainfall of the 2024 long rains over southern Kenya, most of Tanzania and part of Burundi, reached a sharper conclusion: both El Niño and the Indian Ocean Dipole had negligible influence on that event. Human-caused warming made rainfall of that severity about twice as likely and about 5% more intense, with large statistical uncertainty. The authors also pointed to rapid urbanisation and settlement in flood-prone areas as amplifiers of the damage. <span class="lr-rating">[WWA, 23 May 2024 ★★★★]</span></p>
+<p>The two findings are not contradictory. They cover different areas, periods and definitions. Together they give three lessons for Athi River:</p>
+<div class="lr-box lr-know">
+  <span class="lr-lbl">Why this matters for 2026</span>
+  <ul>
+    <li><b>A damaging flood did not need El Niño.</b> The April 2024 flood happened in the long rains, when El Niño's influence on East Africa is weak.</li>
+    <li><b>2026 is the season El Niño does affect.</b> The October to December short rains carry East Africa's strongest El Niño signal, and the ICPAC analogue years, 1997 and 2023, both produced wet short rains across much of the region.</li>
+    <li><b>The background is shifting.</b> A warmer atmosphere holds more moisture, so the same weather pattern can now deliver heavier bursts of rain than it did a generation ago.</li>
+  </ul>
+</div>
+
+<span class="lr-sec-eyebrow" id="lr-s5">Section 05</span>
+<h2><span class="lr-num">05</span>Why Athi River floods: the causal chain</h2>
+<p>Athi River's floods come from two processes that often happen together and need different fixes.</p>
+<div class="lr-tablewrap">
+<table>
+<thead><tr><th>Process</th><th>What happens</th><th>What reduces it</th><th>What does not</th></tr></thead>
+<tbody>
+<tr><td><b>Riverine flooding</b></td><td>The Athi River or a tributary carries more water than its channel can hold and spreads over its floodplain.</td><td>Keeping the floodplain clear, upstream retention, channel and bridge capacity, early warning and evacuation.</td><td>Clearing roadside drains alone.</td></tr>
+<tr><td><b>Urban (pluvial) flooding</b></td><td>Intense local rain cannot drain away because surfaces are paved and drains are missing, undersized or blocked.</td><td>Adequate, maintained drains; open waterways; rainwater harvesting; permeable surfaces.</td><td>River works alone.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Link 1: A steep, fast catchment upstream</h3>
+<p>The Mbagathi River, a main tributary of the upper Athi, rises in the Ngong Hills at about 1,980 m and flows east past Ongata Rongai and Nairobi National Park towards Athi River town. <span class="lr-rating">[Nyika 2017, via ResearchGate ★★★]</span> Streams including the Kandisi join it near Rongai. Our check of the SRTM 30 m elevation model puts Athi River town centre at about 1,509 m and Graceland Estate at about 1,490 m, one of the lowest points among the sites reviewed. <span class="lr-rating">[SRTM via OpenTopoData ★★★★]</span> The fall of roughly 470 m from the headwaters means rain over Ngong and Kajiado North reaches Mavoko quickly and with force.</p>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-2-lag-effect.png" alt="Illustration of rain over a mountain, an arrow down a tributary to a township below, labelled The Lag Effect">
+  <figcaption><b>Figure 2. The lag effect (conceptual).</b> Rain over the upper catchment can raise the river in Mavoko hours later. <i>Note:</i> the labelled 1,960 m refers to the Mbagathi headwater area, not the Ngong Hills summit, which is higher. The graphic's claim of clear skies over Athi River that morning is <b>not confirmed</b>: residents and officials described heavy rain overnight on 23 April across the Nairobi area. What is established is that the damaging water arrived as a river surge, not only as local runoff.</figcaption>
+</figure>
+
+<h3>Link 2: Paving the catchment</h3>
+<p>A 2020 remote-sensing study of Mavoko Municipality (820 km²) found that largely impervious built-up land rose from 24.6% of the area in 1989 to 37.0% in 2018, while grassland, open space and bare land fell from 65.5% to 44.5%. The share of annual rainfall converted into runoff rose from 69% to 76%, and 68% of the municipality produced more runoff than before. About 60% of Mavoko's soils are clays, which absorb water slowly. <span class="lr-rating">[IJERT, Apr 2020 ★★★]</span> Upstream, a study of the Mbagathi and Stony Athi sub-catchments recorded a 53.67% increase in built-up area and a 99.32% loss of wetlands between 2000 and 2019, and projects seasonal rainfall rising by 12% to 21% by 2063 depending on the emissions pathway. <span class="lr-rating">[Sang &amp; Olago ★★★]</span></p>
+
+<div class="lr-chart" role="img" aria-label="Bar chart comparing Mavoko built-up share and runoff conversion in 1989 and 2018">
+  <h4>Mavoko is converting more of its rain into runoff</h4>
+  <p class="lr-sub">Built-up share of land and share of annual rainfall becoming runoff, 1989 vs 2018 (IJERT 2020)</p>
+  <div class="lr-barrow"><span>Built-up land, 1989</span><div class="lr-bar"><i class="lr-light" style="width:24.6%"></i></div><b>24.6%</b></div>
+  <div class="lr-barrow"><span>Built-up land, 2018</span><div class="lr-bar"><i style="width:37%"></i></div><b>37.0%</b></div>
+  <div class="lr-barrow"><span>Rain to runoff, 1989</span><div class="lr-bar"><i class="lr-light" style="width:69%"></i></div><b>69%</b></div>
+  <div class="lr-barrow"><span>Rain to runoff, 2018</span><div class="lr-bar"><i style="width:76%"></i></div><b>76%</b></div>
+</div>
+
+<h3>Link 3: A shallower, narrower channel</h3>
+<p>When soil washes off degraded land upstream, it settles in the riverbed and reduces the volume the channel can carry. A NEMA official, speaking after a 2020 flood at Green Park Estate, described the Athi plains as low-lying, some areas below river flow level, and said silt and debris helped push the river more than 100 m beyond its bank. <span class="lr-rating">[Business Daily, Dec 2020 ★★]</span> In court, a hydrologist attributed an earlier flood at the same estate to backwater from an obstruction during construction of a bridge across the Stony Athi on Mombasa Road. <span class="lr-rating">[The Standard ★★]</span> We found no published sediment survey of the Athi channel through Mavoko, so the scale of siltation remains an open question.</p>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-3-channel.png" alt="Cross-section diagram comparing a deep historical river channel with a 2024 channel narrowed by silt and houses on the banks">
+  <figcaption><b>Figure 3. How siltation and encroachment shrink a channel (schematic, not to scale).</b> The mechanism is well established. Its magnitude on the Athi through Mavoko has not been measured in any public source we found.</figcaption>
+</figure>
+
+<h3>Link 4: Building where the water goes</h3>
+<p>Mavoko's population was 322,499 in 2019 and is projected to reach about 593,000 by 2030, one of the fastest growth rates in the Nairobi Metropolitan Region. <span class="lr-rating">[IJERT, citing KNBS ★★★]</span> Growth has pushed homes, walls and businesses onto river margins. In May 2026, after fresh floods, Machakos officials said sections of rivers and riparian areas in Syokimau, Mlolongo and Sabaki had been blocked by houses and perimeter walls, and that some rivers had been diverted. A residents' association chairman confirmed that some members had encroached and diverted a river. <span class="lr-rating">[The Star, 23 May 2026 ★★★]</span></p>
+
+<h3>Link 5: Drains that cannot cope</h3>
+<p>The Mavoko Integrated Development Plan 2024 to 2029 states that many municipal roads lack stormwater drains, that drains in central areas are often clogged with solid waste, and that this causes urban flooding. It documents flooding in Mlolongo Central and in Athi River's central area. <span class="lr-rating">[Mavoko IDeP, May 2024 ★★★★]</span></p>
+
+<div class="lr-chain" aria-label="Causal chain">
+  <div><b>Heavy rain upstream</b>Ngong Hills and Kajiado North</div>
+  <div><b>Fast runoff</b>~470 m fall, fewer wetlands, more paving</div>
+  <div><b>Surge meets a squeezed channel</b>silt, walls, bridges, debris</div>
+  <div><b>River leaves its banks</b>low ground at Graceland, Kwa Mang'eli, Kicheko</div>
+  <div><b>Local drains fail</b>blocked or missing stormwater channels</div>
+  <div><b>Losses</b>homes, vehicles, livelihoods, lives</div>
+</div>
+<p style="font-size:13.5px;color:var(--lr-muted)">Figure 4. Causal chain synthesised from the sources above. Each link is documented; their relative contribution in 2024 has not been quantified.</p>
+
+<span class="lr-sec-eyebrow" id="lr-s6">Section 06</span>
+<h2><span class="lr-num">06</span>Who is exposed</h2>
+<p>Exposure in Mavoko cuts across income groups. Upmarket gated estates and informal settlements both sit on low ground near the river, but they absorb losses very differently.</p>
+
+<div class="lr-tablewrap">
+<table>
+<caption>Table 2. Documented flood history by location (verified coordinates from OpenStreetMap where available)</caption>
+<thead><tr><th>Location</th><th>Type</th><th>Documented flooding</th><th>Notes</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td><b>Graceland Estate</b><br><small>-1.4331, 36.9916 · ~1,490 m</small></td><td>Gated riverside estate</td><td>24 Apr 2024: river water to two floors in places; 80 households affected; 96 rescued</td><td>Residents on rooftops; vehicles submerged</td><td class="lr-tag">★★★★</td></tr>
+<tr><td><b>Kwa Mang'eli</b></td><td>Village, low-lying</td><td>24 Apr 2024: whole village submerged; ~1,500 rescued; one drowning</td><td>Warning by whistle at ~06:00</td><td class="lr-tag">★★★</td></tr>
+<tr><td><b>Kicheko</b></td><td>Informal settlement</td><td>2024 worst-hit list; named again in May 2026 among areas frequently flooded</td><td>Repeat exposure across two seasons</td><td class="lr-tag">★★★</td></tr>
+<tr><td><b>Kasuitu</b></td><td>Village</td><td>2024 worst-hit list; residents told to keep off riverbanks</td><td>Not a tributary, as some graphics state</td><td class="lr-tag">★★★</td></tr>
+<tr><td><b>Kwa Nzomo, Kinanie, Kyelenzi, 39, Kisumu Ndogo</b></td><td>Mixed settlements</td><td>2024 hardest-hit list (County Commissioner)</td><td>Rescue centre at Kinanie</td><td class="lr-tag">★★★★</td></tr>
+<tr><td><b>Green Park Estate</b><br><small>-1.4612, 37.0147 · ~1,518 m</small></td><td>Gated estate beside the Stony Athi</td><td>Floods in 2018 (wall collapse) and 2020 (river &gt;100 m beyond bank, 10+ homes)</td><td>Courts ruled in 2024 that units are not on riparian land; flooding still occurred</td><td class="lr-tag">★★★</td></tr>
+<tr><td><b>Githunguri, Syokimau, Mlolongo, 360 Estate, Sabaki</b></td><td>Fast-growing suburbs</td><td>Apr to May 2026: 100+ households hit in Githunguri; repeated storm-water flooding</td><td>Officials cite encroachment and blocked waterways</td><td class="lr-tag">★★★</td></tr>
+<tr><td><b>Greatwall Gardens</b><br><small>-1.4289, 36.9786 · ~1,523 m</small></td><td>High-density estate</td><td>No specific flood damage found in this review</td><td>See correction below</td><td class="lr-tag">Gap</td></tr>
+</tbody>
+</table>
+</div>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-vulnerability-matrix.png" alt="The Urban Vulnerability Matrix: Graceland Estate, Greatwall Gardens, Green Park Estate and Kasoito/Kicheko with typology, hazard classification and 2024 impact">
+  <figcaption><b>Figure 3b. The urban vulnerability matrix (earlier working graphic).</b> The hazard classes are analyst judgements, not a mapped hazard assessment. <i>Corrections:</i> Greatwall Gardens' "financial and legal controversies" were a loan dispute, not flood-related; the Green Park wall collapse dates from 2018, before the 2024 Court of Appeal ruling; "Kasoito" is Kasuitu. Table 2 is the corrected record.</figcaption>
+</figure>
+
+<div class="lr-box lr-info">
+  <span class="lr-lbl">Correction to earlier drafts and graphics</span>
+  <p>Earlier working graphics linked Greatwall Gardens' legal troubles to flooding. That link is not supported. KCB's 2024 attempt to auction about 100 units stemmed from a loan dispute with the developer dating to 2015, not from flood damage. <span class="lr-rating">[The Standard; Business Daily; The Star, Apr to May 2024 ★★★]</span> Similarly, the Green Park Court of Appeal ruling (August 2024) came after the April 2024 flood; the documented wall collapse at Green Park dates from 2018. These corrections do not reduce the risk; they keep the record accurate.</p>
+</div>
+
+<p>The difference in consequences is stark. For a household in a gated estate, a flood means ruined furniture, written-off cars and a stay with relatives. For families in informal riverside settlements, the same flood can mean the loss of the house itself, stock, livestock and a farm plot that fed the children. One Kwa Mang'eli resident told KNA she had lost her house and farm and had nothing left for her children. <span class="lr-rating">[KNA ★★★]</span> Any flood plan that treats these groups the same will fail the poorest first.</p>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-two-realities.png" alt="Two panels: The Corporate Reality, about Greatwall Gardens, and The Human Reality, about informal riverside settlements">
+  <figcaption><b>Figure 3c. Two realities of the same flood (earlier working graphic).</b> The human reality panel reflects the documented losses in informal riverside settlements. <i>Correction:</i> the corporate panel presents the KCB auction at Greatwall Gardens as a flood consequence. That is not supported; the auction stemmed from a loan dispute dating to 2015. "Kasoito" refers to Kasuitu.</figcaption>
+</figure>
+
+<span class="lr-sec-eyebrow" id="lr-s7">Section 07</span>
+<h2><span class="lr-num">07</span>What has changed since 2024</h2>
+<p>We looked for evidence of action between April 2024 and September 2026. The record shows intent and enforcement activity, but little verifiable completed infrastructure.</p>
+
+<div class="lr-tablewrap">
+<table>
+<thead><tr><th>Measure</th><th>Evidence found</th><th>Status we can verify</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td>Stormwater drains, Athi River and Mlolongo urban centres</td><td>IDeP 2024 to 2029: KSh 100 million, 25% of length per year over four years</td><td>Planned. No progress report found.</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Stormwater management plan</td><td>IDeP lists "lack of storm water drainage plan" as an issue and proposes one</td><td>Planned. Not found published.</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>30 m riparian reserves</td><td>IDeP spatial framework; county demolition notices, Apr to May 2026; Utawala demolitions using WRA maps, 4 May 2026</td><td>Enforcement under way in parts of Mavoko and Kangundo/Tala. Coverage of the 2024 hotspots unknown.</td><td class="lr-tag">★★★</td></tr>
+<tr><td>Multi-agency flood team</td><td>Formed after 22 May 2026 tour of Syokimau, Mlolongo, Sabaki; focus on stormwater, unclogging drains, encroachment</td><td>Announced. Outputs not yet reported.</td><td class="lr-tag">★★★</td></tr>
+<tr><td>Municipal disaster management centre</td><td>Proposed in IDeP for Athi River and Mlolongo</td><td>Planned. No evidence of construction.</td><td class="lr-tag">★★★★</td></tr>
+<tr><td>Sewage discharge crackdown and evacuation planning</td><td>County operation in Syokimau, 1 Sept 2026, framed as El Niño preparedness</td><td>Under way.</td><td class="lr-tag">★★</td></tr>
+<tr><td>River gauging and community early warning for the Athi at Mavoko</td><td>None found</td><td>Unknown</td><td class="lr-tag">Gap</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="lr-box lr-dark">
+  <span class="lr-lbl">What the plan leaves out</span>
+  <p>The IDeP was prepared between April and June 2024, in the weeks around the flood. It clearly recognises urban drainage failure. But a search of the document found no reference to the 24 April riverine flood, to Graceland, Kwa Mang'eli or Kicheko, or to river-corridor flood protection for them. Its disaster table focuses on fires, road accidents, collapsing buildings and disease, and addresses flash floods mainly through tree planting. <b>The type of flood that did the most damage in 2024 is the type the plan says least about.</b> <span class="lr-rating">[Mavoko IDeP ★★★★]</span></p>
+</div>
+
+<p>The March to May 2026 season is the most useful real-world test available. Without El Niño influence, heavy rain again flooded Mavoko. On 29 April 2026 more than 100 households were affected in Githunguri, and flooding hit Utawala, Katani, Airways, Kamulu and Syokimau. <span class="lr-rating">[The Star, 30 Apr 2026 ★★★]</span> The municipal manager named 360 Estate, Kicheko and Kincar among the areas frequently hit. <span class="lr-rating">[Kenyans.co.ke, 3 May 2026 ★★]</span> On 1 May, Mombasa Road was impassable and police warned that Nairobi's waterways, all draining into the Athi system, were running critically high. <span class="lr-rating">[Kenyans.co.ke ★★]</span> Whatever has been done since 2024, it did not stop these floods.</p>
+
+<span class="lr-sec-eyebrow" id="lr-s8">Section 08</span>
+<h2><span class="lr-num">08</span>Three scenarios for October to December 2026</h2>
+<p>These scenarios are analyst judgements built from the evidence above. They are not hydrological model outputs and carry no numerical probability.</p>
+
+<div class="lr-scen">
+  <div class="lr-scard">
+    <h4>A. Wet but managed</h4>
+    <span class="lr-tagline">Lower likelihood</span>
+    <p><b>Trigger:</b> rain is above normal but spread over many days, with no single extreme night over the upper catchment.</p>
+    <p><b>What it looks like:</b> ponding on roads, traffic disruption on Mombasa and Namanga roads, the river high but mostly in channel.</p>
+    <p><b>Why less likely:</b> KMSA expects prolonged wet spells, which saturate soils and reduce the margin before the next storm.</p>
+  </div>
+  <div class="lr-scard lr-b">
+    <h4>B. Repeated local floods</h4>
+    <span class="lr-tagline">Most likely</span>
+    <p><b>Trigger:</b> several intense storms over Mavoko and nearby suburbs.</p>
+    <p><b>What it looks like:</b> storm water in homes in Syokimau, Mlolongo, Githunguri, 360 Estate and Kicheko; blocked culverts; road closures; small-scale displacement several times in the season.</p>
+    <p><b>Why most likely:</b> this pattern occurred in April and May 2026 without El Niño, and the drivers are unchanged.</p>
+  </div>
+  <div class="lr-scard lr-c">
+    <h4>C. River and urban flood together</h4>
+    <span class="lr-tagline">Serious possibility</span>
+    <p><b>Trigger:</b> an extreme overnight storm over Ngong and Kajiado North on already saturated ground, as on 23 to 24 April 2024.</p>
+    <p><b>What it looks like:</b> the Athi leaves its banks at Graceland, Kwa Mang'eli, Kicheko and Kasuitu before dawn; boat rescues; thousands displaced; possible deaths.</p>
+    <p><b>Why plausible:</b> the forecast rainfall totals, analogue years and unaddressed floodplain exposure all point this way.</p>
+  </div>
+</div>
+
+<div class="lr-box lr-info">
+  <span class="lr-lbl">What would move us between scenarios</span>
+  <ul>
+    <li><b>Towards C:</b> an early and heavy onset in the Nairobi and Ngong highlands in mid-October; KMSA heavy-rainfall advisories above 50 mm in 24 hours for Nairobi and Kajiado; reports of the Mbagathi or Athi running high before Mavoko's own onset.</li>
+    <li><b>Towards A:</b> published evidence that the 2024 hotspots have been cleared, drains built and a working warning chain set up; a weaker or delayed onset.</li>
+  </ul>
+</div>
+
+<span class="lr-sec-eyebrow" id="lr-s9">Section 09</span>
+<h2><span class="lr-num">09</span>Stress test and open questions</h2>
+<p>We challenged each headline conclusion before publishing. The results are below.</p>
+<div class="lr-tablewrap">
+<table>
+<thead><tr><th>Conclusion</th><th>Independent sources?</th><th>Strongest counter-argument</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>A very wet short-rains season is likely</td><td>Yes: NOAA, IRI, ICPAC, KMSA</td><td>Seasonal forecasts describe probabilities over large areas; local totals can differ, and 2015 to 2016 showed strong El Niños do not always deliver expected impacts.</td><td>Holds, with that caveat</td></tr>
+<tr><td>Athi River's floods are driven upstream</td><td>Yes: catchment studies, SRTM, eyewitness timing</td><td>Local rain also fell heavily on 23 April 2024; the relative role of local and upstream water is unmeasured.</td><td>Holds as a major driver, not the only one</td></tr>
+<tr><td>Urbanisation has increased runoff</td><td>Two peer-reviewed studies</td><td>Both rely on modelled runoff (SCS-CN, WEAP), not measured river flow; one journal is lower tier.</td><td>Holds, moderate confidence</td></tr>
+<tr><td>No completed river protection exists</td><td>Absence of evidence only</td><td>Works may exist but be unreported online.</td><td>Moved to Open Questions</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Open questions this review could not answer</h3>
+<ol>
+  <li>Have any stormwater works funded under the IDeP been built, and where?</li>
+  <li>Have structures been removed from riparian land at Graceland, Kwa Mang'eli, Kicheko or Kasuitu since 2024?</li>
+  <li>Is there a working river gauge on the Athi or Mbagathi upstream of Mavoko, and does anyone relay its readings to residents in real time?</li>
+  <li>What is the flow capacity of the channel and bridges through Mavoko, and how much has siltation reduced it?</li>
+  <li>How much rain fell on the upper catchment on the night of 23 April 2024, and how long did the surge take to reach Mavoko?</li>
+  <li>Has a flood hazard map for Mavoko, with a defined return period, been produced and made public?</li>
+</ol>
+
+<div class="lr-box lr-simple">
+  <span class="lr-lbl">Claims we removed from earlier drafts</span>
+  <p>Some working graphics stated that water velocity reached 6.7 m/s ("3x current"), that depths reached 11 metres, and described a "460 m upstream surge". We found no hydrological study or official record supporting these figures, so they are not used here. The 460 m figure describes an elevation difference, not the height of a surge. We also dropped a count of 162 missing persons, which does not match NDOC figures.</p>
+</div>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-surge-graphic.png" alt="Graphic headlined The 460M Upstream Surge and The 100-Year Flood Risk, showing 3x current water velocity (6.7 m/s) and 11-meter depths">
+  <figcaption><b>Figure 5b. The withdrawn surge graphic, shown for transparency.</b> <i>Not supported by evidence:</i> the 6.7 m/s velocity, the "3x" multiplier, the 11-metre depths and the "100-year flood" label have no hydrological source, and 460 m is an elevation difference, not a surge height. Do not cite these figures.</figcaption>
+</figure>
+
+<span class="lr-sec-eyebrow" id="lr-s10">Section 10</span>
+<h2><span class="lr-num">10</span>Recommendations</h2>
+<p>Each recommendation names who should act and by when. They are addressed to the season starting in October 2026.</p>
+<ol>
+  <li><b>Machakos County Government and Municipal Board of Mavoko, before 10 October:</b> publish a one-page status of drainage works, riparian clearances and rescue centres for Athi River town, Kinanie and Mlolongo, including Graceland, Kwa Mang'eli, Kicheko and Kasuitu. <i>Evidence: IDeP targets; 2026 flood record.</i></li>
+  <li><b>Machakos County Disaster Management Unit with the Kenya Red Cross, before onset:</b> run door-to-door preparedness in the 2024 hotspots, confirm evacuation routes and pre-position boats at Athi River town, as the 2024 rescues depended on boats. <i>Evidence: 2024 rescue accounts.</i></li>
+  <li><b>Water Resources Authority (Athi Basin) and KMSA, before onset:</b> set up an upstream-to-downstream alert so that heavy rain or high water on the Mbagathi triggers a warning to Mavoko ward administrators, chiefs and community policing committees. The only documented warning in 2024 was a whistle. <i>Evidence: KNA eyewitness account.</i></li>
+  <li><b>Kenya Urban Roads Authority, KeNHA and the Municipality, September to October:</b> clear culverts and bridge openings on Mombasa Road, Namanga Road and estate roads that cross waterways. <i>Evidence: IDeP; Mai Mahiu culvert failure; Green Park bridge testimony.</i></li>
+  <li><b>Residents' associations in riverside estates, now:</b> agree a household warning chain, move vehicles and valuables to higher ground when KMSA issues heavy-rain advisories, and keep a list of residents who need help to evacuate.</li>
+  <li><b>Buyers and lenders:</b> check WRA riparian maps and past flood records before buying or financing property near the Athi, Stony Athi or their tributaries. <i>Evidence: Machakos County advice, 2026.</i></li>
+  <li><b>County and national government, after the season:</b> commission a flood hazard map and a sediment survey of the Athi through Mavoko, and write river-corridor protection into the next IDeP review. <i>Evidence: Open Questions 4 to 6.</i></li>
+</ol>
+
+<span class="lr-sec-eyebrow" id="lr-s11">Section 11</span>
+<h2><span class="lr-num">11</span>What to watch, week by week</h2>
+<div class="lr-tablewrap">
+<table>
+<thead><tr><th>When</th><th>Signal</th><th>Where to find it</th></tr></thead>
+<tbody>
+<tr><td>Second Thursday monthly (8 Oct, 12 Nov, 10 Dec)</td><td>El Niño strength and outlook</td><td>NOAA CPC ENSO Diagnostic Discussion</td></tr>
+<tr><td>Weekly and monthly</td><td>Regional sub-seasonal rainfall forecasts</td><td>ICPAC</td></tr>
+<tr><td>From early October</td><td>Onset dates, 7-day forecasts and heavy-rainfall advisories for Nairobi, Kajiado and Machakos</td><td>KMSA</td></tr>
+<tr><td>During storms</td><td>Reports of the Mbagathi or Athi rising in Rongai, Kitengela or Athi River</td><td>County emergency lines, KRCS, community groups</td></tr>
+<tr><td>Throughout</td><td>Evidence of drainage and riparian works in Mavoko</td><td>Machakos County, Municipal Board of Mavoko, KNA</td></tr>
+</tbody>
+</table>
+</div>
+
+<figure class="lr-fig">
+  <img src="/research/athi-river-flood-2026/figure-5-profile.png" alt="Low-poly terrain profile descending from Ngong Hills on the left to Athi River on the right">
+  <figcaption><b>Figure 5. From highlands to plains (schematic).</b> The labelled 1,960 m corresponds to the headwater area of the Mbagathi; SRTM places Athi River town at about 1,509 m.</figcaption>
+</figure>
+
+<div class="lr-box lr-dark">
+  <span class="lr-lbl">The wider question</span>
+  <p>Athi River is one of the fastest-growing towns in the Nairobi Metropolitan Region. Its drains, roads and building approvals were designed for the rainfall of the past. The 2024 flood, and the floods of 2026, show that climate has already moved on. <b>The real test this season is not whether it rains heavily. It is whether a town built for yesterday's climate can protect the people living on its lowest ground.</b></p>
+  <p>LMD Consulting Group supports NGOs, county governments and development partners with research, monitoring, evaluation and learning, and risk communication. If you hold field data on Mavoko's drains, river levels or 2024 losses, or need support turning early warnings into community action, contact us at <a href="mailto:info@lmdconsulting.co">info@lmdconsulting.co</a> or +254 788 850 900.</p>
+</div>
+
+<span class="lr-sec-eyebrow" id="lr-s12">Section 12</span>
+<h2><span class="lr-num">12</span>Method, limitations and references</h2>
+<h3>Method</h3>
+<p>We decomposed the headline question into sub-questions covering hazard, exposure, vulnerability, protection and preparedness; searched government, intergovernmental, academic and news sources; rated each claim; reported conflicting figures side by side; and stress-tested each conclusion before writing. Elevations were sampled from the SRTM 30 m model through the OpenTopoData API, and estate locations were geocoded from OpenStreetMap on 16 September 2026. The research workflow drew on the open-source <i>academic-research-skills</i> framework (source verification, evidence grading, devil's advocate review).</p>
+<h3>Evidence ratings</h3>
+<p>★★★★★ government data with independent corroboration · ★★★★ international or national agency · ★★★ peer-reviewed research, or official statements reported by reputable media · ★★ established news media · ★ uncorroborated reports.</p>
+<h3>Limitations</h3>
+<ul>
+  <li>No field visits were made for this review. On-the-ground conditions may differ from what public records show.</li>
+  <li>No river-flow or rainfall-station data for 23 to 24 April 2024 were available to us.</li>
+  <li>Absence of online evidence of works is not proof that works do not exist.</li>
+  <li>Seasonal forecasts are probabilistic and regional. They cannot say whether a specific place will flood.</li>
+  <li>Some 2024 casualty and displacement figures come from early reports and were revised later.</li>
+</ul>
+<h3>Disclosure</h3>
+<p>This paper was researched and drafted with AI assistance and reviewed by LMD Consulting Group. Several illustrations are AI-generated concept graphics; their captions state what they do and do not show. Coordinates in earlier working notes for Graceland Estate and the "Namanga Road bridge" did not match OpenStreetMap and have been replaced or withdrawn.</p>
+
+<h3>References</h3>
+<ol class="lr-refs">
+  <li>NOAA Climate Prediction Center. ENSO Diagnostic Discussion, September 2026. https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml</li>
+  <li>NOAA CPC. ENSO: Recent Evolution, Current Status and Predictions, 14 September 2026. https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/lanina/enso_evolution-status-fcsts-web.pdf</li>
+  <li>IRI, Columbia University. ENSO Forecast, August 2026 Quick Look. https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/</li>
+  <li>ICPAC. The Greater Horn of Africa is expected to experience a wetter-than-normal October to December 2026 season as El Niño strengthens, 18 August 2026. https://www.icpac.net/news/</li>
+  <li>ICPAC. Technical Statement from GHACOF74, August 2026. https://www.icpac.net/publications/technical-statement-from-the-74th-greater-horn-of-africa-climate-outlook-forum-ghacof74/</li>
+  <li>ICPAC. Dual climate risks emerging (long-range outlook), June 2026. https://www.icpac.net/publications/</li>
+  <li>WMO. El Niño impacts Greater Horn of Africa, August 2026. https://wmo.int/media/news/el-nino-impacts-greater-horn-of-africa</li>
+  <li>Kenya Meteorological Service Authority. OND 2026 Rainfall Outlook, 26 August 2026 (as reported by The Star, 27 Aug 2026; The Kenya Times; Smart Farmer Africa).</li>
+  <li>Jessop, S. and Jones, M. Africa facing $10-$20 billion economic hit from 'super' El Niño, AfDB climate chief warns. Reuters, 26 July 2026.</li>
+  <li>The Star. El Niño economic impact on Kenya (infographic), 14 September 2026.</li>
+  <li>World Weather Attribution. Urban planning at the heart of increasingly severe East African flood impacts in a warming world, 23 May 2024. https://www.worldweatherattribution.org/</li>
+  <li>WMO. Extreme weather and climate change impacts hit Africa hard (State of the Climate in Africa 2024), May 2025. https://wmo.int/news/media-centre/extreme-weather-and-climate-change-impacts-hit-africa-hard</li>
+  <li>OCHA. Kenya: Heavy Rains and Flooding Update, Flash Updates 6 (17 May 2024) and 7 (19 June 2024). https://reliefweb.int/disaster/fl-2024-000045-ken</li>
+  <li>Dialogue Earth. Life after Kenya's floods of 2024, March 2025 (citing the Kenya Red Cross 2024 flood operations report).</li>
+  <li>Kenya News Agency. Thousands of residents in Athi River displaced by floods; Floods wreak havoc in Athiriver Sub County, 25 April 2024. https://www.kenyanews.go.ke/</li>
+  <li>The Star. 96 people rescued from Athi River flash floods; Two dead, over 2000 flood victims rescued in Athi River, 25 April 2024.</li>
+  <li>Daily Nation. Graceland Estate residents rescued by boat after River Athi burst its banks, 24 April 2024.</li>
+  <li>Business Now. Wavinya leads rescue, evacuation efforts for Mavoko floods victims, 24 April 2024.</li>
+  <li>County Government of Machakos. Integrated Development Plan for Mavoko Municipality 2024-2029, May 2024. https://machakos.go.ke/wp-content/uploads/2026/03/MAVOKO-MUNICIPALITY-IDeP-F.pdf</li>
+  <li>Runoff Estimation for an Urban Area using SCS-CN Method, Remote Sensing and GIS: A Case Study of Mavoko Municipality, Kenya. International Journal of Engineering Research &amp; Technology 9(4), April 2020.</li>
+  <li>Sang, C. C. and Olago, D. O. Water security in Mbagathi and Stony Athi catchments within Kenya's SGR corridor under environmental and socio-economic change.</li>
+  <li>Nyika (2017), Mbagathi sub-catchment study, as cited on ResearchGate.</li>
+  <li>The Star. Multi-agency team moves to tackle Mavoko flooding, 23 May 2026.</li>
+  <li>The Star. Families evacuated after floods displace tens in Machakos, 30 April 2026.</li>
+  <li>Kenyans.co.ke. Machakos County announces demolition of houses sitting on riparian land, 3 May 2026; Mombasa Road impassable as floods paralyse Nairobi roads, 1 May 2026; Machakos cracks down on landlords over illegal sewage discharge, September 2026.</li>
+  <li>Education News. Machakos County begins demolitions on Utawala river banks, 5 May 2026.</li>
+  <li>The Star; The Standard. Court of Appeal: Green Park Estate not on riparian land, 19 to 20 August 2024.</li>
+  <li>Business Daily. Regulator says flooded Athi River estate not on riparian land, December 2020.</li>
+  <li>The Standard; Business Daily; The Star. Reporting on KCB and Greatwall Gardens units, April to May 2024.</li>
+  <li>Daily Nation. The slow death of Athi River, January 2026.</li>
+  <li>Kimutai, J. et al. Attribution of the human influence on heavy rainfall associated with flooding events during the 2012, 2016 and 2018 MAM seasons in Kenya. Weather and Climate Extremes 38 (2022).</li>
+  <li>FAO GIEWS. Special Report: Eastern Africa (heavy rains attributed to El Niño), 5 February 1998.</li>
+  <li>NASA SRTM 30 m DEM via OpenTopoData API; OpenStreetMap contributors (ODbL), accessed 16 September 2026.</li>
+</ol>
+
+</div>
+</div>
+
+<footer class="lr-foot">
+  <div class="lr-wrap">
+    <div class="lr-mark">LMD <span>Consulting Group</span></div>
+    <p>Monitoring &amp; Evaluation · Communications · Research · <a href="https://lmdconsulting.co">lmdconsulting.co</a> · <a href="mailto:info@lmdconsulting.co">info@lmdconsulting.co</a> · +254 788 850 900</p>
+    <p class="lr-cite">Suggested citation: LMD Consulting Group (2026). <i>Will Athi River Flood Again? What the 2024 Disaster Tells Us About the Very Strong 2026 El Ni&ntilde;o.</i> Research paper, September 2026. Nairobi: LMD Consulting Group.</p>
+  </div>
+</footer>
+</article>

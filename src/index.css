@@ -2447,3 +2447,11 @@ nav.main-nav.is-scrolled {
 /* Browser surfaces carry the palette too. */
 ::selection { background: rgba(227, 160, 42, 0.35); color: var(--ink); }
 input, textarea, select { caret-color: var(--accent); }
+
+/* Mapped: link out to a full research paper. */
+.mapped-report .mapped-detail-text { margin-bottom: 1.25rem; }
+.mapped-research { padding-top: 4.75rem; background: #edeff0; }
+.mapped-research-bar { max-width: 1080px; margin: 0 auto; padding: 1.25rem 24px; }
+.mapped-research-bar .mapped-back-btn { margin-bottom: 0; }
+.mapped-research .lmd-research h2,
+.mapped-research .lmd-research [id^="lr-s"] { scroll-margin-top: 6rem; }
