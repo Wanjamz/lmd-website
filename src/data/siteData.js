@@ -564,9 +564,9 @@ In practice, the role required working across programmes, partnerships, operatio
       },
       {
         type: 'image',
-        src: '/images/Evaluation.png',
-        alt: 'Humanitarian communications in the field',
-        caption: 'Embedding communications into programme delivery across Southwest Somalia'
+        src: '/images/work/reado-annual-report-cover.webp',
+        alt: "Cover of READO's 2024 Annual Report, showing a student reading at her desk",
+        caption: "READO's annual report — the organisation presented to partners and donors in one document"
       },
       {
         type: 'text',
@@ -582,9 +582,15 @@ In practice, the role required working across programmes, partnerships, operatio
       },
       {
         type: 'image',
-        src: '/images/Baseline 1.png',
-        alt: 'Donor visibility and field branding coordination',
-        caption: 'Supporting brand compliance and partner publication workflows'
+        src: '/images/work/reado-gbv-spread.webp',
+        alt: 'Annual report page on gender-based violence and child protection, with field photographs and a column of headline figures',
+        caption: 'Programme pages pair field photography with the figures a donor reads first'
+      },
+      {
+        type: 'image',
+        src: '/images/work/reado-mpca-spread.webp',
+        alt: 'Annual report page on multi-purpose cash assistance, carrying a cash distribution photograph, the amount distributed and a recipient quote',
+        caption: 'Cash assistance results set beside a recipient speaking in her own words'
       },
       {
         type: 'text',
@@ -598,7 +604,7 @@ In practice, the role required working across programmes, partnerships, operatio
     ],
     impact: 'The value of this work was not just in creating materials. It was in helping READO present itself as organized, responsive, and donor-ready across multiple touchpoints. In a humanitarian setting where partner trust and institutional perception matter enormously, communications played a direct role in reinforcing organizational credibility. (Delivered by Benson Wanjama as Lead Communications Consultant for READO Somalia.)',
     tags: ['Communications', 'Donor Visibility', 'Humanitarian', 'Brand Management', 'Somalia'],
-    image: '/images/Evaluation.png',
+    image: '/images/work/reado-annual-report-cover.webp',
   },
   {
     id: 'mother-esther-baseline',
