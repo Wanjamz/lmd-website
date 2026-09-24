@@ -8,7 +8,6 @@ const footerLinks = [
   { label: 'Work',      to: '/work' },
   { label: 'Mapped',    to: '/mapped' },
   { label: 'Services',  to: '/#services' },
-  { label: 'AI 4 NGOs', to: 'https://www.ai4development.co/', external: true },
   { label: 'Contact',   to: '/contact' },
 ];
 

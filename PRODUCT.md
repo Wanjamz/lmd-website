@@ -63,7 +63,6 @@ The firm is candid about its capability envelope and refers out work it would no
 
 - **Case studies** (`caseStudies` in `src/data/siteData.js`):
   - UNICEF Zambia parliamentary advocacy (2025)
-  - AI4Dev platform for East African NGOs (2025)
   - AEA Strategic Plan mid-term review (2024)
   - READO Somalia communications (2024)
   - Mother Esther Project baseline (2024)

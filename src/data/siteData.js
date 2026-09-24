@@ -328,7 +328,7 @@ We build digital platforms and intelligent systems that improve organizational p
     selectedWork: [],
     teamIds: ['benson-wanjama'],
     category: 'Digital Systems',
-    examples: ['ai4dev-platform'],
+    examples: [],
   },
 ];
 
@@ -477,90 +477,6 @@ export const caseStudies = [
     impact: 'The project equipped UNICEF with an advocacy-ready tool that made the state of children in Zambia visible and understandable. It bridged the gap between raw data and decision-making, supporting parliamentary dialogue on public finance and child policy. (Delivered by Benson Wanjama.)',
     tags: ['Advocacy', 'Data Visualization', 'Infographics', 'Brand Management'],
     image: '/images/Unicef Booklet.png',
-  },
-  {
-    id: 'ai4dev-platform',
-    category: 'Capacity Building',
-    client: 'East African NGOs',
-    year: '2025',
-    duration: 'Ongoing',
-    location: 'East Africa (Remote & Blended)',
-    title: 'AI for Development — Building an AI Capacity Platform for East African NGOs',
-    excerpt: 'A purpose-built AI capacity-building platform for NGO staff and leadership in East Africa — tackling donor pressure, compliance risk, and the gap between generic AI tools and real development workflows.',
-    fullContent: [
-      {
-        type: 'text',
-        label: 'Overview',
-        title: 'The problem with generic AI training',
-        content: `Across East Africa's development sector, NGO leaders and their teams were feeling a mounting tension. Donors — including major institutional funders like USAID, DANIDA, and FCDO — were increasingly expecting AI integration to appear in proposals, reporting frameworks, and operational workflows. The pressure was real, but the resources to respond to it were not.
-
-The core problem wasn't a lack of willingness. It was a lack of relevant, context-aware training. Generic AI courses built for Western corporate audiences consistently failed to address the realities on the ground: tools like KoboCollect for data collection, M-Changa for community fundraising, and SMS-based communication gateways were the backbone of field operations — yet no existing curriculum addressed them.
-
-Standard AI prompt techniques broke down when applied to the strict logframe and reporting formats required by international donors. And perhaps most critically, staff had no guidance on how to use AI tools in compliance with the Kenya Data Protection Act 2019, putting beneficiary data at genuine legal risk.`
-      },
-      {
-        type: 'image',
-        src: '/images/Evaluation.png',
-        alt: 'AI capacity building for East African NGOs',
-        caption: 'Purpose-built for the tools, donors, and compliance environment of East African development work'
-      },
-      {
-        type: 'text',
-        label: 'Our Approach',
-        title: 'Built from the ground up — for East Africa',
-        content: `LMD Consulting Group developed AI4Dev — a dedicated capacity-building platform purpose-built for NGO staff and leadership in the East African development context. Rather than adapting an existing curriculum, we built from the ground up with our clients' operational realities at the center of every design decision.
-
-We designed four specialized role-specific learning tracks:
-• Resource Mobilisation — AI tools for grant writing, donor mapping, and proposal drafting calibrated to USAID and EU standards.
-• Programme & MEAL — Automating data cleaning from KoboCollect, generating field insights, and drafting impact reports faster.
-• Leadership — AI policy development, organizational change management, and KE-DPA compliance at the institutional level.
-• Communications — Scaling impact storytelling and managing content localization for diverse communities across the region.`
-      },
-      {
-        type: 'text',
-        label: 'Platform Design',
-        title: 'Flexible, verified, and compliance-first',
-        content: `Every module was designed with East African workflows in mind — not theoretical overviews, but real case studies and exercises drawn directly from the development sector.
-
-AI4Dev offers both self-paced and blended/facilitated delivery modes, accommodating the reality of NGO staffing where senior management have limited time and field officers benefit from extended self-paced learning.
-
-The platform issues verifiable certificates upon programme completion, recognized by major development partners, alongside micro-credential badges for specific competencies such as Data Privacy and Grant Automation — tangible assets organizations can include in donor reports and proposals.
-
-Rather than treating the Kenya Data Protection Act as a footnote, we embedded KE-DPA compliance throughout the curriculum. The platform also offers a free NGO Data Protection Guide covering consent management for AI, safe prompt engineering, and a vendor assessment checklist.`
-      },
-      {
-        type: 'image',
-        src: '/images/Baseline 1.png',
-        alt: 'AI4Dev learning tracks and platform interface',
-        caption: 'Visit the platform at ai4development.co'
-      },
-      {
-        type: 'text',
-        label: 'Results & Impact',
-        title: 'Early outcomes from the platform',
-        content: `The platform has begun delivering measurable outcomes for its early cohort of users:
-
-• MEAL teams integrating KoboCollect-specific training reported significant time savings in data processing workflows.
-• Programme managers cited the Kenya Data Protection Act module as a critical differentiator — providing the institutional confidence to begin using AI tools without exposing beneficiary data to risk.
-• Senior leadership teams used the blended delivery model to get executive staff up to speed rapidly while field officers completed self-paced tracks on their own schedules.
-
-The pricing model — offered in both USD and KES, with individual track access, full programme enrollment, and organizational volume pricing — was designed to make the platform genuinely accessible to the development sector rather than reserved for well-funded institutions.`
-      },
-      {
-        type: 'text',
-        label: 'Why It Worked',
-        title: 'Context is not a detail — it\'s the product',
-        content: `The success of AI4Dev stems from a simple insight: by designing for East African NGOs specifically — their tools, their donors, their compliance environment, their team structures — LMD Consulting Group built something that generic platforms cannot replicate.
-
-Our clients didn't just learn about AI. They learned how to use AI in their organizations, starting on day one.
-
-🔗 Visit the platform: https://www.ai4development.co/`
-      }
-    ],
-    impact: 'AI4Dev is now an active platform serving East African NGOs with role-specific AI training that is KE-DPA 2019 compliant, donor-aligned, and built around the tools development teams actually use. It represents LMD\'s commitment to not just advising on AI — but building the infrastructure to make responsible AI adoption real across the sector.',
-    tags: ['AI', 'Capacity Building', 'Digital Learning', 'KE-DPA', 'NGO', 'East Africa'],
-    image: '/images/Evaluation.png',
-    externalLink: 'https://www.ai4development.co/',
   },
   // ── 2024 ──────────────────────────────────────────────────────────────────
   {
