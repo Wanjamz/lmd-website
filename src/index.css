@@ -369,7 +369,6 @@ h1.hero-title::after {
 }
 
 /* Placeholder panels read as a reserved slot rather than a broken image. */
-.hero-image-placeholder,
 .media-placeholder {
   width: 100%;
   display: flex;
@@ -381,11 +380,14 @@ h1.hero-title::after {
   color: var(--muted);
   font-size: 0.85rem;
 }
-#hero .hero-image-placeholder {
-  aspect-ratio: 4 / 3;
-  border-color: var(--on-dark-rule);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--on-dark-muted);
+/* The hero figure is a cut-out on transparency, so it sits straight on the
+   navy field with no frame around it. */
+.hero-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 34rem;
+  justify-self: center;
 }
 
 .hero-stat-grid {

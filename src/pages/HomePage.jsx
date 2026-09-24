@@ -105,9 +105,14 @@ export default function HomePage() {
         </div>
 
         <div className="hero-right">
-          <div className="hero-image-placeholder">
-            <span>[ Image Placeholder ]</span>
-          </div>
+          <img
+            className="hero-figure"
+            src="/images/hero-figure.webp"
+            alt="An LMD consultant at work, surrounded by the firm's outputs: a mapping dashboard, a data report, a printed publication and social content."
+            width="1380"
+            height="1140"
+            fetchPriority="high"
+          />
 
           <div className="hero-quote-card">
             <blockquote>

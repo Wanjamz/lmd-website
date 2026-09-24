@@ -794,9 +794,9 @@ The methodology included data quality controls, informed consent procedures, and
       },
       {
         type: 'image',
-        src: '/images/Baseline 1.png',
-        alt: 'Gender and agriculture research in Senegal',
-        caption: 'Grounding gender analysis in national agricultural and economic data'
+        src: '/images/work/lba-gcf-1.webp',
+        alt: 'Women working together in a smallholder vegetable field in rural Senegal',
+        caption: 'Women do much of the work in Senegalese agriculture while men control 93.6% of cultivated land'
       },
       {
         type: 'text',
@@ -822,9 +822,9 @@ The report also outlined practical approaches for gender-responsive funding allo
       },
       {
         type: 'image',
-        src: '/images/Evaluation.png',
-        alt: 'Gender data analysis for climate finance',
-        caption: 'Translating structural gender data into programme-relevant recommendations'
+        src: '/images/work/lba-gcf-2.webp',
+        alt: 'Analysts reviewing gender and agriculture data, draft report pages and a regional map of Senegal',
+        caption: 'Literature, policy and institutional review turned into recommendations LBA could act on'
       },
       {
         type: 'text',
@@ -851,7 +851,7 @@ Core outputs:
     ],
     impact: 'This work strengthened the gender foundation of a proposed climate finance intervention — ensuring the programme could be informed by real structural constraints rather than generic inclusion statements. It positioned gender as central to resilience, access, productivity, and finance. Fine print: Sarah was contracted by ESF Consultants to prepare this assessment for LBA as part of GCF documentation. (Delivered by Sarah Ngondi Kaia and Benson Wanjama.)',
     tags: ['Gender Assessment', 'Climate Finance', 'Research', 'GCF', 'Agriculture'],
-    image: '/images/Baseline 1.png',
+    image: '/images/work/lba-gcf-1.webp',
   },
   // ── 2018 ──────────────────────────────────────────────────────────────────
   {
@@ -880,9 +880,9 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
       },
       {
         type: 'image',
-        src: '/images/UNICEF booklet11.png',
-        alt: 'Brand identity materials layout',
-        caption: 'Building a professional brand identity from day one'
+        src: '/images/work/secplus-1.webp',
+        alt: 'The Secplus Consulting logo printed in white on a navy company profile cover',
+        caption: 'The mark: a soft lowercase wordmark with the plus lifted out as its own counter'
       },
       {
         type: 'text',
@@ -910,9 +910,15 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
       },
       {
         type: 'image',
-        src: '/images/Evaluation.png',
-        alt: 'Iterative design process and client review',
-        caption: 'Collaborative, revision-led design process across all deliverables'
+        src: '/images/work/secplus-2.webp',
+        alt: 'Double-sided Secplus business cards laid out in navy and white',
+        caption: 'Double-sided cards for the Lead Consultant, built on a template the incoming partner reused'
+      },
+      {
+        type: 'image',
+        src: '/images/work/secplus-3.webp',
+        alt: 'The Secplus logo shown in its positive and reversed versions, on white and on navy',
+        caption: 'Positive and reversed lock-ups, so the mark holds on print, digital and stationery'
       },
       {
         type: 'text',
@@ -923,7 +929,7 @@ As the firm was newly registered and preparing to formally engage clients, Ken r
     ],
     impact: 'Full brand identity established from scratch. Functional digital workflows enabled through an editable letterhead and embeddable email signature. The brand scaled seamlessly when a second partner joined within months. The trust built through branding converted directly into a broader retainer engagement. (Delivered by Benson Wanjama.)',
     tags: ['Brand Identity', 'Corporate Communications', 'Design', 'Print'],
-    image: '/images/UNICEF booklet11.png',
+    image: '/images/work/secplus-1.webp',
   },
 ];
 
