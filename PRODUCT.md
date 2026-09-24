@@ -50,7 +50,7 @@ The firm is candid about its capability envelope and refers out work it would no
 - **Stack:** React 19 + Vite + react-router, deployed with Vercel Analytics. Content lives in `src/data/siteData.js`, with optional Supabase-backed case studies and Mapped insights that fall back to static data.
 - **Routes:** `/`, `/about`, `/work`, `/work/:id`, `/mapped`, `/contact`, `/services/:id` (off-menu). Legacy `/case-studies` paths redirect.
 - **Enquiries** from both contact forms are saved to the Supabase `contact_messages` table (`supabase/contact_messages.sql`).
-- **Contact:** info@lmdconsulting.co, +254 788 850 900, Calendly (`lmd-consulting`), and a floating WhatsApp button.
+- **Contact:** partnerships@lmdconsulting.co, +254 723 539 332, Calendly (`lmd-consulting`), and a floating WhatsApp button.
 - **Open decision:** whether the packages (Foundation / Catalyst / Transform) are still offered publicly.
 
 ## Brand Commitments

@@ -6,9 +6,9 @@ export const CALENDLY_URL = 'https://calendly.com/lmd-consulting';
 // ─── FIRM DETAILS ──────────────────────────────────────────────────────────────
 export const firm = {
   name: 'LMD Consulting Group',
-  email: 'info@lmdconsulting.co',
-  phone: '+254 788 850 900',
-  phoneHref: '+254788850900',
+  email: 'partnerships@lmdconsulting.co',
+  phone: '+254 723 539 332',
+  phoneHref: '+254723539332',
   website: 'www.lmdconsulting.co',
   location: 'Nairobi, Kenya',
   countries: ['Kenya', 'Somalia', 'Djibouti', 'Ethiopia', 'South Sudan'],
@@ -410,7 +410,7 @@ export const careers = {
     'Publication designers with InDesign fluency and donor-branding experience — UNICEF, FCDO, USAID or equivalent.',
     'Sector advisors with senior credibility in agriculture, livelihoods, health, WASH, or education — available on a named-associate basis for specific bids.',
   ],
-  howToApply: `If that is you, write to info@lmdconsulting.co with a CV and two work samples. We reply to every application within two weeks.`,
+  howToApply: `If that is you, write to partnerships@lmdconsulting.co with a CV and two work samples. We reply to every application within two weeks.`,
 };
 
 // ─── COMPLIANCE ────────────────────────────────────────────────────────────────
