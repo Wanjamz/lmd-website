@@ -346,10 +346,14 @@ export default function HomePage() {
           </p>
         </div>
         
-        {/* Placeholder for Photo on the right side */}
-        <div className="media-placeholder about-media">
-          <span>[ Photo Placeholder ]</span>
-        </div>
+        <img
+          className="about-media about-photo"
+          src="/images/about-team.webp"
+          alt="Three LMD colleagues around a table, working through a printed map, programme documents and a dashboard on a laptop."
+          width="1536"
+          height="1024"
+          loading="lazy"
+        />
       </section>
 
       {/* ── CONTACT CTA ────────────────────────────────────────────── */}

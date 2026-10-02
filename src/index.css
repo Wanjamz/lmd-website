@@ -1986,6 +1986,15 @@ footer.main-footer {
 .about-copy { display: flex; flex-direction: column; gap: 1.1rem; }
 .about-copy .section-intro { margin: 0; }
 .about-media { min-height: 380px; align-self: stretch; }
+/* The about photo fills the placeholder's slot, but at its own proportions:
+   the scene is three people over one table, so cropping it loses the point. */
+.about-photo {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  align-self: start;
+  border-radius: var(--radius);
+}
 
 /* ─── HOME: CONTACT ──────────────────────────────────────────────────────── */
 .contact-form-title {
